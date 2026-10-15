@@ -15,9 +15,23 @@ const H = (() => {
   async function load(){
     if(cache) return cache;
     const seed = window.HAPPYON_SEED || {site:{},categories:[],products:[]};
-    const [site,categories,products] = await Promise.all([
-      readJSON('data/site.json', seed.site), readJSON('data/categories.json', seed.categories), readJSON('data/products.json', seed.products)
+    const [site,categories,legacyProducts,...splitLists] = await Promise.all([
+      readJSON('data/site.json', seed.site),
+      readJSON('data/categories.json', seed.categories),
+      readJSON('data/products.json', seed.products),
+      readJSON('data/products/magnifier.json', []),
+      readJSON('data/products/card-mirror.json', []),
+      readJSON('data/products/winter.json', []),
+      readJSON('data/products/summer.json', []),
+      readJSON('data/products/all-season.json', [])
     ]);
+
+    // 카테고리별 상품 파일에 데이터가 들어간 뒤에는 그 파일들을 사용합니다.
+    // 아직 분리 전이라 모두 비어 있으면 기존 products.json을 그대로 사용하므로
+    // 홈페이지 표시가 바뀌거나 기존 상품이 사라지지 않습니다.
+    const splitProducts = splitLists.flat().filter(Boolean);
+    const products = splitProducts.length ? splitProducts : legacyProducts;
+
     categories.forEach(c=>{categoryMap[c.id]=c;(c.subs||[]).forEach(s=>subMap[c.id+'|'+s.id]=s)});
     cache={site,categories,products};
     return cache;
