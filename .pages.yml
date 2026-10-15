@@ -311,6 +311,11 @@ content:
       label: 메인 대표상품
       type: boolean
       default: false
+    - name: home_slide_page2
+      label: 메인 슬라이드 2페이지 노출
+      type: boolean
+      default: false
+      description: 이 카테고리에서 메인 2페이지에 보여줄 상품 1개만 켜주세요.
     - name: hero_image
       label: 대표이미지
       type: image
@@ -463,6 +468,11 @@ content:
       label: 메인 대표상품
       type: boolean
       default: false
+    - name: home_slide_page2
+      label: 메인 슬라이드 2페이지 노출
+      type: boolean
+      default: false
+      description: 이 카테고리에서 메인 2페이지에 보여줄 상품 1개만 켜주세요.
     - name: hero_image
       label: 대표이미지
       type: image
@@ -625,6 +635,21 @@ content:
       label: 메인 대표상품
       type: boolean
       default: false
+    - name: home_slide_order
+      label: 메인 슬라이드 노출 순서
+      type: select
+      default: none
+      description: 메인 슬라이드에 보여줄 상품 3개만 1·2·3 순서로 지정하세요.
+      options:
+        values:
+        - name: none
+          label: 노출 안 함
+        - name: '1'
+          label: 1번째
+        - name: '2'
+          label: 2번째
+        - name: '3'
+          label: 3번째
     - name: hero_image
       label: 대표이미지
       type: image
@@ -783,6 +808,21 @@ content:
       label: 메인 대표상품
       type: boolean
       default: false
+    - name: home_slide_order
+      label: 메인 슬라이드 노출 순서
+      type: select
+      default: none
+      description: 메인 슬라이드에 보여줄 상품 3개만 1·2·3 순서로 지정하세요.
+      options:
+        values:
+        - name: none
+          label: 노출 안 함
+        - name: '1'
+          label: 1번째
+        - name: '2'
+          label: 2번째
+        - name: '3'
+          label: 3번째
     - name: hero_image
       label: 대표이미지
       type: image

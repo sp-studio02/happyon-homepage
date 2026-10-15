@@ -1,12 +1,147 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>해피온 HAPPYON | 주문제작 제품</title><meta name="description" content="기업과 단체를 위한 주문제작 제품 소개"><link rel="icon" href="assets/images/logo.png"><link rel="stylesheet" href="assets/css/style.css"></head><body><div id="site-header"></div>
 <main>
-<section class="hero"><div class="container hero-grid"><div><p class="eyebrow">HAPPYON · SINCE 2000</p><h1 id="hero-title">필요한 제품을,<br>목적에 맞게.</h1><p class="hero-desc" id="hero-desc">다양한 주문제작 제품을 카테고리별로 보기 쉽게 소개합니다.</p><div class="hero-actions"><a class="btn primary" href="products.html">제품소개 보기</a><a class="btn ghost" href="company.html">회사소개</a></div></div><div class="hero-panel"><div class="hero-tile big"><span class="num">SINCE 2000</span><div class="circle"></div><div><h3>오랜 제작 경험</h3><p>제품을 목적과 수량에 맞게 살펴보세요.</p></div></div><div class="hero-tile"><span class="num">01</span><div><h3>맞춤 제작</h3><p>기업·단체 주문제작</p></div></div><div class="hero-tile"><span class="num">02</span><div><h3>제품 카탈로그</h3><p>카테고리별 제품 안내</p></div></div></div></div></section>
+<section class="hero hero-carousel" id="home-hero">
+  <div class="hero-slide active" data-slide="0">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">HAPPYON · SINCE 2000</p>
+        <h1 id="hero-title">필요한 제품을,<br>목적에 맞게.</h1>
+        <p class="hero-desc" id="hero-desc">다양한 주문제작 제품을 카테고리별로 보기 쉽게 소개합니다.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="products.html">제품소개 보기</a>
+          <a class="btn ghost" href="company.html">회사소개</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-tile big"><span class="num">SINCE 2000</span><div class="circle"></div><div><h3>오랜 제작 경험</h3><p>제품을 목적과 수량에 맞게 살펴보세요.</p></div></div>
+        <div class="hero-tile"><span class="num">01</span><div><h3>맞춤 제작</h3><p>기업·단체 주문제작</p></div></div>
+        <div class="hero-tile"><span class="num">02</span><div><h3>제품 카탈로그</h3><p>카테고리별 제품 안내</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-slide" data-slide="1">
+    <div class="container hero-products-page">
+      <div class="hero-products-head">
+        <p class="eyebrow">HAPPYON PRODUCTS</p>
+        <h2>돋보기명함 · 카드거울</h2>
+      </div>
+      <div class="hero-product-grid hero-product-grid-2" id="hero-page2-products"></div>
+    </div>
+  </div>
+
+  <div class="hero-slide" data-slide="2">
+    <div class="container hero-products-page">
+      <div class="hero-products-head">
+        <p class="eyebrow">WINTER PRODUCTS</p>
+        <h2>겨울 추천제품</h2>
+      </div>
+      <div class="hero-product-grid hero-product-grid-3" id="hero-page3-products"></div>
+    </div>
+  </div>
+
+  <div class="hero-slide" data-slide="3">
+    <div class="container hero-products-page">
+      <div class="hero-products-head">
+        <p class="eyebrow">SUMMER PRODUCTS</p>
+        <h2>여름 추천제품</h2>
+      </div>
+      <div class="hero-product-grid hero-product-grid-3" id="hero-page4-products"></div>
+    </div>
+  </div>
+
+  <div class="hero-carousel-controls" aria-label="메인 슬라이드">
+    <button class="hero-arrow" id="hero-prev" type="button" aria-label="이전 슬라이드">←</button>
+    <div class="hero-dots" id="hero-dots">
+      <button class="hero-dot active" type="button" data-go="0" aria-label="1페이지"></button>
+      <button class="hero-dot" type="button" data-go="1" aria-label="2페이지"></button>
+      <button class="hero-dot" type="button" data-go="2" aria-label="3페이지"></button>
+      <button class="hero-dot" type="button" data-go="3" aria-label="4페이지"></button>
+    </div>
+    <button class="hero-arrow" id="hero-next" type="button" aria-label="다음 슬라이드">→</button>
+  </div>
+</section>
 <section class="trust"><div class="container trust-grid"><div class="trust-item"><strong>SINCE 2000</strong><span>2000년 설립</span></div><div class="trust-item"><strong>ORDER MADE</strong><span>전 제품 주문제작</span></div><div class="trust-item"><strong>SEASON</strong><span>겨울·여름·사계절 제품</span></div><div class="trust-item"><strong>SET PACKAGE</strong><span>지퍼백·복주머니·종이케이스 세트</span></div></div></section>
 <section class="section soft"><div class="container"><div class="section-head"><div><p class="eyebrow">PRODUCT CATEGORY</p><h2>제품 카테고리</h2></div><a class="text-link" href="products.html">전체 제품 보기 →</a></div><div class="category-grid" id="home-categories"></div></div></section>
 <section class="section"><div class="container about-grid"><div><div class="about-number"><small>ESTABLISHED</small><span data-site="established">2000</span></div></div><div class="about-copy"><p id="about-short"></p><p id="about-long"></p><a class="text-link" href="company.html">해피온 더 알아보기 →</a></div></div></section>
 <section class="section soft"><div class="container"><div class="section-head"><div><p class="eyebrow">FEATURED PRODUCTS</p><h2>주요 제품</h2></div></div><div class="product-grid" id="featured-products"></div></div></section>
 </main>
-<div id="site-footer"></div><script src="data/seed.js"></script><script src="assets/js/app.js"></script><script>(async()=>{const d=await H.load();H.headerFooter(d.site,'');document.getElementById('hero-title').innerHTML=H.esc(d.site.hero_title||'필요한 제품을, 목적에 맞게.').replace(/, /,',<br>');document.getElementById('hero-desc').textContent=d.site.hero_description||'';document.getElementById('about-short').textContent=d.site.about_short||'';document.getElementById('about-long').textContent=d.site.about_long||'';const cg=document.getElementById('home-categories');
+<div id="site-footer"></div><script src="data/seed.js"></script><script src="assets/js/app.js"></script><script>(async()=>{const d=await H.load();H.headerFooter(d.site,'');document.getElementById('hero-title').innerHTML=H.esc(d.site.hero_title||'필요한 제품을, 목적에 맞게.').replace(/, /,',<br>');document.getElementById('hero-desc').textContent=d.site.hero_description||'';document.getElementById('about-short').textContent=d.site.about_short||'';document.getElementById('about-long').textContent=d.site.about_long||'';
+
+const heroProductCard=(p,slotLabel='')=>{
+  if(!p){
+    return `<div class="hero-feature-card hero-feature-empty">
+      <div class="hero-feature-media"></div>
+      <div class="hero-feature-copy">
+        <span>${slotLabel}</span>
+        <h3>상품을 선택해 주세요</h3>
+        <p>Pages CMS 상품 관리에서 메인 슬라이드 노출을 지정하세요.</p>
+      </div>
+    </div>`;
+  }
+  const img=p.hero_image
+    ? `<img src="${H.esc(p.hero_image.replace(/^\//,''))}" alt="${H.esc(p.title)}">`
+    : `<div class="hero-feature-placeholder">HAPPYON</div>`;
+  return `<a class="hero-feature-card" href="product.html?id=${encodeURIComponent(p.id)}">
+    <div class="hero-feature-media">${img}</div>
+    <div class="hero-feature-copy">
+      <span>${slotLabel}</span>
+      <h3>${H.esc(p.title||'')}</h3>
+      <p>${H.esc(p.summary||'')}</p>
+      <strong>제품 상세 보기 →</strong>
+    </div>
+  </a>`;
+};
+
+const allPublished=d.products.filter(p=>p.published!==false);
+
+// 2페이지: 돋보기명함 1개 + 카드거울 1개
+const page2Magnifier=allPublished.find(p=>p.category==='magnifier' && p.home_slide_page2===true);
+const page2Mirror=allPublished.find(p=>p.category==='card-mirror' && p.home_slide_page2===true);
+document.getElementById('hero-page2-products').innerHTML=
+  heroProductCard(page2Magnifier,'MAGNIFIER CARD')+
+  heroProductCard(page2Mirror,'CARD MIRROR');
+
+// 3·4페이지: 관리자에서 1/2/3 순서를 지정한 상품
+const orderedSlots=(category)=>{
+  const selected=allPublished.filter(p=>p.category===category && ['1','2','3'].includes(String(p.home_slide_order||'')));
+  const bySlot={};
+  selected.forEach(p=>{
+    const s=String(p.home_slide_order);
+    if(!bySlot[s]) bySlot[s]=p;
+  });
+  return ['1','2','3'].map(s=>bySlot[s]||null);
+};
+const winterSlots=orderedSlots('winter');
+const summerSlots=orderedSlots('summer');
+document.getElementById('hero-page3-products').innerHTML=winterSlots.map((p,i)=>heroProductCard(p,`WINTER 0${i+1}`)).join('');
+document.getElementById('hero-page4-products').innerHTML=summerSlots.map((p,i)=>heroProductCard(p,`SUMMER 0${i+1}`)).join('');
+
+// 메인 4페이지 자동 슬라이드
+const hero=document.getElementById('home-hero');
+const slides=[...hero.querySelectorAll('.hero-slide')];
+const dots=[...hero.querySelectorAll('.hero-dot')];
+let heroIndex=0;
+let heroTimer=null;
+
+const showHero=(idx)=>{
+  heroIndex=(idx+slides.length)%slides.length;
+  slides.forEach((s,i)=>s.classList.toggle('active',i===heroIndex));
+  dots.forEach((d,i)=>d.classList.toggle('active',i===heroIndex));
+};
+const startHero=()=>{
+  clearInterval(heroTimer);
+  heroTimer=setInterval(()=>showHero(heroIndex+1),5000);
+};
+document.getElementById('hero-prev').addEventListener('click',()=>{showHero(heroIndex-1);startHero();});
+document.getElementById('hero-next').addEventListener('click',()=>{showHero(heroIndex+1);startHero();});
+dots.forEach(dot=>dot.addEventListener('click',()=>{showHero(Number(dot.dataset.go));startHero();}));
+hero.addEventListener('mouseenter',()=>clearInterval(heroTimer));
+hero.addEventListener('mouseleave',startHero);
+showHero(0);
+startHero();
+
+const cg=document.getElementById('home-categories');
 const homeCardIds=['magnifier','card-mirror','winter','summer','all-season'];
 const homeCards=await Promise.all(homeCardIds.map(async(id,i)=>{
   const fallbackCat=d.categories.find(c=>c.id===id)||{};
