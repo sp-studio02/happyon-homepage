@@ -25,3 +25,65 @@
 
 /* product display fix */
 @media(max-width:720px){.gallery{max-width:100%;margin-top:48px}.product-media{aspect-ratio:1/1}}
+
+
+/* Direct subcategory -> detail navigation + 1:1 subcategory thumbnails */
+.subcategory-card-with-image{
+  min-height:0;
+  padding:0;
+  display:block;
+  overflow:hidden;
+}
+.subcategory-media{
+  aspect-ratio:1/1;
+  width:100%;
+  background:#f2efed;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.subcategory-media img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  background:#fff;
+}
+.subcategory-placeholder{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:flex-end;
+  padding:22px;
+  background:linear-gradient(135deg,#f7f4f2,#e9e2df);
+  color:#7e7471;
+  font-weight:800;
+  font-size:13px;
+}
+.subcategory-content{
+  padding:20px 22px 22px;
+}
+.subcategory-card-with-image .tag{
+  display:block;
+  margin-bottom:20px;
+}
+.subcategory-card-with-image h3{
+  margin:0 0 7px;
+  font-size:20px;
+}
+.subcategory-card-with-image .count{
+  display:block;
+}
+.subcategory-action{
+  display:block;
+  margin-top:17px;
+  font-size:13px;
+  font-weight:800;
+  color:var(--text);
+}
+.subcategory-card.is-empty{
+  pointer-events:none;
+  opacity:.58;
+}
