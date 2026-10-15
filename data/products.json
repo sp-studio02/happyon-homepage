@@ -7,8 +7,18 @@
     "summary": "명함사이즈 돋보기명함",
     "published": true,
     "featured": true,
+    "hero_image": "assets/uploads/file-2.jpg",
+    "gallery": [
+      "assets/uploads/file-3.jpg"
+    ],
     "dimensions": "상세페이지 참고",
-    "material": "상세페이지 참고"
+    "material": "상세페이지 참고",
+    "colors": "컬러인쇄 가능",
+    "default_order_quantity": "1,000개",
+    "production_time": "약 일주일",
+    "print_method": "UV옵셋인쇄",
+    "packaging": "기본 OPP개별포장",
+    "set_type": "set_unavailable"
   },
   {
     "id": "1a0744d1-bdd6-4790-9242-3f2e903141d7",
