@@ -2,526 +2,861 @@ media:
   input: assets/uploads
   output: assets/uploads
   rename: safe
-  categories: [image]
-
+  categories:
+  - image
 settings:
   hide: false
   content:
     merge: true
-
 content:
-  - name: site
-    label: 회사 기본정보
+- name: site
+  label: 회사 기본정보
+  type: file
+  path: data/site.json
+  format: json
+  operations:
+    delete: false
+    rename: false
+  fields:
+  - name: company_name
+    label: 회사명
+    type: string
+    required: true
+  - name: company_name_en
+    label: 영문 회사명
+    type: string
+    required: true
+  - name: ceo
+    label: 대표자명
+    type: string
+  - name: business_number
+    label: 사업자등록번호
+    type: string
+  - name: address
+    label: 사업장 주소
+    type: string
+  - name: phone
+    label: 대표 전화번호
+    type: string
+  - name: email
+    label: 이메일
+    type: string
+  - name: fax
+    label: 팩스번호
+    type: string
+  - name: domain
+    label: 홈페이지 도메인
+    type: string
+  - name: established
+    label: 설립연도
+    type: number
+  - name: logo
+    label: 로고
+    type: image
+    options:
+      extensions:
+      - png
+      - jpg
+      - jpeg
+      - webp
+      - svg
+      rename: safe
+  - name: tagline
+    label: 회사 한 줄 소개
+    type: string
+  - name: hero_title
+    label: 메인 제목
+    type: string
+  - name: hero_description
+    label: 메인 설명
+    type: text
+  - name: about_short
+    label: 회사소개 짧은 문구
+    type: text
+  - name: about_long
+    label: 회사소개 본문
+    type: text
+- name: product_management
+  label: 상품 관리
+  type: group
+  items:
+  - name: products_magnifier
+    label: 돋보기명함
     type: file
-    path: data/site.json
+    path: data/products/magnifier.json
     format: json
+    list: true
     operations:
       delete: false
       rename: false
     fields:
-      - { name: company_name, label: 회사명, type: string, required: true }
-      - { name: company_name_en, label: 영문 회사명, type: string, required: true }
-      - { name: ceo, label: 대표자명, type: string }
-      - { name: business_number, label: 사업자등록번호, type: string }
-      - { name: address, label: 사업장 주소, type: string }
-      - { name: phone, label: 대표 전화번호, type: string }
-      - { name: email, label: 이메일, type: string }
-      - { name: fax, label: 팩스번호, type: string }
-      - { name: domain, label: 홈페이지 도메인, type: string }
-      - { name: established, label: 설립연도, type: number }
-      - name: logo
-        label: 로고
-        type: image
-        options:
-          extensions: [png, jpg, jpeg, webp, svg]
-          rename: safe
-      - { name: tagline, label: 회사 한 줄 소개, type: string }
-      - { name: hero_title, label: 메인 제목, type: string }
-      - { name: hero_description, label: 메인 설명, type: text }
-      - { name: about_short, label: 회사소개 짧은 문구, type: text }
-      - { name: about_long, label: 회사소개 본문, type: text }
-
-  - name: product_management
-    label: 상품 관리
-    type: group
-    items:
-      - name: products_magnifier
-        label: 돋보기명함
-        type: file
-        path: data/products/magnifier.json
-        format: json
-        list: true
-        operations:
-          delete: false
-          rename: false
-        fields:
-          - name: id
-            label: 상품 ID
-            type: uuid
-            readonly: true
-            options:
-              editable: false
-          - { name: title, label: 상품명, type: string, required: true }
-          - name: category
-            label: 대분류
-            type: select
-            required: true
-            default: magnifier
-            options:
-              values:
-                - { name: magnifier, label: 돋보기명함 }
-          - name: subcategory
-            label: 세부 품목
-            type: select
-            required: true
-            options:
-              values:
-            - { name: business-card, label: 명함사이즈 }
-            - { name: bookmark, label: 책갈피사이즈 }
-            - { name: magnetic, label: 자석 돋보기 }
-
-      - { name: summary, label: 한 줄 설명, type: text }
-      - { name: published, label: 홈페이지 공개, type: boolean, default: true }
-      - { name: featured, label: 메인 대표상품, type: boolean, default: false }
-      - name: hero_image
-        label: 대표이미지
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-      - name: gallery
-        label: 상세이미지
-        type: image
-        description: 여러 장을 한 번에 선택할 수 있습니다.
-        options:
-          multiple: { max: 30 }
-          unique: true
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-      - name: features
-        label: 주요 특징
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{title}"
-        fields:
-          - { name: title, label: 특징 제목, type: string }
-          - { name: description, label: 설명, type: text }
-      - { name: dimensions, label: 규격, type: string, description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요. }
-      - { name: material, label: 재질, type: string, description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요. }
-      - { name: colors, label: 색상, type: string }
-      - { name: default_order_quantity, label: 기본 주문수량, type: string, description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다. }
-      - { name: production_time, label: 제작기간, type: string }
-      - { name: print_method, label: 인쇄·제작 방식, type: text }
-      - { name: packaging, label: 포장 방식, type: text }
-      - name: set_type
-        label: 세트 유형
-        type: select
-        description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
-        options:
-          values:
-            - { name: set_product, label: 세트상품 }
-            - { name: set_available, label: 세트 구성 가능 }
-            - { name: set_unavailable, label: 세트 구성 불가 }
-      - { name: set_name, label: 세트 구성명, type: string, description: '세트상품을 선택한 경우에만 작성하세요.' }
-      - name: set_contents
-        label: 구성 제품
+    - name: id
+      label: 상품 ID
+      type: uuid
+      readonly: true
+      options:
+        editable: false
+    - name: title
+      label: 상품명
+      type: string
+      required: true
+    - name: category
+      label: 대분류
+      type: select
+      required: true
+      default: magnifier
+      options:
+        values:
+        - name: magnifier
+          label: 돋보기명함
+    - name: subcategory
+      label: 세부 품목
+      type: select
+      required: true
+      options:
+        values:
+        - name: business-card
+          label: 명함사이즈
+        - name: bookmark
+          label: 책갈피사이즈
+        - name: magnetic
+          label: 자석 돋보기
+    - name: summary
+      label: 한 줄 설명
+      type: text
+    - name: published
+      label: 홈페이지 공개
+      type: boolean
+      default: true
+    - name: featured
+      label: 메인 대표상품
+      type: boolean
+      default: false
+    - name: hero_image
+      label: 대표이미지
+      type: image
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: gallery
+      label: 상세이미지
+      type: image
+      description: 여러 장을 한 번에 선택할 수 있습니다.
+      options:
+        multiple:
+          max: 30
+        unique: true
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: features
+      label: 주요 특징
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: title
+        label: 특징 제목
         type: string
-        list: true
-        description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
-      - { name: set_packaging, label: 세트 포장 형태, type: string, description: '세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스' }
-      - { name: set_description, label: 세트 설명, type: text, description: '세트상품을 선택한 경우에만 작성하세요.' }
-      - name: set_image
-        label: 세트 이미지
-        type: image
-        description: 세트상품을 선택한 경우에만 등록하세요.
-        options:
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-
-      - name: products_card_mirror
-        label: 카드거울
-        type: file
-        path: data/products/card-mirror.json
-        format: json
-        list: true
-        operations:
-          delete: false
-          rename: false
-        fields:
-          - name: id
-            label: 상품 ID
-            type: uuid
-            readonly: true
-            options:
-              editable: false
-          - { name: title, label: 상품명, type: string, required: true }
-          - name: category
-            label: 대분류
-            type: select
-            required: true
-            default: card-mirror
-            options:
-              values:
-                - { name: card-mirror, label: 카드거울 }
-          - name: subcategory
-            label: 세부 품목
-            type: select
-            required: true
-            options:
-              values:
-            - { name: standard, label: 카드거울 }
-            - { name: small-qty, label: 소량제작 카드거울 }
-
-      - { name: summary, label: 한 줄 설명, type: text }
-      - { name: published, label: 홈페이지 공개, type: boolean, default: true }
-      - { name: featured, label: 메인 대표상품, type: boolean, default: false }
-      - name: hero_image
-        label: 대표이미지
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-      - name: gallery
-        label: 상세이미지
-        type: image
-        description: 여러 장을 한 번에 선택할 수 있습니다.
-        options:
-          multiple: { max: 30 }
-          unique: true
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-      - name: features
-        label: 주요 특징
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{title}"
-        fields:
-          - { name: title, label: 특징 제목, type: string }
-          - { name: description, label: 설명, type: text }
-      - { name: dimensions, label: 규격, type: string, description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요. }
-      - { name: material, label: 재질, type: string, description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요. }
-      - { name: colors, label: 색상, type: string }
-      - { name: default_order_quantity, label: 기본 주문수량, type: string, description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다. }
-      - { name: production_time, label: 제작기간, type: string }
-      - { name: print_method, label: 인쇄·제작 방식, type: text }
-      - { name: packaging, label: 포장 방식, type: text }
-      - name: set_type
-        label: 세트 유형
-        type: select
-        description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
-        options:
-          values:
-            - { name: set_product, label: 세트상품 }
-            - { name: set_available, label: 세트 구성 가능 }
-            - { name: set_unavailable, label: 세트 구성 불가 }
-      - { name: set_name, label: 세트 구성명, type: string, description: '세트상품을 선택한 경우에만 작성하세요.' }
-      - name: set_contents
-        label: 구성 제품
+      - name: description
+        label: 설명
+        type: text
+    - name: dimensions
+      label: 규격
+      type: string
+      description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+    - name: material
+      label: 재질
+      type: string
+      description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+    - name: colors
+      label: 색상
+      type: string
+    - name: default_order_quantity
+      label: 기본 주문수량
+      type: string
+      description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다.
+    - name: production_time
+      label: 제작기간
+      type: string
+    - name: print_method
+      label: 인쇄·제작 방식
+      type: text
+    - name: packaging
+      label: 포장 방식
+      type: text
+    - name: set_type
+      label: 세트 유형
+      type: select
+      description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
+      options:
+        values:
+        - name: set_product
+          label: 세트상품
+        - name: set_available
+          label: 세트 구성 가능
+        - name: set_unavailable
+          label: 세트 구성 불가
+    - name: set_name
+      label: 세트 구성명
+      type: string
+      description: 세트상품을 선택한 경우에만 작성하세요.
+    - name: set_contents
+      label: 구성 제품
+      type: string
+      list: true
+      description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
+    - name: set_packaging
+      label: 세트 포장 형태
+      type: string
+      description: 세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스
+    - name: set_description
+      label: 세트 설명
+      type: text
+      description: 세트상품을 선택한 경우에만 작성하세요.
+    - name: set_image
+      label: 세트 이미지
+      type: image
+      description: 세트상품을 선택한 경우에만 등록하세요.
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+  - name: products_card_mirror
+    label: 카드거울
+    type: file
+    path: data/products/card-mirror.json
+    format: json
+    list: true
+    operations:
+      delete: false
+      rename: false
+    fields:
+    - name: id
+      label: 상품 ID
+      type: uuid
+      readonly: true
+      options:
+        editable: false
+    - name: title
+      label: 상품명
+      type: string
+      required: true
+    - name: category
+      label: 대분류
+      type: select
+      required: true
+      default: card-mirror
+      options:
+        values:
+        - name: card-mirror
+          label: 카드거울
+    - name: subcategory
+      label: 세부 품목
+      type: select
+      required: true
+      options:
+        values:
+        - name: standard
+          label: 카드거울
+        - name: small-qty
+          label: 소량제작 카드거울
+    - name: summary
+      label: 한 줄 설명
+      type: text
+    - name: published
+      label: 홈페이지 공개
+      type: boolean
+      default: true
+    - name: featured
+      label: 메인 대표상품
+      type: boolean
+      default: false
+    - name: hero_image
+      label: 대표이미지
+      type: image
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: gallery
+      label: 상세이미지
+      type: image
+      description: 여러 장을 한 번에 선택할 수 있습니다.
+      options:
+        multiple:
+          max: 30
+        unique: true
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: features
+      label: 주요 특징
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: title
+        label: 특징 제목
         type: string
-        list: true
-        description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
-      - { name: set_packaging, label: 세트 포장 형태, type: string, description: '세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스' }
-      - { name: set_description, label: 세트 설명, type: text, description: '세트상품을 선택한 경우에만 작성하세요.' }
-      - name: set_image
-        label: 세트 이미지
-        type: image
-        description: 세트상품을 선택한 경우에만 등록하세요.
-        options:
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-
-      - name: products_winter
-        label: 겨울제품
-        type: file
-        path: data/products/winter.json
-        format: json
-        list: true
-        operations:
-          delete: false
-          rename: false
-        fields:
-          - name: id
-            label: 상품 ID
-            type: uuid
-            readonly: true
-            options:
-              editable: false
-          - { name: title, label: 상품명, type: string, required: true }
-          - name: category
-            label: 대분류
-            type: select
-            required: true
-            default: winter
-            options:
-              values:
-                - { name: winter, label: 겨울제품 }
-          - name: subcategory
-            label: 세부 품목
-            type: select
-            required: true
-            options:
-              values:
-            - { name: neckwarmer, label: 넥워머 }
-            - { name: gloves, label: 장갑 }
-            - { name: earmuffs, label: 귀마개 }
-            - { name: blanket, label: 담요 }
-            - { name: socks, label: 양말 }
-            - { name: foot-warmer, label: 발토시 }
-            - { name: sets, label: 세트상품 }
-
-      - { name: summary, label: 한 줄 설명, type: text }
-      - { name: published, label: 홈페이지 공개, type: boolean, default: true }
-      - { name: featured, label: 메인 대표상품, type: boolean, default: false }
-      - name: hero_image
-        label: 대표이미지
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-      - name: gallery
-        label: 상세이미지
-        type: image
-        description: 여러 장을 한 번에 선택할 수 있습니다.
-        options:
-          multiple: { max: 30 }
-          unique: true
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-      - name: features
-        label: 주요 특징
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{title}"
-        fields:
-          - { name: title, label: 특징 제목, type: string }
-          - { name: description, label: 설명, type: text }
-      - { name: dimensions, label: 규격, type: string, description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요. }
-      - { name: material, label: 재질, type: string, description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요. }
-      - { name: colors, label: 색상, type: string }
-      - { name: default_order_quantity, label: 기본 주문수량, type: string, description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다. }
-      - { name: production_time, label: 제작기간, type: string }
-      - { name: print_method, label: 인쇄·제작 방식, type: text }
-      - { name: packaging, label: 포장 방식, type: text }
-      - name: set_type
-        label: 세트 유형
-        type: select
-        description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
-        options:
-          values:
-            - { name: set_product, label: 세트상품 }
-            - { name: set_available, label: 세트 구성 가능 }
-            - { name: set_unavailable, label: 세트 구성 불가 }
-      - { name: set_name, label: 세트 구성명, type: string, description: '세트상품을 선택한 경우에만 작성하세요.' }
-      - name: set_contents
-        label: 구성 제품
+      - name: description
+        label: 설명
+        type: text
+    - name: dimensions
+      label: 규격
+      type: string
+      description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+    - name: material
+      label: 재질
+      type: string
+      description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+    - name: colors
+      label: 색상
+      type: string
+    - name: default_order_quantity
+      label: 기본 주문수량
+      type: string
+      description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다.
+    - name: production_time
+      label: 제작기간
+      type: string
+    - name: print_method
+      label: 인쇄·제작 방식
+      type: text
+    - name: packaging
+      label: 포장 방식
+      type: text
+    - name: set_type
+      label: 세트 유형
+      type: select
+      description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
+      options:
+        values:
+        - name: set_product
+          label: 세트상품
+        - name: set_available
+          label: 세트 구성 가능
+        - name: set_unavailable
+          label: 세트 구성 불가
+    - name: set_name
+      label: 세트 구성명
+      type: string
+      description: 세트상품을 선택한 경우에만 작성하세요.
+    - name: set_contents
+      label: 구성 제품
+      type: string
+      list: true
+      description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
+    - name: set_packaging
+      label: 세트 포장 형태
+      type: string
+      description: 세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스
+    - name: set_description
+      label: 세트 설명
+      type: text
+      description: 세트상품을 선택한 경우에만 작성하세요.
+    - name: set_image
+      label: 세트 이미지
+      type: image
+      description: 세트상품을 선택한 경우에만 등록하세요.
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+  - name: products_winter
+    label: 겨울제품
+    type: file
+    path: data/products/winter.json
+    format: json
+    list: true
+    operations:
+      delete: false
+      rename: false
+    fields:
+    - name: id
+      label: 상품 ID
+      type: uuid
+      readonly: true
+      options:
+        editable: false
+    - name: title
+      label: 상품명
+      type: string
+      required: true
+    - name: category
+      label: 대분류
+      type: select
+      required: true
+      default: winter
+      options:
+        values:
+        - name: winter
+          label: 겨울제품
+    - name: subcategory
+      label: 세부 품목
+      type: select
+      required: true
+      options:
+        values:
+        - name: neckwarmer
+          label: 넥워머
+        - name: gloves
+          label: 장갑
+        - name: earmuffs
+          label: 귀마개
+        - name: blanket
+          label: 담요
+        - name: socks
+          label: 양말
+        - name: foot-warmer
+          label: 발토시
+        - name: sets
+          label: 세트상품
+    - name: summary
+      label: 한 줄 설명
+      type: text
+    - name: published
+      label: 홈페이지 공개
+      type: boolean
+      default: true
+    - name: featured
+      label: 메인 대표상품
+      type: boolean
+      default: false
+    - name: hero_image
+      label: 대표이미지
+      type: image
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: gallery
+      label: 상세이미지
+      type: image
+      description: 여러 장을 한 번에 선택할 수 있습니다.
+      options:
+        multiple:
+          max: 30
+        unique: true
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: features
+      label: 주요 특징
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: title
+        label: 특징 제목
         type: string
-        list: true
-        description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
-      - { name: set_packaging, label: 세트 포장 형태, type: string, description: '세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스' }
-      - { name: set_description, label: 세트 설명, type: text, description: '세트상품을 선택한 경우에만 작성하세요.' }
-      - name: set_image
-        label: 세트 이미지
-        type: image
-        description: 세트상품을 선택한 경우에만 등록하세요.
-        options:
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-
-      - name: products_summer
-        label: 여름제품
-        type: file
-        path: data/products/summer.json
-        format: json
-        list: true
-        operations:
-          delete: false
-          rename: false
-        fields:
-          - name: id
-            label: 상품 ID
-            type: uuid
-            readonly: true
-            options:
-              editable: false
-          - { name: title, label: 상품명, type: string, required: true }
-          - name: category
-            label: 대분류
-            type: select
-            required: true
-            default: summer
-            options:
-              values:
-                - { name: summer, label: 여름제품 }
-          - name: subcategory
-            label: 세부 품목
-            type: select
-            required: true
-            options:
-              values:
-            - { name: cool-arm-sleeves, label: 쿨토시 }
-            - { name: cool-scarf, label: 쿨스카프 }
-            - { name: cool-mask, label: 쿨마스크 }
-            - { name: cool-towel, label: 쿨타올 }
-            - { name: sets, label: 세트상품 }
-
-      - { name: summary, label: 한 줄 설명, type: text }
-      - { name: published, label: 홈페이지 공개, type: boolean, default: true }
-      - { name: featured, label: 메인 대표상품, type: boolean, default: false }
-      - name: hero_image
-        label: 대표이미지
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-      - name: gallery
-        label: 상세이미지
-        type: image
-        description: 여러 장을 한 번에 선택할 수 있습니다.
-        options:
-          multiple: { max: 30 }
-          unique: true
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-      - name: features
-        label: 주요 특징
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{title}"
-        fields:
-          - { name: title, label: 특징 제목, type: string }
-          - { name: description, label: 설명, type: text }
-      - { name: dimensions, label: 규격, type: string, description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요. }
-      - { name: material, label: 재질, type: string, description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요. }
-      - { name: colors, label: 색상, type: string }
-      - { name: default_order_quantity, label: 기본 주문수량, type: string, description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다. }
-      - { name: production_time, label: 제작기간, type: string }
-      - { name: print_method, label: 인쇄·제작 방식, type: text }
-      - { name: packaging, label: 포장 방식, type: text }
-      - name: set_type
-        label: 세트 유형
-        type: select
-        description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
-        options:
-          values:
-            - { name: set_product, label: 세트상품 }
-            - { name: set_available, label: 세트 구성 가능 }
-            - { name: set_unavailable, label: 세트 구성 불가 }
-      - { name: set_name, label: 세트 구성명, type: string, description: '세트상품을 선택한 경우에만 작성하세요.' }
-      - name: set_contents
-        label: 구성 제품
+      - name: description
+        label: 설명
+        type: text
+    - name: dimensions
+      label: 규격
+      type: string
+      description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+    - name: material
+      label: 재질
+      type: string
+      description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+    - name: colors
+      label: 색상
+      type: string
+    - name: default_order_quantity
+      label: 기본 주문수량
+      type: string
+      description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다.
+    - name: production_time
+      label: 제작기간
+      type: string
+    - name: print_method
+      label: 인쇄·제작 방식
+      type: text
+    - name: packaging
+      label: 포장 방식
+      type: text
+    - name: set_type
+      label: 세트 유형
+      type: select
+      description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
+      options:
+        values:
+        - name: set_product
+          label: 세트상품
+        - name: set_available
+          label: 세트 구성 가능
+        - name: set_unavailable
+          label: 세트 구성 불가
+    - name: set_name
+      label: 세트 구성명
+      type: string
+      description: 세트상품을 선택한 경우에만 작성하세요.
+    - name: set_contents
+      label: 구성 제품
+      type: string
+      list: true
+      description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
+    - name: set_packaging
+      label: 세트 포장 형태
+      type: string
+      description: 세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스
+    - name: set_description
+      label: 세트 설명
+      type: text
+      description: 세트상품을 선택한 경우에만 작성하세요.
+    - name: set_image
+      label: 세트 이미지
+      type: image
+      description: 세트상품을 선택한 경우에만 등록하세요.
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+  - name: products_summer
+    label: 여름제품
+    type: file
+    path: data/products/summer.json
+    format: json
+    list: true
+    operations:
+      delete: false
+      rename: false
+    fields:
+    - name: id
+      label: 상품 ID
+      type: uuid
+      readonly: true
+      options:
+        editable: false
+    - name: title
+      label: 상품명
+      type: string
+      required: true
+    - name: category
+      label: 대분류
+      type: select
+      required: true
+      default: summer
+      options:
+        values:
+        - name: summer
+          label: 여름제품
+    - name: subcategory
+      label: 세부 품목
+      type: select
+      required: true
+      options:
+        values:
+        - name: cool-arm-sleeves
+          label: 쿨토시
+        - name: cool-scarf
+          label: 쿨스카프
+        - name: cool-mask
+          label: 쿨마스크
+        - name: cool-towel
+          label: 쿨타올
+        - name: sets
+          label: 세트상품
+    - name: summary
+      label: 한 줄 설명
+      type: text
+    - name: published
+      label: 홈페이지 공개
+      type: boolean
+      default: true
+    - name: featured
+      label: 메인 대표상품
+      type: boolean
+      default: false
+    - name: hero_image
+      label: 대표이미지
+      type: image
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: gallery
+      label: 상세이미지
+      type: image
+      description: 여러 장을 한 번에 선택할 수 있습니다.
+      options:
+        multiple:
+          max: 30
+        unique: true
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: features
+      label: 주요 특징
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: title
+        label: 특징 제목
         type: string
-        list: true
-        description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
-      - { name: set_packaging, label: 세트 포장 형태, type: string, description: '세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스' }
-      - { name: set_description, label: 세트 설명, type: text, description: '세트상품을 선택한 경우에만 작성하세요.' }
-      - name: set_image
-        label: 세트 이미지
-        type: image
-        description: 세트상품을 선택한 경우에만 등록하세요.
-        options:
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-
-      - name: products_all_season
-        label: 사계절제품
-        type: file
-        path: data/products/all-season.json
-        format: json
-        list: true
-        operations:
-          delete: false
-          rename: false
-        fields:
-          - name: id
-            label: 상품 ID
-            type: uuid
-            readonly: true
-            options:
-              editable: false
-          - { name: title, label: 상품명, type: string, required: true }
-          - name: category
-            label: 대분류
-            type: select
-            required: true
-            default: all-season
-            options:
-              values:
-                - { name: all-season, label: 사계절제품 }
-          - name: subcategory
-            label: 세부 품목
-            type: select
-            required: true
-            options:
-              values:
-            - { name: mat, label: 돗자리 }
-            - { name: premium-socks, label: 프리미엄 양말 }
-            - { name: buff, label: 버프(멀티스카프) }
-
-      - { name: summary, label: 한 줄 설명, type: text }
-      - { name: published, label: 홈페이지 공개, type: boolean, default: true }
-      - { name: featured, label: 메인 대표상품, type: boolean, default: false }
-      - name: hero_image
-        label: 대표이미지
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-      - name: gallery
-        label: 상세이미지
-        type: image
-        description: 여러 장을 한 번에 선택할 수 있습니다.
-        options:
-          multiple: { max: 30 }
-          unique: true
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-      - name: features
-        label: 주요 특징
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{title}"
-        fields:
-          - { name: title, label: 특징 제목, type: string }
-          - { name: description, label: 설명, type: text }
-      - { name: dimensions, label: 규격, type: string, description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요. }
-      - { name: material, label: 재질, type: string, description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요. }
-      - { name: colors, label: 색상, type: string }
-      - { name: default_order_quantity, label: 기본 주문수량, type: string, description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다. }
-      - { name: production_time, label: 제작기간, type: string }
-      - { name: print_method, label: 인쇄·제작 방식, type: text }
-      - { name: packaging, label: 포장 방식, type: text }
-      - name: set_type
-        label: 세트 유형
-        type: select
-        description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
-        options:
-          values:
-            - { name: set_product, label: 세트상품 }
-            - { name: set_available, label: 세트 구성 가능 }
-            - { name: set_unavailable, label: 세트 구성 불가 }
-      - { name: set_name, label: 세트 구성명, type: string, description: '세트상품을 선택한 경우에만 작성하세요.' }
-      - name: set_contents
-        label: 구성 제품
+      - name: description
+        label: 설명
+        type: text
+    - name: dimensions
+      label: 규격
+      type: string
+      description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+    - name: material
+      label: 재질
+      type: string
+      description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+    - name: colors
+      label: 색상
+      type: string
+    - name: default_order_quantity
+      label: 기본 주문수량
+      type: string
+      description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다.
+    - name: production_time
+      label: 제작기간
+      type: string
+    - name: print_method
+      label: 인쇄·제작 방식
+      type: text
+    - name: packaging
+      label: 포장 방식
+      type: text
+    - name: set_type
+      label: 세트 유형
+      type: select
+      description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
+      options:
+        values:
+        - name: set_product
+          label: 세트상품
+        - name: set_available
+          label: 세트 구성 가능
+        - name: set_unavailable
+          label: 세트 구성 불가
+    - name: set_name
+      label: 세트 구성명
+      type: string
+      description: 세트상품을 선택한 경우에만 작성하세요.
+    - name: set_contents
+      label: 구성 제품
+      type: string
+      list: true
+      description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
+    - name: set_packaging
+      label: 세트 포장 형태
+      type: string
+      description: 세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스
+    - name: set_description
+      label: 세트 설명
+      type: text
+      description: 세트상품을 선택한 경우에만 작성하세요.
+    - name: set_image
+      label: 세트 이미지
+      type: image
+      description: 세트상품을 선택한 경우에만 등록하세요.
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+  - name: products_all_season
+    label: 사계절제품
+    type: file
+    path: data/products/all-season.json
+    format: json
+    list: true
+    operations:
+      delete: false
+      rename: false
+    fields:
+    - name: id
+      label: 상품 ID
+      type: uuid
+      readonly: true
+      options:
+        editable: false
+    - name: title
+      label: 상품명
+      type: string
+      required: true
+    - name: category
+      label: 대분류
+      type: select
+      required: true
+      default: all-season
+      options:
+        values:
+        - name: all-season
+          label: 사계절제품
+    - name: subcategory
+      label: 세부 품목
+      type: select
+      required: true
+      options:
+        values:
+        - name: mat
+          label: 돗자리
+        - name: premium-socks
+          label: 프리미엄 양말
+        - name: buff
+          label: 버프(멀티스카프)
+    - name: summary
+      label: 한 줄 설명
+      type: text
+    - name: published
+      label: 홈페이지 공개
+      type: boolean
+      default: true
+    - name: featured
+      label: 메인 대표상품
+      type: boolean
+      default: false
+    - name: hero_image
+      label: 대표이미지
+      type: image
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: gallery
+      label: 상세이미지
+      type: image
+      description: 여러 장을 한 번에 선택할 수 있습니다.
+      options:
+        multiple:
+          max: 30
+        unique: true
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: features
+      label: 주요 특징
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: title
+        label: 특징 제목
         type: string
-        list: true
-        description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
-      - { name: set_packaging, label: 세트 포장 형태, type: string, description: '세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스' }
-      - { name: set_description, label: 세트 설명, type: text, description: '세트상품을 선택한 경우에만 작성하세요.' }
-      - name: set_image
-        label: 세트 이미지
-        type: image
-        description: 세트상품을 선택한 경우에만 등록하세요.
-        options:
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-
+      - name: description
+        label: 설명
+        type: text
+    - name: dimensions
+      label: 규격
+      type: string
+      description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+    - name: material
+      label: 재질
+      type: string
+      description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+    - name: colors
+      label: 색상
+      type: string
+    - name: default_order_quantity
+      label: 기본 주문수량
+      type: string
+      description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다.
+    - name: production_time
+      label: 제작기간
+      type: string
+    - name: print_method
+      label: 인쇄·제작 방식
+      type: text
+    - name: packaging
+      label: 포장 방식
+      type: text
+    - name: set_type
+      label: 세트 유형
+      type: select
+      description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
+      options:
+        values:
+        - name: set_product
+          label: 세트상품
+        - name: set_available
+          label: 세트 구성 가능
+        - name: set_unavailable
+          label: 세트 구성 불가
+    - name: set_name
+      label: 세트 구성명
+      type: string
+      description: 세트상품을 선택한 경우에만 작성하세요.
+    - name: set_contents
+      label: 구성 제품
+      type: string
+      list: true
+      description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
+    - name: set_packaging
+      label: 세트 포장 형태
+      type: string
+      description: 세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스
+    - name: set_description
+      label: 세트 설명
+      type: text
+      description: 세트상품을 선택한 경우에만 작성하세요.
+    - name: set_image
+      label: 세트 이미지
+      type: image
+      description: 세트상품을 선택한 경우에만 등록하세요.
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
