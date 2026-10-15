@@ -1,0 +1,122 @@
+[
+  {
+    "id": "magnifier",
+    "label": "돋보기명함",
+    "eyebrow": "MAGNIFIER CARD",
+    "desc": "용도에 맞는 형태의 돋보기명함을 확인하세요.",
+    "subs": [
+      {
+        "id": "business-card",
+        "label": "명함사이즈"
+      },
+      {
+        "id": "bookmark",
+        "label": "책갈피사이즈"
+      },
+      {
+        "id": "magnetic",
+        "label": "자석 돋보기"
+      }
+    ]
+  },
+  {
+    "id": "card-mirror",
+    "label": "카드거울",
+    "eyebrow": "CARD MIRROR",
+    "desc": "카드형 거울 제품을 확인하세요.",
+    "subs": [
+      {
+        "id": "standard",
+        "label": "카드거울"
+      },
+      {
+        "id": "small-qty",
+        "label": "소량제작 카드거울"
+      }
+    ]
+  },
+  {
+    "id": "winter",
+    "label": "겨울제품",
+    "eyebrow": "WINTER PRODUCTS",
+    "desc": "겨울철 활용도가 높은 방한 제품과 세트상품입니다.",
+    "subs": [
+      {
+        "id": "neckwarmer",
+        "label": "넥워머"
+      },
+      {
+        "id": "gloves",
+        "label": "장갑"
+      },
+      {
+        "id": "earmuffs",
+        "label": "귀마개"
+      },
+      {
+        "id": "blanket",
+        "label": "담요"
+      },
+      {
+        "id": "socks",
+        "label": "양말"
+      },
+      {
+        "id": "foot-warmer",
+        "label": "발토시"
+      },
+      {
+        "id": "sets",
+        "label": "세트상품"
+      }
+    ]
+  },
+  {
+    "id": "summer",
+    "label": "여름제품",
+    "eyebrow": "SUMMER PRODUCTS",
+    "desc": "여름철 활용 제품과 세트상품을 확인하세요.",
+    "subs": [
+      {
+        "id": "cool-arm-sleeves",
+        "label": "쿨토시"
+      },
+      {
+        "id": "cool-scarf",
+        "label": "쿨스카프"
+      },
+      {
+        "id": "cool-mask",
+        "label": "쿨마스크"
+      },
+      {
+        "id": "cool-towel",
+        "label": "쿨타올"
+      },
+      {
+        "id": "sets",
+        "label": "세트상품"
+      }
+    ]
+  },
+  {
+    "id": "all-season",
+    "label": "사계절제품",
+    "eyebrow": "ALL SEASON",
+    "desc": "계절에 관계없이 활용할 수 있는 제품입니다.",
+    "subs": [
+      {
+        "id": "mat",
+        "label": "돗자리"
+      },
+      {
+        "id": "premium-socks",
+        "label": "프리미엄 양말"
+      },
+      {
+        "id": "buff",
+        "label": "버프(멀티스카프)"
+      }
+    ]
+  }
+]
