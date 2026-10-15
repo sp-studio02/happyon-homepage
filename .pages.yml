@@ -76,6 +76,185 @@ content:
   - name: about_long
     label: 회사소개 본문
     type: text
+- name: home_category_management
+  label: 메인 카테고리 관리
+  type: group
+  items:
+  - name: home_category_magnifier
+    label: 돋보기명함
+    type: file
+    path: data/home-categories/magnifier.json
+    format: json
+    operations:
+      delete: false
+      rename: false
+    fields:
+    - name: image
+      label: 대표이미지
+      type: image
+      description: 메인 제품 카테고리 카드의 배경 이미지입니다.
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: top_text
+      label: 위쪽 작은 문구
+      type: string
+      description: 예) 01 또는 MAGNIFIER
+    - name: title
+      label: 큰 제목
+      type: string
+      required: true
+    - name: description
+      label: 설명
+      type: text
+    - name: link_text
+      label: 아래 링크 문구
+      type: string
+      description: 예) 제품 보기 →
+  - name: home_category_card_mirror
+    label: 카드거울
+    type: file
+    path: data/home-categories/card-mirror.json
+    format: json
+    operations:
+      delete: false
+      rename: false
+    fields:
+    - name: image
+      label: 대표이미지
+      type: image
+      description: 메인 제품 카테고리 카드의 배경 이미지입니다.
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: top_text
+      label: 위쪽 작은 문구
+      type: string
+      description: 예) 01 또는 MAGNIFIER
+    - name: title
+      label: 큰 제목
+      type: string
+      required: true
+    - name: description
+      label: 설명
+      type: text
+    - name: link_text
+      label: 아래 링크 문구
+      type: string
+      description: 예) 제품 보기 →
+  - name: home_category_winter
+    label: 겨울제품
+    type: file
+    path: data/home-categories/winter.json
+    format: json
+    operations:
+      delete: false
+      rename: false
+    fields:
+    - name: image
+      label: 대표이미지
+      type: image
+      description: 메인 제품 카테고리 카드의 배경 이미지입니다.
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: top_text
+      label: 위쪽 작은 문구
+      type: string
+      description: 예) 01 또는 MAGNIFIER
+    - name: title
+      label: 큰 제목
+      type: string
+      required: true
+    - name: description
+      label: 설명
+      type: text
+    - name: link_text
+      label: 아래 링크 문구
+      type: string
+      description: 예) 제품 보기 →
+  - name: home_category_summer
+    label: 여름제품
+    type: file
+    path: data/home-categories/summer.json
+    format: json
+    operations:
+      delete: false
+      rename: false
+    fields:
+    - name: image
+      label: 대표이미지
+      type: image
+      description: 메인 제품 카테고리 카드의 배경 이미지입니다.
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: top_text
+      label: 위쪽 작은 문구
+      type: string
+      description: 예) 01 또는 MAGNIFIER
+    - name: title
+      label: 큰 제목
+      type: string
+      required: true
+    - name: description
+      label: 설명
+      type: text
+    - name: link_text
+      label: 아래 링크 문구
+      type: string
+      description: 예) 제품 보기 →
+  - name: home_category_all_season
+    label: 사계절제품
+    type: file
+    path: data/home-categories/all-season.json
+    format: json
+    operations:
+      delete: false
+      rename: false
+    fields:
+    - name: image
+      label: 대표이미지
+      type: image
+      description: 메인 제품 카테고리 카드의 배경 이미지입니다.
+      options:
+        extensions:
+        - jpg
+        - jpeg
+        - png
+        - webp
+        rename: safe
+    - name: top_text
+      label: 위쪽 작은 문구
+      type: string
+      description: 예) 01 또는 MAGNIFIER
+    - name: title
+      label: 큰 제목
+      type: string
+      required: true
+    - name: description
+      label: 설명
+      type: text
+    - name: link_text
+      label: 아래 링크 문구
+      type: string
+      description: 예) 제품 보기 →
 - name: product_management
   label: 상품 관리
   type: group

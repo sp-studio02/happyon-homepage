@@ -6,4 +6,39 @@
 <section class="section"><div class="container about-grid"><div><div class="about-number"><small>ESTABLISHED</small><span data-site="established">2000</span></div></div><div class="about-copy"><p id="about-short"></p><p id="about-long"></p><a class="text-link" href="company.html">해피온 더 알아보기 →</a></div></div></section>
 <section class="section soft"><div class="container"><div class="section-head"><div><p class="eyebrow">FEATURED PRODUCTS</p><h2>주요 제품</h2></div></div><div class="product-grid" id="featured-products"></div></div></section>
 </main>
-<div id="site-footer"></div><script src="data/seed.js"></script><script src="assets/js/app.js"></script><script>(async()=>{const d=await H.load();H.headerFooter(d.site,'');document.getElementById('hero-title').innerHTML=H.esc(d.site.hero_title||'필요한 제품을, 목적에 맞게.').replace(/, /,',<br>');document.getElementById('hero-desc').textContent=d.site.hero_description||'';document.getElementById('about-short').textContent=d.site.about_short||'';document.getElementById('about-long').textContent=d.site.about_long||'';const cg=document.getElementById('home-categories');cg.innerHTML=d.categories.map((c,i)=>`<a class="category-card" href="category.html?category=${encodeURIComponent(c.id)}"><span class="index">0${i+1}</span><div><h3>${H.esc(c.label)}</h3><p>${H.esc(c.desc)}</p><div class="arrow">→</div></div></a>`).join('');const fp=d.products.filter(p=>p.published!==false&&p.featured).slice(0,6);document.getElementById('featured-products').innerHTML=fp.map(H.productCard).join('')||'<div class="empty">대표 제품을 관리자에서 지정해 주세요.</div>';})();</script></body></html>
+<div id="site-footer"></div><script src="data/seed.js"></script><script src="assets/js/app.js"></script><script>(async()=>{const d=await H.load();H.headerFooter(d.site,'');document.getElementById('hero-title').innerHTML=H.esc(d.site.hero_title||'필요한 제품을, 목적에 맞게.').replace(/, /,',<br>');document.getElementById('hero-desc').textContent=d.site.hero_description||'';document.getElementById('about-short').textContent=d.site.about_short||'';document.getElementById('about-long').textContent=d.site.about_long||'';const cg=document.getElementById('home-categories');
+const homeCardIds=['magnifier','card-mirror','winter','summer','all-season'];
+const homeCards=await Promise.all(homeCardIds.map(async(id,i)=>{
+  const fallbackCat=d.categories.find(c=>c.id===id)||{};
+  const fallback={
+    top_text:String(i+1).padStart(2,'0'),
+    title:fallbackCat.label||'',
+    description:fallbackCat.desc||'',
+    link_text:'제품 보기 →',
+    image:''
+  };
+  try{
+    const r=await fetch(`data/home-categories/${id}.json?ts=${Date.now()}`,{cache:'no-store'});
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    return {id,...fallback,...await r.json()};
+  }catch(e){
+    return {id,...fallback};
+  }
+}));
+cg.innerHTML=homeCards.map(c=>{
+  const image=c.image
+    ? `<img class="home-category-image" src="${H.esc(c.image.replace(/^\//,''))}" alt="${H.esc(c.title)}">`
+    : '';
+  return `<a class="home-category-card ${c.image?'has-image':'no-image'}" href="category.html?category=${encodeURIComponent(c.id)}">
+    ${image}
+    <div class="home-category-shade"></div>
+    <div class="home-category-content">
+      <span class="home-category-top">${H.esc(c.top_text||'')}</span>
+      <div class="home-category-bottom">
+        <h3>${H.esc(c.title||'')}</h3>
+        <p>${H.esc(c.description||'')}</p>
+        <span class="home-category-link">${H.esc(c.link_text||'제품 보기 →')}</span>
+      </div>
+    </div>
+  </a>`;
+}).join('');const fp=d.products.filter(p=>p.published!==false&&p.featured).slice(0,6);document.getElementById('featured-products').innerHTML=fp.map(H.productCard).join('')||'<div class="empty">대표 제품을 관리자에서 지정해 주세요.</div>';})();</script></body></html>
