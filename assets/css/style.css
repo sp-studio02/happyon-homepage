@@ -87,3 +87,100 @@
   pointer-events:none;
   opacity:.58;
 }
+
+
+/* Homepage admin-editable category image cards */
+#home-categories.category-grid{
+  grid-template-columns:repeat(5,1fr);
+}
+.home-category-card{
+  position:relative;
+  min-height:320px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:#eee8e5;
+  display:block;
+  color:#fff;
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+.home-category-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+}
+.home-category-image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .35s ease;
+}
+.home-category-card:hover .home-category-image{
+  transform:scale(1.035);
+}
+.home-category-shade{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom,rgba(18,13,12,.08) 15%,rgba(18,13,12,.16) 42%,rgba(18,13,12,.82) 100%);
+}
+.home-category-content{
+  position:relative;
+  z-index:2;
+  min-height:320px;
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.home-category-top{
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.06em;
+  color:#fff;
+}
+.home-category-bottom h3{
+  margin:0 0 9px;
+  font-size:23px;
+  line-height:1.2;
+  letter-spacing:-.04em;
+  color:#fff;
+}
+.home-category-bottom p{
+  margin:0;
+  font-size:13px;
+  line-height:1.65;
+  color:rgba(255,255,255,.84);
+}
+.home-category-link{
+  display:block;
+  margin-top:20px;
+  font-size:13px;
+  font-weight:800;
+  color:#fff;
+}
+.home-category-card.no-image{
+  color:var(--text);
+  background:#fff;
+}
+.home-category-card.no-image .home-category-shade{
+  display:none;
+}
+.home-category-card.no-image .home-category-top{
+  color:var(--accent);
+}
+.home-category-card.no-image .home-category-bottom h3,
+.home-category-card.no-image .home-category-link{
+  color:var(--text);
+}
+.home-category-card.no-image .home-category-bottom p{
+  color:var(--muted);
+}
+
+@media(max-width:980px){
+  #home-categories.category-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:720px){
+  #home-categories.category-grid{grid-template-columns:1fr}
+  .home-category-card,
+  .home-category-content{min-height:300px}
+}
