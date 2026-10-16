@@ -51,14 +51,12 @@
   </div>
 
   <div class="hero-carousel-controls" aria-label="메인 슬라이드">
-    <button class="hero-arrow" id="hero-prev" type="button" aria-label="이전 슬라이드">←</button>
     <div class="hero-dots" id="hero-dots">
       <button class="hero-dot active" type="button" data-go="0" aria-label="1페이지"></button>
       <button class="hero-dot" type="button" data-go="1" aria-label="2페이지"></button>
       <button class="hero-dot" type="button" data-go="2" aria-label="3페이지"></button>
       <button class="hero-dot" type="button" data-go="3" aria-label="4페이지"></button>
     </div>
-    <button class="hero-arrow" id="hero-next" type="button" aria-label="다음 슬라이드">→</button>
   </div>
 </section>
 <section class="trust"><div class="container trust-grid"><div class="trust-item"><strong>SINCE 2000</strong><span>2000년 설립</span></div><div class="trust-item"><strong>ORDER MADE</strong><span>전 제품 주문제작</span></div><div class="trust-item"><strong>SEASON</strong><span>겨울·여름·사계절 제품</span></div><div class="trust-item"><strong>SET PACKAGE</strong><span>지퍼백·복주머니·종이케이스 세트</span></div></div></section>
@@ -133,11 +131,10 @@ const startHero=()=>{
   clearInterval(heroTimer);
   heroTimer=setInterval(()=>showHero(heroIndex+1),5000);
 };
-document.getElementById('hero-prev').addEventListener('click',()=>{showHero(heroIndex-1);startHero();});
-document.getElementById('hero-next').addEventListener('click',()=>{showHero(heroIndex+1);startHero();});
-dots.forEach(dot=>dot.addEventListener('click',()=>{showHero(Number(dot.dataset.go));startHero();}));
-hero.addEventListener('mouseenter',()=>clearInterval(heroTimer));
-hero.addEventListener('mouseleave',startHero);
+dots.forEach(dot=>dot.addEventListener('click',()=>{
+  showHero(Number(dot.dataset.go));
+  startHero();
+}));
 showHero(0);
 startHero();
 
