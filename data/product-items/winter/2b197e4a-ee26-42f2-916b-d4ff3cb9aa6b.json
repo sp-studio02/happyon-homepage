@@ -1,0 +1,25 @@
+{
+  "id": "2b197e4a-ee26-42f2-916b-d4ff3cb9aa6b",
+  "title": "레포마 웜가드 넥워머",
+  "category": "winter",
+  "subcategory": "neckwarmer",
+  "summary": "안쪽 전체 기모 / 버클 조절 / 가성비 최고 넥워머입니다.",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/file-14.jpg",
+  "gallery": [
+    "assets/uploads/file-15.jpg"
+  ],
+  "dimensions": "25x30cm",
+  "material": "폴리",
+  "colors": "블랙, 그레이",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "1도 실크인쇄 별도",
+  "packaging": "기본 opp개별포장",
+  "set_type": "set_available",
+  "related_set_products": [
+    "ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2"
+  ]
+}

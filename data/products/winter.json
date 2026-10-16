@@ -1,19 +1,5 @@
 [
   {
-    "id": "ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2",
-    "title": "레포마 추위대비 2종 A세트(넥워머+방한장갑)",
-    "category": "winter",
-    "subcategory": "sets",
-    "published": true,
-    "featured": true,
-    "home_slide_order": "1",
-    "hero_image": "assets/uploads/2a.jpg",
-    "gallery": [
-      "assets/uploads/2a-1.jpg"
-    ],
-    "set_type": "set_available"
-  },
-  {
     "id": "2b197e4a-ee26-42f2-916b-d4ff3cb9aa6b",
     "title": "레포마 웜가드 넥워머",
     "category": "winter",
@@ -37,5 +23,19 @@
     "related_set_products": [
       "ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2"
     ]
+  },
+  {
+    "id": "ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2",
+    "title": "레포마 추위대비 2종 A세트(넥워머+방한장갑)",
+    "category": "winter",
+    "subcategory": "sets",
+    "published": true,
+    "featured": true,
+    "home_slide_order": "1",
+    "hero_image": "assets/uploads/2a.jpg",
+    "gallery": [
+      "assets/uploads/2a-1.jpg"
+    ],
+    "set_type": "set_available"
   }
 ]

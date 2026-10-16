@@ -22,28 +22,6 @@
     "set_type": "set_unavailable"
   },
   {
-    "id": "510718e1-c2e5-439d-9e48-3a5a95ad0540",
-    "title": "책갈피 돋보기명함",
-    "category": "magnifier",
-    "subcategory": "bookmark",
-    "summary": "기존 돋보기명함 보다 더욱 큰 사이즈로 시원시원하게!",
-    "published": true,
-    "featured": false,
-    "home_slide_page2": false,
-    "hero_image": "assets/uploads/file-8.jpg",
-    "gallery": [
-      "assets/uploads/completeimgfileparruwdo-1.jpg"
-    ],
-    "dimensions": "75x110cm",
-    "material": "프리넬렌즈",
-    "colors": "풀 컬러인쇄",
-    "default_order_quantity": "1,000개",
-    "production_time": "약 일주일",
-    "print_method": "UV옵셋인쇄",
-    "packaging": "기본 개별 opp포장",
-    "set_type": "set_unavailable"
-  },
-  {
     "id": "d22843bd-6ee3-47f5-9fa9-b3a09b8d3b80",
     "title": "자석 돋보기명함",
     "category": "magnifier",
@@ -63,6 +41,28 @@
     "production_time": "약 일주일",
     "print_method": "UV 옵셋인쇄",
     "packaging": "기본 opp개별 포장",
+    "set_type": "set_unavailable"
+  },
+  {
+    "id": "510718e1-c2e5-439d-9e48-3a5a95ad0540",
+    "title": "책갈피 돋보기명함",
+    "category": "magnifier",
+    "subcategory": "bookmark",
+    "summary": "기존 돋보기명함 보다 더욱 큰 사이즈로 시원시원하게!",
+    "published": true,
+    "featured": false,
+    "home_slide_page2": false,
+    "hero_image": "assets/uploads/file-8.jpg",
+    "gallery": [
+      "assets/uploads/completeimgfileparruwdo-1.jpg"
+    ],
+    "dimensions": "75x110cm",
+    "material": "프리넬렌즈",
+    "colors": "풀 컬러인쇄",
+    "default_order_quantity": "1,000개",
+    "production_time": "약 일주일",
+    "print_method": "UV옵셋인쇄",
+    "packaging": "기본 개별 opp포장",
     "set_type": "set_unavailable"
   }
 ]

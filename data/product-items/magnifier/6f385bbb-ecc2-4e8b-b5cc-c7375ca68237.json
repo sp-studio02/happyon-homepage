@@ -1,0 +1,22 @@
+{
+  "id": "6f385bbb-ecc2-4e8b-b5cc-c7375ca68237",
+  "title": "돋보기 명함",
+  "category": "magnifier",
+  "subcategory": "business-card",
+  "summary": "명함사이즈 돋보기명함입니다.",
+  "published": true,
+  "featured": true,
+  "home_slide_page2": true,
+  "hero_image": "assets/uploads/file-6.jpg",
+  "gallery": [
+    "assets/uploads/file-7.jpg"
+  ],
+  "dimensions": "85x53mm",
+  "material": "프리넬렌즈",
+  "colors": "풀컬러인쇄 가능",
+  "default_order_quantity": "1,000개",
+  "production_time": "약 일주일",
+  "print_method": "UV옵셋인쇄",
+  "packaging": "기본 opp개별포장",
+  "set_type": "set_unavailable"
+}

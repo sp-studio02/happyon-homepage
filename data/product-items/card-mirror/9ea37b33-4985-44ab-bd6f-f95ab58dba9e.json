@@ -1,0 +1,22 @@
+{
+  "id": "9ea37b33-4985-44ab-bd6f-f95ab58dba9e",
+  "title": "카드거울",
+  "category": "card-mirror",
+  "subcategory": "standard",
+  "summary": "앞면 아크릴 거울, 뒷면 풀컬러 인쇄로 명함, 판촉물 등 유용하게 사용 가능합니다.",
+  "published": true,
+  "featured": true,
+  "home_slide_page2": true,
+  "hero_image": "assets/uploads/2.jpg",
+  "gallery": [
+    "assets/uploads/file-11.jpg"
+  ],
+  "dimensions": "85x53mm",
+  "material": "아크릴 거울",
+  "colors": "풀컬러인쇄 가능",
+  "default_order_quantity": "500개",
+  "production_time": "약 일주일",
+  "print_method": "UV 옵셋 인쇄",
+  "packaging": "기본 opp개별포장",
+  "set_type": "set_unavailable"
+}
