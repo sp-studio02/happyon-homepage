@@ -26,6 +26,28 @@
     "display_order": 1
   },
   {
+    "id": "ad649ce1-5e92-433f-aeae-7d2917c65907",
+    "title": "투톤 리버시블 넥워머",
+    "display_order": 2,
+    "category": "winter",
+    "subcategory": "neckwarmer",
+    "summary": "2가지 연출이 가능한 활용도 높은 리버시블",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-16.jpg",
+    "gallery": [
+      "assets/uploads/file-17.jpg"
+    ],
+    "dimensions": "27x28cm",
+    "material": "폴리에스터95%, 폴리우레탄5%",
+    "colors": "블랙&레드, 그레이&레드, 카키&그레이",
+    "default_order_quantity": "100개",
+    "production_time": "약4~5일",
+    "print_method": "1도 실크인쇄 별도",
+    "packaging": "기본 opp 개별포장"
+  },
+  {
     "id": "ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2",
     "title": "레포마 추위대비 2종 A세트(넥워머+방한장갑)",
     "category": "winter",
