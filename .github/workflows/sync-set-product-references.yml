@@ -1,0 +1,88 @@
+name: Sync set product references
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/products/**"
+      - ".pages.yml"
+      - ".github/workflows/sync-set-product-references.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build set product reference files
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          source_dir = Path("data/products")
+          out_dir = Path("data/set-product-references")
+          out_dir.mkdir(parents=True, exist_ok=True)
+
+          # Remove only generated JSON files. Keep README.md.
+          for f in out_dir.glob("*.json"):
+              f.unlink()
+
+          products = []
+          for name in ["magnifier.json", "card-mirror.json", "winter.json", "summer.json", "all-season.json"]:
+              path = source_dir / name
+              if not path.exists():
+                  continue
+              try:
+                  data = json.loads(path.read_text(encoding="utf-8"))
+              except Exception:
+                  continue
+              if isinstance(data, list):
+                  products.extend(data)
+
+          set_products = [
+              p for p in products
+              if isinstance(p, dict)
+              and p.get("id")
+              and p.get("set_type") == "set_product"
+              and p.get("published", True) is not False
+          ]
+
+          for p in set_products:
+              safe_id = re.sub(r"[^A-Za-z0-9_-]+", "-", str(p["id"])).strip("-") or "set-product"
+              ref = {
+                  "id": str(p.get("id", "")),
+                  "title": p.get("title", ""),
+                  "category": p.get("category", ""),
+                  "subcategory": p.get("subcategory", ""),
+                  "hero_image": p.get("hero_image", ""),
+                  "summary": p.get("summary", ""),
+              }
+              (out_dir / f"{safe_id}.json").write_text(
+                  json.dumps(ref, ensure_ascii=False, indent=2) + "\n",
+                  encoding="utf-8"
+              )
+
+          print(f"Synced {len(set_products)} set products.")
+          PY
+
+      - name: Commit generated reference files
+        shell: bash
+        run: |
+          if git diff --quiet -- data/set-product-references; then
+            echo "No reference changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/set-product-references
+          git commit -m "Sync set product references"
+          git push
