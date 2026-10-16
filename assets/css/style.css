@@ -653,3 +653,144 @@
     aspect-ratio:1/1;
   }
 }
+
+
+/* Shop-style major / sub category navigation */
+.shop-category-bar{
+  position:relative;
+  z-index:60;
+  height:52px;
+  background:#111;
+  border-top:1px solid #111;
+}
+
+.shop-category-inner{
+  height:52px;
+}
+
+.shop-category-nav{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  height:52px;
+}
+
+.shop-category-item{
+  position:relative;
+  min-width:0;
+}
+
+.shop-category-main{
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 16px;
+  color:#fff;
+  font-size:14px;
+  font-weight:750;
+  letter-spacing:-.02em;
+  white-space:nowrap;
+  transition:background .18s ease,color .18s ease;
+}
+
+.shop-category-item:hover .shop-category-main,
+.shop-category-item.active .shop-category-main{
+  background:#292323;
+  color:#ff5a69;
+}
+
+.shop-category-dropdown{
+  position:absolute;
+  top:100%;
+  left:0;
+  width:100%;
+  min-width:190px;
+  padding:10px 0;
+  background:#fff;
+  border:1px solid var(--line);
+  border-top:0;
+  box-shadow:0 18px 36px rgba(25,18,17,.14);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(7px);
+  transition:opacity .16s ease,transform .16s ease,visibility .16s ease;
+  z-index:100;
+}
+
+.shop-category-item:hover .shop-category-dropdown,
+.shop-category-item:focus-within .shop-category-dropdown{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+.shop-category-dropdown a{
+  display:block;
+  padding:11px 18px;
+  color:var(--text);
+  font-size:13px;
+  font-weight:600;
+  line-height:1.35;
+  background:#fff;
+  transition:background .15s ease,color .15s ease,padding .15s ease;
+}
+
+.shop-category-dropdown a:hover{
+  padding-left:22px;
+  background:var(--soft);
+  color:var(--accent);
+}
+
+/* 카테고리 바가 추가된 뒤 메인 슬라이드 내부 여백을 균형 있게 조정 */
+.hero-slide{
+  padding-top:66px;
+  padding-bottom:70px;
+}
+
+/* Mobile: hover dropdown 대신 대카테고리를 가로 스크롤로 사용 */
+@media(max-width:720px){
+  .site-header{
+    position:sticky;
+    top:0;
+  }
+
+  .shop-category-bar,
+  .shop-category-inner{
+    height:46px;
+  }
+
+  .shop-category-inner{
+    width:100%;
+  }
+
+  .shop-category-nav{
+    display:flex;
+    height:46px;
+    overflow-x:auto;
+    scrollbar-width:none;
+    padding:0 14px;
+  }
+
+  .shop-category-nav::-webkit-scrollbar{
+    display:none;
+  }
+
+  .shop-category-item{
+    flex:0 0 auto;
+  }
+
+  .shop-category-main{
+    height:46px;
+    padding:0 16px;
+    font-size:13px;
+  }
+
+  .shop-category-dropdown{
+    display:none;
+  }
+
+  .hero-slide{
+    padding-top:54px;
+    padding-bottom:76px;
+  }
+}
