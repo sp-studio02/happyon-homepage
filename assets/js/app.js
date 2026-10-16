@@ -66,7 +66,53 @@ const H = (() => {
   function setupMenu(){const b=document.querySelector('.mobile-menu'), n=document.querySelector('.main-nav');if(b&&n)b.addEventListener('click',()=>n.classList.toggle('open'))}
   function headerFooter(site, active=''){
     const header=document.querySelector('#site-header');
-    if(header) header.innerHTML=`<header class="site-header"><div class="container header-inner"><a class="brand" href="${BASE}index.html"><img data-site-logo src="${BASE}assets/images/logo.png" alt="HAPPYON"></a><button class="mobile-menu" aria-label="메뉴">☰</button><nav class="main-nav"><a class="${active==='company'?'active':''}" href="${BASE}company.html">회사소개</a><a class="${active==='products'?'active':''}" href="${BASE}products.html">제품소개</a><a class="${active==='guide'?'active':''}" href="${BASE}guide.html">제작안내</a><a class="${active==='contact'?'active':''}" href="${BASE}contact.html">문의하기</a></nav></div></header>`;
+
+    // 쇼핑몰형 제품 카테고리 메뉴
+    const categories=(cache&&cache.categories)||[];
+    const products=(cache&&cache.products)||[];
+    const currentCategory=new URLSearchParams(location.search).get('category')||'';
+
+    const subHref=(categoryId,subId)=>{
+      const matched=products.filter(p=>
+        p &&
+        p.published!==false &&
+        p.category===categoryId &&
+        p.subcategory===subId
+      );
+      if(matched.length===1){
+        return `${BASE}product.html?id=${encodeURIComponent(matched[0].id)}`;
+      }
+      return `${BASE}category.html?category=${encodeURIComponent(categoryId)}&sub=${encodeURIComponent(subId)}`;
+    };
+
+    const categoryNav=categories.map(c=>{
+      const subs=(c.subs||[]).map(s=>
+        `<a href="${subHref(c.id,s.id)}">${esc(s.label)}</a>`
+      ).join('');
+      return `<div class="shop-category-item ${currentCategory===c.id?'active':''}">
+        <a class="shop-category-main" href="${BASE}category.html?category=${encodeURIComponent(c.id)}">${esc(c.label)}</a>
+        ${subs?`<div class="shop-category-dropdown">${subs}</div>`:''}
+      </div>`;
+    }).join('');
+
+    if(header) header.innerHTML=`<header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="${BASE}index.html"><img data-site-logo src="${BASE}assets/images/logo.png" alt="HAPPYON"></a>
+        <button class="mobile-menu" aria-label="메뉴">☰</button>
+        <nav class="main-nav">
+          <a class="${active==='company'?'active':''}" href="${BASE}company.html">회사소개</a>
+          <a class="${active==='products'?'active':''}" href="${BASE}products.html">제품소개</a>
+          <a class="${active==='guide'?'active':''}" href="${BASE}guide.html">제작안내</a>
+          <a class="${active==='contact'?'active':''}" href="${BASE}contact.html">문의하기</a>
+        </nav>
+      </div>
+      <div class="shop-category-bar">
+        <div class="container shop-category-inner">
+          <nav class="shop-category-nav" aria-label="제품 카테고리">${categoryNav}</nav>
+        </div>
+      </div>
+    </header>`;
+
     const footer=document.querySelector('#site-footer');
     if(footer) footer.innerHTML=`<footer class="site-footer"><div class="container footer-grid"><a href="${BASE}index.html"><img class="footer-logo" data-site-logo src="${BASE}assets/images/logo.png" alt="HAPPYON"></a><div class="footer-info"><strong>${esc(site.company_name||'해피온')}</strong><br>대표 ${esc(site.ceo||'')} · 사업자등록번호 ${esc(site.business_number||'')}<br>${esc(site.address||'')}<br>TEL. ${esc(site.phone||'')} · FAX. ${esc(site.fax||'')} · E-mail. ${esc(site.email||'')}</div><div class="copyright">© ${new Date().getFullYear()} ${esc(site.company_name_en||'HAPPYON')}<br>All Rights Reserved.</div></div></footer>`;
     fillSite(site);setupMenu();
