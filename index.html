@@ -129,7 +129,7 @@ const showHero=(idx)=>{
 };
 const startHero=()=>{
   clearInterval(heroTimer);
-  heroTimer=setInterval(()=>showHero(heroIndex+1),5000);
+  heroTimer=setInterval(()=>showHero(heroIndex+1),3000);
 };
 dots.forEach(dot=>dot.addEventListener('click',()=>{
   showHero(Number(dot.dataset.go));
