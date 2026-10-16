@@ -261,13 +261,13 @@ content:
   items:
   - name: products_magnifier
     label: 돋보기명함
-    type: file
-    path: data/products/magnifier.json
+    type: collection
+    path: data/product-items/magnifier
     format: json
-    list: true
     operations:
-      delete: false
+      create: true
       rename: false
+      delete: true
     fields:
     - name: id
       label: 상품 ID
@@ -427,15 +427,32 @@ content:
         - png
         - webp
         rename: safe
+    filename:
+      template: '{fields.id}.json'
+      field: false
+    view:
+      primary: title
+      fields:
+      - title
+      - subcategory
+      - published
+      search:
+      - title
+      - subcategory
+      sort:
+      - title
+      default:
+        sort: title
+        order: asc
   - name: products_card_mirror
     label: 카드거울
-    type: file
-    path: data/products/card-mirror.json
+    type: collection
+    path: data/product-items/card-mirror
     format: json
-    list: true
     operations:
-      delete: false
+      create: true
       rename: false
+      delete: true
     fields:
     - name: id
       label: 상품 ID
@@ -593,15 +610,32 @@ content:
         - png
         - webp
         rename: safe
+    filename:
+      template: '{fields.id}.json'
+      field: false
+    view:
+      primary: title
+      fields:
+      - title
+      - subcategory
+      - published
+      search:
+      - title
+      - subcategory
+      sort:
+      - title
+      default:
+        sort: title
+        order: asc
   - name: products_winter
     label: 겨울제품
-    type: file
-    path: data/products/winter.json
+    type: collection
+    path: data/product-items/winter
     format: json
-    list: true
     operations:
-      delete: false
+      create: true
       rename: false
+      delete: true
     fields:
     - name: id
       label: 상품 ID
@@ -779,15 +813,32 @@ content:
         - png
         - webp
         rename: safe
+    filename:
+      template: '{fields.id}.json'
+      field: false
+    view:
+      primary: title
+      fields:
+      - title
+      - subcategory
+      - published
+      search:
+      - title
+      - subcategory
+      sort:
+      - title
+      default:
+        sort: title
+        order: asc
   - name: products_summer
     label: 여름제품
-    type: file
-    path: data/products/summer.json
+    type: collection
+    path: data/product-items/summer
     format: json
-    list: true
     operations:
-      delete: false
+      create: true
       rename: false
+      delete: true
     fields:
     - name: id
       label: 상품 ID
@@ -961,15 +1012,32 @@ content:
         - png
         - webp
         rename: safe
+    filename:
+      template: '{fields.id}.json'
+      field: false
+    view:
+      primary: title
+      fields:
+      - title
+      - subcategory
+      - published
+      search:
+      - title
+      - subcategory
+      sort:
+      - title
+      default:
+        sort: title
+        order: asc
   - name: products_all_season
     label: 사계절제품
-    type: file
-    path: data/products/all-season.json
+    type: collection
+    path: data/product-items/all-season
     format: json
-    list: true
     operations:
-      delete: false
+      create: true
       rename: false
+      delete: true
     fields:
     - name: id
       label: 상품 ID
@@ -1124,3 +1192,20 @@ content:
         - png
         - webp
         rename: safe
+    filename:
+      template: '{fields.id}.json'
+      field: false
+    view:
+      primary: title
+      fields:
+      - title
+      - subcategory
+      - published
+      search:
+      - title
+      - subcategory
+      sort:
+      - title
+      default:
+        sort: title
+        order: asc
