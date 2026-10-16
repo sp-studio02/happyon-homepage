@@ -255,6 +255,47 @@ content:
       label: 아래 링크 문구
       type: string
       description: 예) 제품 보기 →
+- name: set_product_refs
+  label: 세트상품 연결목록 (자동)
+  type: collection
+  path: data/set-product-references
+  format: json
+  exclude:
+  - README.md
+  operations:
+    create: false
+    rename: false
+    delete: false
+  view:
+    primary: title
+    fields:
+    - title
+    - category
+  fields:
+  - name: id
+    label: 상품 ID
+    type: string
+    readonly: true
+  - name: title
+    label: 세트상품명
+    type: string
+    readonly: true
+  - name: category
+    label: 대분류
+    type: string
+    readonly: true
+  - name: subcategory
+    label: 세부 품목
+    type: string
+    readonly: true
+  - name: hero_image
+    label: 대표이미지
+    type: string
+    readonly: true
+  - name: summary
+    label: 한 줄 설명
+    type: text
+    readonly: true
 - name: product_management
   label: 상품 관리
   type: group
@@ -390,6 +431,17 @@ content:
           label: 세트 구성 가능
         - name: set_unavailable
           label: 세트 구성 불가
+    - name: related_set_products
+      label: 관련 세트상품
+      type: reference
+      description: 이미 등록된 세트상품 중 상세페이지에 보여줄 상품을 여러 개 선택하세요.
+      options: &id001
+        collection: set_product_refs
+        multiple: true
+        max: 12
+        search: title,category
+        value: '{fields.id}'
+        label: '{fields.title}'
     - name: set_name
       label: 세트 구성명
       type: string
@@ -547,6 +599,11 @@ content:
           label: 세트 구성 가능
         - name: set_unavailable
           label: 세트 구성 불가
+    - name: related_set_products
+      label: 관련 세트상품
+      type: reference
+      description: 이미 등록된 세트상품 중 상세페이지에 보여줄 상품을 여러 개 선택하세요.
+      options: *id001
     - name: set_name
       label: 세트 구성명
       type: string
@@ -724,6 +781,11 @@ content:
           label: 세트 구성 가능
         - name: set_unavailable
           label: 세트 구성 불가
+    - name: related_set_products
+      label: 관련 세트상품
+      type: reference
+      description: 이미 등록된 세트상품 중 상세페이지에 보여줄 상품을 여러 개 선택하세요.
+      options: *id001
     - name: set_name
       label: 세트 구성명
       type: string
@@ -897,6 +959,11 @@ content:
           label: 세트 구성 가능
         - name: set_unavailable
           label: 세트 구성 불가
+    - name: related_set_products
+      label: 관련 세트상품
+      type: reference
+      description: 이미 등록된 세트상품 중 상세페이지에 보여줄 상품을 여러 개 선택하세요.
+      options: *id001
     - name: set_name
       label: 세트 구성명
       type: string
@@ -1051,6 +1118,11 @@ content:
           label: 세트 구성 가능
         - name: set_unavailable
           label: 세트 구성 불가
+    - name: related_set_products
+      label: 관련 세트상품
+      type: reference
+      description: 이미 등록된 세트상품 중 상세페이지에 보여줄 상품을 여러 개 선택하세요.
+      options: *id001
     - name: set_name
       label: 세트 구성명
       type: string
