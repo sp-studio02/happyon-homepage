@@ -1,0 +1,152 @@
+name: Sync set product options
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/products/**"
+      - ".github/workflows/sync-set-product-references.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install YAML library
+        run: python -m pip install pyyaml
+
+      - name: Update Pages CMS set product choices
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import copy
+          from pathlib import Path
+          import yaml
+
+          pages_path = Path(".pages.yml")
+          products_dir = Path("data/products")
+
+          config = yaml.safe_load(pages_path.read_text(encoding="utf-8"))
+
+          products = []
+          for path in sorted(products_dir.glob("*.json")):
+              try:
+                  data = json.loads(path.read_text(encoding="utf-8"))
+              except Exception as e:
+                  print(f"Skip {path}: {e}")
+                  continue
+
+              if isinstance(data, list):
+                  products.extend(x for x in data if isinstance(x, dict))
+              elif isinstance(data, dict):
+                  for key in ("products", "items", "data"):
+                      value = data.get(key)
+                      if isinstance(value, list):
+                          products.extend(x for x in value if isinstance(x, dict))
+                          break
+
+          def norm(value):
+              return str(value or "").strip().lower().replace(" ", "").replace("-", "_")
+
+          def is_set_product(p):
+              return (
+                  norm(p.get("set_type")) in {"set_product", "setproduct", "세트상품"}
+                  or norm(p.get("subcategory")) in {"sets", "set", "set_product", "setproduct", "세트상품"}
+              )
+
+          set_products = [
+              p for p in products
+              if p.get("id")
+              and p.get("published", True) is not False
+              and is_set_product(p)
+          ]
+
+          # Stable, readable dropdown order.
+          set_products.sort(key=lambda p: (str(p.get("category", "")), str(p.get("title", ""))))
+
+          values = [
+              {
+                  "name": str(p["id"]),
+                  "label": str(p.get("title") or p["id"])
+              }
+              for p in set_products
+          ]
+
+          # Remove the no-longer-used automatic reference collection if it still exists.
+          config["content"] = [
+              x for x in config.get("content", [])
+              if x.get("name") != "set_product_refs"
+          ]
+
+          group = next(
+              (x for x in config.get("content", []) if x.get("name") == "product_management"),
+              None
+          )
+          if not group:
+              raise SystemExit("product_management group not found")
+
+          changed_fields = 0
+
+          for item in group.get("items", []):
+              for field in item.get("fields", []):
+                  if field.get("name") != "related_set_products":
+                      continue
+
+                  field.clear()
+                  field.update({
+                      "name": "related_set_products",
+                      "label": "관련 세트상품",
+                      "type": "select",
+                      "description": "이미 등록된 세트상품 중 상세페이지에 보여줄 상품을 여러 개 선택하세요.",
+                      "options": {
+                          "multiple": True,
+                          "values": copy.deepcopy(values)
+                      }
+                  })
+                  changed_fields += 1
+
+          class NoAliasDumper(yaml.SafeDumper):
+              def ignore_aliases(self, data):
+                  return True
+
+          pages_path.write_text(
+              yaml.dump(
+                  config,
+                  Dumper=NoAliasDumper,
+                  allow_unicode=True,
+                  sort_keys=False,
+                  width=120
+              ),
+              encoding="utf-8"
+          )
+
+          print(f"Found {len(products)} products total.")
+          print(f"Found {len(set_products)} set products.")
+          print(f"Updated {changed_fields} related-set fields.")
+          for p in set_products:
+              print(" -", p.get("title"), "|", p.get("id"))
+          PY
+
+      - name: Commit updated Pages CMS choices
+        shell: bash
+        run: |
+          git add .pages.yml
+
+          if git diff --cached --quiet; then
+            echo "No option changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync set product options"
+          git push
