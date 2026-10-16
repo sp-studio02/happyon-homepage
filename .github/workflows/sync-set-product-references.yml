@@ -41,7 +41,6 @@ jobs:
               if isinstance(data, list):
                   products.extend(x for x in data if isinstance(x, dict))
               elif isinstance(data, dict):
-                  # 혹시 파일 구조가 {products:[...]} 같은 형태여도 대응
                   for key in ("products", "items", "data"):
                       value = data.get(key)
                       if isinstance(value, list):
@@ -63,14 +62,10 @@ jobs:
               set_type = norm(p.get("set_type"))
               subcategory = norm(p.get("subcategory"))
 
-              # 1) 세트 유형이 세트상품인 경우
               if set_type in {"set_product", "setproduct", "세트상품"}:
                   return True
 
-              # 2) 세부 품목 자체가 '세트상품' 카테고리인 경우
-              if subcategory in {
-                  "sets", "set", "set_product", "setproduct", "세트상품"
-              }:
+              if subcategory in {"sets", "set", "set_product", "setproduct", "세트상품"}:
                   return True
 
               return False
@@ -109,12 +104,14 @@ jobs:
       - name: Commit generated reference files
         shell: bash
         run: |
-          if git diff --quiet -- data/set-product-references; then
+          git add data/set-product-references
+
+          if git diff --cached --quiet; then
             echo "No reference changes."
             exit 0
           fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/set-product-references
           git commit -m "Sync set product references"
           git push
