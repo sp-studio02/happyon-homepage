@@ -7,7 +7,7 @@
     "summary": "명함사이즈 돋보기명함입니다.",
     "published": true,
     "featured": true,
-    "home_slide_page2": false,
+    "home_slide_page2": true,
     "hero_image": "assets/uploads/file-6.jpg",
     "gallery": [
       "assets/uploads/file-7.jpg"
