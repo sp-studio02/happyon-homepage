@@ -264,10 +264,7 @@ content:
     type: file
     path: data/products/magnifier.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: '{title}'
+    list: true
     operations:
       delete: false
       rename: false
@@ -435,10 +432,7 @@ content:
     type: file
     path: data/products/card-mirror.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: '{title}'
+    list: true
     operations:
       delete: false
       rename: false
@@ -604,10 +598,7 @@ content:
     type: file
     path: data/products/winter.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: '{title}'
+    list: true
     operations:
       delete: false
       rename: false
@@ -793,10 +784,7 @@ content:
     type: file
     path: data/products/summer.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: '{title}'
+    list: true
     operations:
       delete: false
       rename: false
@@ -978,10 +966,7 @@ content:
     type: file
     path: data/products/all-season.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: '{title}'
+    list: true
     operations:
       delete: false
       rename: false
