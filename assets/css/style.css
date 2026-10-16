@@ -806,3 +806,35 @@
   object-position:center;
   background:#fff;
 }
+
+/* Page 2 product cards: keep text grouped and vertically centered */
+.hero-product-grid-2 .hero-feature-copy{
+  padding:32px 28px;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+.hero-product-grid-2 .hero-feature-copy>span{
+  margin:0 0 14px;
+  padding:0;
+  font-size:11px;
+  line-height:1.2;
+}
+
+.hero-product-grid-2 .hero-feature-copy h3{
+  margin:0 0 10px;
+  font-size:27px;
+  line-height:1.2;
+}
+
+.hero-product-grid-2 .hero-feature-copy p{
+  margin:0;
+  font-size:13px;
+  line-height:1.65;
+}
+
+.hero-product-grid-2 .hero-feature-copy strong{
+  margin-top:20px;
+  padding:0;
+  font-size:13px;
+}
