@@ -1,0 +1,130 @@
+name: Sync product collections
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/product-items/**"
+      - "data/products/**"
+      - ".github/workflows/sync-product-collections.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Migrate and sync products
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          categories = {
+              "magnifier": "magnifier.json",
+              "card-mirror": "card-mirror.json",
+              "winter": "winter.json",
+              "summer": "summer.json",
+              "all-season": "all-season.json",
+          }
+
+          source_root = Path("data/products")
+          item_root = Path("data/product-items")
+          item_root.mkdir(parents=True, exist_ok=True)
+
+          def read_array(path):
+              if not path.exists():
+                  return []
+              try:
+                  data = json.loads(path.read_text(encoding="utf-8"))
+              except Exception as e:
+                  print(f"Could not read {path}: {e}")
+                  return []
+              return data if isinstance(data, list) else []
+
+          def safe_filename(product):
+              pid = str(product.get("id") or "").strip()
+              if not pid:
+                  return None
+              return re.sub(r"[^A-Za-z0-9_-]+", "-", pid).strip("-") + ".json"
+
+          for category, aggregate_name in categories.items():
+              aggregate_path = source_root / aggregate_name
+              category_dir = item_root / category
+              category_dir.mkdir(parents=True, exist_ok=True)
+
+              marker = category_dir / ".migrated"
+
+              # One-time migration from the current arrays.
+              if not marker.exists():
+                  current = read_array(aggregate_path)
+                  print(f"[{category}] migrating {len(current)} existing products")
+
+                  for product in current:
+                      if not isinstance(product, dict):
+                          continue
+                      filename = safe_filename(product)
+                      if not filename:
+                          print("  skip product without id:", product.get("title", ""))
+                          continue
+
+                      item_path = category_dir / filename
+                      if not item_path.exists():
+                          item_path.write_text(
+                              json.dumps(product, ensure_ascii=False, indent=2) + "\n",
+                              encoding="utf-8"
+                          )
+
+                  marker.write_text(
+                      "This folder has been migrated to one-file-per-product storage.\n",
+                      encoding="utf-8"
+                  )
+
+              # Rebuild website aggregate JSON from item files.
+              items = []
+              for item_path in sorted(category_dir.glob("*.json")):
+                  try:
+                      product = json.loads(item_path.read_text(encoding="utf-8"))
+                  except Exception as e:
+                      print(f"  skip invalid {item_path}: {e}")
+                      continue
+
+                  if isinstance(product, dict):
+                      items.append(product)
+
+              # Keep stable list order by title for predictable output.
+              items.sort(key=lambda p: str(p.get("title", "")).lower())
+
+              aggregate_path.parent.mkdir(parents=True, exist_ok=True)
+              aggregate_path.write_text(
+                  json.dumps(items, ensure_ascii=False, indent=2) + "\n",
+                  encoding="utf-8"
+              )
+
+              print(f"[{category}] synced {len(items)} products")
+
+          PY
+
+      - name: Commit migrated and synced files
+        shell: bash
+        run: |
+          git add data/product-items data/products
+
+          if git diff --cached --quiet; then
+            echo "No product sync changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync product collections"
+          git push
