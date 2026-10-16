@@ -69,9 +69,14 @@ jobs:
                   current = read_array(aggregate_path)
                   print(f"[{category}] migrating {len(current)} existing products")
 
-                  for product in current:
+                  for idx, product in enumerate(current, start=1):
                       if not isinstance(product, dict):
                           continue
+
+                      # Existing products get an initial editable order automatically.
+                      if product.get("display_order") in (None, ""):
+                          product["display_order"] = idx * 10
+
                       filename = safe_filename(product)
                       if not filename:
                           print("  skip product without id:", product.get("title", ""))
@@ -101,8 +106,16 @@ jobs:
                   if isinstance(product, dict):
                       items.append(product)
 
-              # Keep stable list order by title for predictable output.
-              items.sort(key=lambda p: str(p.get("title", "")).lower())
+              # Website order: smaller display_order first, then title.
+              def order_key(product):
+                  raw = product.get("display_order")
+                  try:
+                      order = float(raw)
+                  except (TypeError, ValueError):
+                      order = 999999999
+                  return (order, str(product.get("title", "")).lower())
+
+              items.sort(key=order_key)
 
               aggregate_path.parent.mkdir(parents=True, exist_ok=True)
               aggregate_path.write_text(
