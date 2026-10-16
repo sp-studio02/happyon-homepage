@@ -32,46 +32,78 @@ jobs:
           out_dir = Path("data/set-product-references")
           out_dir.mkdir(parents=True, exist_ok=True)
 
-          # Remove only generated JSON files. Keep README.md.
           for f in out_dir.glob("*.json"):
               f.unlink()
 
           products = []
-          for name in ["magnifier.json", "card-mirror.json", "winter.json", "summer.json", "all-season.json"]:
-              path = source_dir / name
-              if not path.exists():
-                  continue
+
+          def add_products(data):
+              if isinstance(data, list):
+                  products.extend(x for x in data if isinstance(x, dict))
+              elif isinstance(data, dict):
+                  # 혹시 파일 구조가 {products:[...]} 같은 형태여도 대응
+                  for key in ("products", "items", "data"):
+                      value = data.get(key)
+                      if isinstance(value, list):
+                          products.extend(x for x in value if isinstance(x, dict))
+                          return
+
+          for path in sorted(source_dir.glob("*.json")):
               try:
                   data = json.loads(path.read_text(encoding="utf-8"))
-              except Exception:
+              except Exception as e:
+                  print(f"Skip {path}: {e}")
                   continue
-              if isinstance(data, list):
-                  products.extend(data)
+              add_products(data)
+
+          def norm(v):
+              return str(v or "").strip().lower().replace(" ", "").replace("-", "_")
+
+          def is_set_product(p):
+              set_type = norm(p.get("set_type"))
+              subcategory = norm(p.get("subcategory"))
+
+              # 1) 세트 유형이 세트상품인 경우
+              if set_type in {"set_product", "setproduct", "세트상품"}:
+                  return True
+
+              # 2) 세부 품목 자체가 '세트상품' 카테고리인 경우
+              if subcategory in {
+                  "sets", "set", "set_product", "setproduct", "세트상품"
+              }:
+                  return True
+
+              return False
 
           set_products = [
               p for p in products
-              if isinstance(p, dict)
-              and p.get("id")
-              and p.get("set_type") == "set_product"
+              if p.get("id")
               and p.get("published", True) is not False
+              and is_set_product(p)
           ]
 
           for p in set_products:
-              safe_id = re.sub(r"[^A-Za-z0-9_-]+", "-", str(p["id"])).strip("-") or "set-product"
+              product_id = str(p.get("id", "")).strip()
+              safe_id = re.sub(r"[^A-Za-z0-9_-]+", "-", product_id).strip("-") or "set-product"
+
               ref = {
-                  "id": str(p.get("id", "")),
+                  "id": product_id,
                   "title": p.get("title", ""),
                   "category": p.get("category", ""),
                   "subcategory": p.get("subcategory", ""),
                   "hero_image": p.get("hero_image", ""),
                   "summary": p.get("summary", ""),
               }
+
               (out_dir / f"{safe_id}.json").write_text(
                   json.dumps(ref, ensure_ascii=False, indent=2) + "\n",
                   encoding="utf-8"
               )
 
+          print(f"Found {len(products)} products total.")
           print(f"Synced {len(set_products)} set products.")
+          for p in set_products:
+              print(" -", p.get("title", ""), "|", p.get("subcategory", ""), "|", p.get("set_type", ""))
           PY
 
       - name: Commit generated reference files
