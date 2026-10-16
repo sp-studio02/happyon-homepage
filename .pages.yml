@@ -279,6 +279,10 @@ content:
       label: 상품명
       type: string
       required: true
+    - name: display_order
+      label: 노출 순서
+      type: number
+      description: '숫자가 작을수록 먼저 표시됩니다. 예: 10, 20, 30 / 중간 삽입은 15'
     - name: category
       label: 대분류
       type: select
@@ -433,6 +437,7 @@ content:
     view:
       primary: title
       fields:
+      - display_order
       - title
       - subcategory
       - published
@@ -440,9 +445,10 @@ content:
       - title
       - subcategory
       sort:
+      - display_order
       - title
       default:
-        sort: title
+        sort: display_order
         order: asc
   - name: products_card_mirror
     label: 카드거울
@@ -464,6 +470,10 @@ content:
       label: 상품명
       type: string
       required: true
+    - name: display_order
+      label: 노출 순서
+      type: number
+      description: '숫자가 작을수록 먼저 표시됩니다. 예: 10, 20, 30 / 중간 삽입은 15'
     - name: category
       label: 대분류
       type: select
@@ -616,6 +626,7 @@ content:
     view:
       primary: title
       fields:
+      - display_order
       - title
       - subcategory
       - published
@@ -623,9 +634,10 @@ content:
       - title
       - subcategory
       sort:
+      - display_order
       - title
       default:
-        sort: title
+        sort: display_order
         order: asc
   - name: products_winter
     label: 겨울제품
@@ -647,6 +659,10 @@ content:
       label: 상품명
       type: string
       required: true
+    - name: display_order
+      label: 노출 순서
+      type: number
+      description: '숫자가 작을수록 먼저 표시됩니다. 예: 10, 20, 30 / 중간 삽입은 15'
     - name: category
       label: 대분류
       type: select
@@ -819,6 +835,7 @@ content:
     view:
       primary: title
       fields:
+      - display_order
       - title
       - subcategory
       - published
@@ -826,9 +843,10 @@ content:
       - title
       - subcategory
       sort:
+      - display_order
       - title
       default:
-        sort: title
+        sort: display_order
         order: asc
   - name: products_summer
     label: 여름제품
@@ -850,6 +868,10 @@ content:
       label: 상품명
       type: string
       required: true
+    - name: display_order
+      label: 노출 순서
+      type: number
+      description: '숫자가 작을수록 먼저 표시됩니다. 예: 10, 20, 30 / 중간 삽입은 15'
     - name: category
       label: 대분류
       type: select
@@ -1018,6 +1040,7 @@ content:
     view:
       primary: title
       fields:
+      - display_order
       - title
       - subcategory
       - published
@@ -1025,9 +1048,10 @@ content:
       - title
       - subcategory
       sort:
+      - display_order
       - title
       default:
-        sort: title
+        sort: display_order
         order: asc
   - name: products_all_season
     label: 사계절제품
@@ -1049,6 +1073,10 @@ content:
       label: 상품명
       type: string
       required: true
+    - name: display_order
+      label: 노출 순서
+      type: number
+      description: '숫자가 작을수록 먼저 표시됩니다. 예: 10, 20, 30 / 중간 삽입은 15'
     - name: category
       label: 대분류
       type: select
@@ -1198,6 +1226,7 @@ content:
     view:
       primary: title
       fields:
+      - display_order
       - title
       - subcategory
       - published
@@ -1205,7 +1234,8 @@ content:
       - title
       - subcategory
       sort:
+      - display_order
       - title
       default:
-        sort: title
+        sort: display_order
         order: asc
