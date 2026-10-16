@@ -436,3 +436,47 @@
     min-height:0;
   }
 }
+
+
+/* Main slider: keep all 4 pages at the same height */
+.hero-carousel{
+  min-height:680px;
+}
+.hero-slide{
+  min-height:680px;
+  box-sizing:border-box;
+}
+.hero-slide > .container{
+  min-height:512px;
+}
+.hero-slide:first-child .hero-grid{
+  min-height:512px;
+  align-items:center;
+}
+.hero-products-page{
+  min-height:512px;
+}
+
+@media(max-width:900px){
+  .hero-carousel,
+  .hero-slide{
+    min-height:720px;
+  }
+  .hero-slide > .container,
+  .hero-slide:first-child .hero-grid,
+  .hero-products-page{
+    min-height:552px;
+  }
+}
+
+@media(max-width:620px){
+  .hero-carousel,
+  .hero-slide{
+    min-height:0;
+  }
+  .hero-slide > .container,
+  .hero-slide:first-child .hero-grid,
+  .hero-products-page{
+    min-height:0;
+  }
+}
