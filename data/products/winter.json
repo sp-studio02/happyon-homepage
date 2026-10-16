@@ -33,6 +33,9 @@
     "production_time": "약 3-4일",
     "print_method": "1도 실크인쇄 별도",
     "packaging": "기본 opp개별포장",
-    "set_type": "set_available"
+    "set_type": "set_available",
+    "related_set_products": [
+      "ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2"
+    ]
   }
 ]
