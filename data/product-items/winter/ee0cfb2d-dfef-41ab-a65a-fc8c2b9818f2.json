@@ -10,5 +10,6 @@
   "gallery": [
     "assets/uploads/2a-1.jpg"
   ],
-  "set_type": "set_available"
+  "set_type": "set_available",
+  "display_order": 1
 }
