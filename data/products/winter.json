@@ -82,5 +82,27 @@
     "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
     "packaging": "기본 지퍼백 포장",
     "set_type": "set_product"
+  },
+  {
+    "id": "0c6bea85-6457-4d54-8057-d05a6a772dc2",
+    "title": "레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)",
+    "category": "winter",
+    "subcategory": "sets",
+    "summary": "손과 귀를 함께 따뜻하게 보호하는 실용적인 겨울 방한 2종 세트입니다.\n\n세트 유형",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/2c.jpg",
+    "gallery": [
+      "assets/uploads/2c-1.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
+    "packaging": "기본 지퍼백 포장",
+    "set_type": "set_product"
   }
 ]
