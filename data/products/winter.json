@@ -26,6 +26,21 @@
     "display_order": 1
   },
   {
+    "id": "ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2",
+    "title": "레포마 추위대비 2종 A세트(넥워머+방한장갑)",
+    "category": "winter",
+    "subcategory": "sets",
+    "published": true,
+    "featured": true,
+    "home_slide_order": "1",
+    "hero_image": "assets/uploads/2a.jpg",
+    "gallery": [
+      "assets/uploads/2a-1.jpg"
+    ],
+    "set_type": "set_available",
+    "display_order": 1
+  },
+  {
     "id": "ad649ce1-5e92-433f-aeae-7d2917c65907",
     "title": "투톤 리버시블 넥워머",
     "display_order": 2,
@@ -68,20 +83,6 @@
     "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
     "packaging": "기본 지퍼백 포장",
     "set_type": "set_product"
-  },
-  {
-    "id": "ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2",
-    "title": "레포마 추위대비 2종 A세트(넥워머+방한장갑)",
-    "category": "winter",
-    "subcategory": "sets",
-    "published": true,
-    "featured": true,
-    "home_slide_order": "1",
-    "hero_image": "assets/uploads/2a.jpg",
-    "gallery": [
-      "assets/uploads/2a-1.jpg"
-    ],
-    "set_type": "set_available"
   },
   {
     "id": "ea23da25-90c9-469e-9617-7401ff0b1e07",
