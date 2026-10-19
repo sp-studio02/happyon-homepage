@@ -48,6 +48,28 @@
     "packaging": "기본 opp 개별포장"
   },
   {
+    "id": "1f2c2303-396d-4645-b29c-c0389c324291",
+    "title": "레포마 까사 윈터 2종 A세트(까사장갑+넥워머)",
+    "category": "winter",
+    "subcategory": "sets",
+    "summary": "까사장갑과 넥워머를 함께 구성한 실용적인 겨울 방한 2종 세트입니다.",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/2a-2.jpg",
+    "gallery": [
+      "assets/uploads/2a-3.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
+    "packaging": "기본 지퍼백 포장",
+    "set_type": "set_product"
+  },
+  {
     "id": "ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2",
     "title": "레포마 추위대비 2종 A세트(넥워머+방한장갑)",
     "category": "winter",
