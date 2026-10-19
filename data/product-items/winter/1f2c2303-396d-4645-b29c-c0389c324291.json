@@ -18,5 +18,6 @@
   "production_time": "약 3-4일",
   "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
   "packaging": "기본 지퍼백 포장",
-  "set_type": "set_product"
+  "set_type": "set_product",
+  "display_order": 5
 }
