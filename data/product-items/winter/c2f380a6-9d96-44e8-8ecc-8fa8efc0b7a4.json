@@ -1,16 +1,17 @@
 {
   "id": "c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4",
-  "title": "레포마 까사 윈터 2종 A세트(까사장갑+귀마개)",
+  "title": "레포마 까사 윈터 2종 B세트(까사장갑+귀마개)",
   "display_order": 6,
   "category": "winter",
   "subcategory": "sets",
-  "summary": "까사장갑과 넥워머를 함께 구성한 실용적인 겨울 방한 2종 세트입니다.",
+  "summary": "까사장갑과 귀마개를 함께 구성한 실용적인 겨울 방한 2종 세트입니다.",
   "published": true,
   "featured": false,
   "home_slide_order": "none",
-  "hero_image": "assets/uploads/2a-4.jpg",
+  "hero_image": "assets/uploads/2b-2.jpg",
   "gallery": [
-    "assets/uploads/2a-5.jpg"
+    "assets/uploads/2a-5.jpg",
+    "assets/uploads/2b-3.jpg"
   ],
   "dimensions": "상세페이지 참고",
   "material": "상세페이지 참고",
@@ -20,5 +21,6 @@
   "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
   "packaging": "기본 지퍼백 포장",
   "set_packaging": "지퍼백",
-  "set_description": "겨울철 활용도가 높은 까사장갑과 넥워머를 한 세트로 구성했습니다. 손과 목을 함께 따뜻하게 보호할 수 있어 겨울철 단체선물과 판촉용으로 활용하기 좋은 방한 세트입니다."
+  "set_description": "겨울철 활용도가 높은 까사장갑과 귀마개를 한 세트로 구성했습니다. 손과 귀를 함께 따뜻하게 보호할 수 있어 겨울철 단체선물과 판촉용으로 활용하기 좋은 방한 세트입니다.",
+  "set_image": "assets/uploads/2b-4.jpg"
 }
