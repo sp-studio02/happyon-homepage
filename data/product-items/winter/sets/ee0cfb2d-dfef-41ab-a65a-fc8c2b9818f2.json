@@ -5,7 +5,7 @@
   "subcategory": "sets",
   "published": true,
   "featured": false,
-  "home_slide_order": "1",
+  "home_slide_order": "none",
   "hero_image": "assets/uploads/2a.jpg",
   "gallery": [
     "assets/uploads/2a-1.jpg"
