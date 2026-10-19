@@ -60,5 +60,27 @@
       "assets/uploads/2a-1.jpg"
     ],
     "set_type": "set_available"
+  },
+  {
+    "id": "ea23da25-90c9-469e-9617-7401ff0b1e07",
+    "title": "레포마 추위대비 2종 B세트(넥워머+귀마개)",
+    "category": "winter",
+    "subcategory": "sets",
+    "summary": "목과 귀를 함께 따뜻하게 보호하는 실용적인 겨울 방한 2종 세트입니다.",
+    "published": true,
+    "featured": true,
+    "home_slide_order": "2",
+    "hero_image": "assets/uploads/2b.jpg",
+    "gallery": [
+      "assets/uploads/2b-1.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
+    "packaging": "기본 지퍼백 포장",
+    "set_type": "set_product"
   }
 ]
