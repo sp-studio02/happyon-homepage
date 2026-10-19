@@ -206,5 +206,31 @@
     "set_packaging": "지퍼백",
     "set_description": "겨울철 활용도가 높은 까사장갑, 넥워머, 귀마개를 한 세트로 구성했습니다. 손과 목, 귀를 함께 따뜻하게 보호할 수 있어 겨울철 단체선물과 판촉용으로 활용하기 좋은 방한 세트입니다.",
     "set_image": "assets/uploads/3s-2.jpg"
+  },
+  {
+    "id": "2cf9f72f-4ddd-4383-96a2-a7f42b703cc3",
+    "title": "레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)",
+    "display_order": 8,
+    "category": "winter",
+    "subcategory": "sets",
+    "summary": "웜장갑과 넥워머를 함께 구성한 실용적인 겨울 방한 2종 세트입니다.",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-18.jpg",
+    "gallery": [
+      "assets/uploads/file-19.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "복주머니 - 1도 실크인쇄 가능",
+    "packaging": "복주머니 파우치",
+    "set_type": "set_product",
+    "set_packaging": "복주머니 파우치",
+    "set_description": "겨울철 활용도가 높은 웜장갑과 넥워머를 복조리개 파우치에 담아 구성했습니다. 실용적인 방한용품과 포장을 함께 갖춰 겨울철 단체선물과 판촉용으로 활용하기 좋은 세트입니다.",
+    "set_image": "assets/uploads/file-20.jpg"
   }
 ]
