@@ -27,6 +27,7 @@ jobs:
           python - <<'PY'
           import json
           import re
+          import shutil
           from pathlib import Path
 
           categories = {
@@ -35,6 +36,85 @@ jobs:
               "winter": "winter.json",
               "summer": "summer.json",
               "all-season": "all-season.json",
+          }
+
+          nested_subfolders = {
+              "winter": {
+                  "neckwarmer": "neckwarmer",
+                  "gloves": "gloves",
+                  "earmuffs": "earmuffs",
+                  "blanket": "blanket",
+                  "socks": "socks",
+                  "footwarmer": "footwarmer",
+                  "sets": "sets",
+              },
+              "summer": {
+                  "arm_sleeves": "arm_sleeves",
+                  "cool_scarf": "cool_scarf",
+                  "cool_mask": "cool_mask",
+                  "cool_towel": "cool_towel",
+                  "sets": "sets",
+              }
+          }
+
+          # Compatibility aliases: if old data used a slightly different id,
+          # move it to the correct current admin folder instead of losing it.
+          sub_aliases = {
+              "winter": {
+                  "neckwarmer": "neckwarmer",
+                  "neck_warmer": "neckwarmer",
+                  "넥워머": "neckwarmer",
+
+                  "gloves": "gloves",
+                  "glove": "gloves",
+                  "warmgloves": "gloves",
+                  "warm_gloves": "gloves",
+                  "장갑": "gloves",
+
+                  "earmuffs": "earmuffs",
+                  "earmuff": "earmuffs",
+                  "귀마개": "earmuffs",
+
+                  "blanket": "blanket",
+                  "blankets": "blanket",
+                  "담요": "blanket",
+
+                  "socks": "socks",
+                  "sock": "socks",
+                  "양말": "socks",
+
+                  "footwarmer": "footwarmer",
+                  "foot_warmer": "footwarmer",
+                  "발토시": "footwarmer",
+
+                  "sets": "sets",
+                  "set": "sets",
+                  "set_product": "sets",
+                  "세트상품": "sets",
+              },
+              "summer": {
+                  "arm_sleeves": "arm_sleeves",
+                  "armsleeves": "arm_sleeves",
+                  "cool_sleeves": "arm_sleeves",
+                  "쿨토시": "arm_sleeves",
+
+                  "cool_scarf": "cool_scarf",
+                  "coolscarf": "cool_scarf",
+                  "쿨스카프": "cool_scarf",
+
+                  "cool_mask": "cool_mask",
+                  "coolmask": "cool_mask",
+                  "쿨마스크": "cool_mask",
+
+                  "cool_towel": "cool_towel",
+                  "cooltowel": "cool_towel",
+                  "쿨타올": "cool_towel",
+
+                  "sets": "sets",
+                  "set": "sets",
+                  "set_product": "sets",
+                  "세트상품": "sets",
+              }
           }
 
           source_root = Path("data/products")
@@ -57,56 +137,101 @@ jobs:
                   return None
               return re.sub(r"[^A-Za-z0-9_-]+", "-", pid).strip("-") + ".json"
 
+          def norm(value):
+              return str(value or "").strip().lower().replace(" ", "").replace("-", "_")
+
+          def target_subfolder(category, product):
+              if category not in nested_subfolders:
+                  return None
+              raw = norm(product.get("subcategory"))
+              return sub_aliases.get(category, {}).get(raw, "_other")
+
+          def add_initial_order(products):
+              for idx, product in enumerate(products, start=1):
+                  if isinstance(product, dict) and product.get("display_order") in (None, ""):
+                      product["display_order"] = idx * 10
+
+          # 1) Migrate legacy aggregate arrays into per-product files if not already present.
           for category, aggregate_name in categories.items():
               aggregate_path = source_root / aggregate_name
               category_dir = item_root / category
               category_dir.mkdir(parents=True, exist_ok=True)
 
-              marker = category_dir / ".migrated"
+              current = read_array(aggregate_path)
+              add_initial_order(current)
 
-              # One-time migration from the current arrays.
-              if not marker.exists():
-                  current = read_array(aggregate_path)
-                  print(f"[{category}] migrating {len(current)} existing products")
+              for product in current:
+                  if not isinstance(product, dict):
+                      continue
+                  filename = safe_filename(product)
+                  if not filename:
+                      continue
 
-                  for idx, product in enumerate(current, start=1):
-                      if not isinstance(product, dict):
-                          continue
+                  subfolder = target_subfolder(category, product)
+                  if subfolder:
+                      dest_dir = category_dir / subfolder
+                  else:
+                      dest_dir = category_dir
+                  dest_dir.mkdir(parents=True, exist_ok=True)
 
-                      # Existing products get an initial editable order automatically.
-                      if product.get("display_order") in (None, ""):
-                          product["display_order"] = idx * 10
+                  dest = dest_dir / filename
 
-                      filename = safe_filename(product)
-                      if not filename:
-                          print("  skip product without id:", product.get("title", ""))
-                          continue
-
-                      item_path = category_dir / filename
-                      if not item_path.exists():
-                          item_path.write_text(
+                  # Don't overwrite a newer per-product CMS file.
+                  if not dest.exists():
+                      # Search recursively in case this product already exists elsewhere.
+                      existing = list(category_dir.rglob(filename))
+                      if not existing:
+                          dest.write_text(
                               json.dumps(product, ensure_ascii=False, indent=2) + "\n",
                               encoding="utf-8"
                           )
 
-                  marker.write_text(
-                      "This folder has been migrated to one-file-per-product storage.\n",
-                      encoding="utf-8"
-                  )
+          # 2) Move any existing flat winter/summer JSON files into the right subfolder.
+          for category in ("winter", "summer"):
+              category_dir = item_root / category
+              if not category_dir.exists():
+                  continue
 
-              # Rebuild website aggregate JSON from item files.
+              for flat_file in list(category_dir.glob("*.json")):
+                  try:
+                      product = json.loads(flat_file.read_text(encoding="utf-8"))
+                  except Exception as e:
+                      print(f"Skip invalid {flat_file}: {e}")
+                      continue
+
+                  if not isinstance(product, dict):
+                      continue
+
+                  subfolder = target_subfolder(category, product) or "_other"
+                  dest_dir = category_dir / subfolder
+                  dest_dir.mkdir(parents=True, exist_ok=True)
+                  dest = dest_dir / flat_file.name
+
+                  if dest.exists():
+                      # Keep the destination copy and remove the duplicate flat file.
+                      flat_file.unlink()
+                  else:
+                      shutil.move(str(flat_file), str(dest))
+
+                  print(f"Moved {category}/{flat_file.name} -> {category}/{subfolder}/{flat_file.name}")
+
+          # 3) Rebuild website aggregate JSON from per-product files recursively.
+          for category, aggregate_name in categories.items():
+              aggregate_path = source_root / aggregate_name
+              category_dir = item_root / category
+              category_dir.mkdir(parents=True, exist_ok=True)
+
               items = []
-              for item_path in sorted(category_dir.glob("*.json")):
+              for item_path in sorted(category_dir.rglob("*.json")):
                   try:
                       product = json.loads(item_path.read_text(encoding="utf-8"))
                   except Exception as e:
-                      print(f"  skip invalid {item_path}: {e}")
+                      print(f"Skip invalid {item_path}: {e}")
                       continue
 
                   if isinstance(product, dict):
                       items.append(product)
 
-              # Website order: smaller display_order first, then title.
               def order_key(product):
                   raw = product.get("display_order")
                   try:
@@ -139,5 +264,5 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Sync product collections"
+          git commit -m "Sync nested product collections"
           git push
