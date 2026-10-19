@@ -4,7 +4,7 @@
   "category": "winter",
   "subcategory": "sets",
   "published": true,
-  "featured": true,
+  "featured": false,
   "home_slide_order": "1",
   "hero_image": "assets/uploads/2a.jpg",
   "gallery": [
