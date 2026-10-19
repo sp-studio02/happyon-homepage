@@ -5,8 +5,8 @@
   "subcategory": "sets",
   "summary": "목과 귀를 함께 따뜻하게 보호하는 실용적인 겨울 방한 2종 세트입니다.",
   "published": true,
-  "featured": true,
-  "home_slide_order": "2",
+  "featured": false,
+  "home_slide_order": "none",
   "hero_image": "assets/uploads/2b.jpg",
   "gallery": [
     "assets/uploads/2b-1.jpg"
