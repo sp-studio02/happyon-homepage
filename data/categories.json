@@ -1,37 +1,29 @@
 [
   {
-    "id": "magnifier",
-    "label": "돋보기명함",
-    "eyebrow": "MAGNIFIER CARD",
-    "desc": "용도에 맞는 형태의 돋보기명함을 확인하세요.",
+    "id": "summer",
+    "label": "여름제품",
+    "eyebrow": "SUMMER PRODUCTS",
+    "desc": "여름철 활용 제품과 세트상품을 확인하세요.",
     "subs": [
       {
-        "id": "business-card",
-        "label": "명함사이즈"
+        "id": "cool-arm-sleeves",
+        "label": "쿨토시"
       },
       {
-        "id": "bookmark",
-        "label": "책갈피사이즈"
+        "id": "cool-scarf",
+        "label": "쿨스카프"
       },
       {
-        "id": "magnetic",
-        "label": "자석 돋보기"
-      }
-    ]
-  },
-  {
-    "id": "card-mirror",
-    "label": "카드거울",
-    "eyebrow": "CARD MIRROR",
-    "desc": "카드형 거울 제품을 확인하세요.",
-    "subs": [
-      {
-        "id": "standard",
-        "label": "카드거울"
+        "id": "cool-mask",
+        "label": "쿨마스크"
       },
       {
-        "id": "small-qty",
-        "label": "소량제작 카드거울"
+        "id": "cool-towel",
+        "label": "쿨타올"
+      },
+      {
+        "id": "sets",
+        "label": "세트상품"
       }
     ]
   },
@@ -72,34 +64,6 @@
     ]
   },
   {
-    "id": "summer",
-    "label": "여름제품",
-    "eyebrow": "SUMMER PRODUCTS",
-    "desc": "여름철 활용 제품과 세트상품을 확인하세요.",
-    "subs": [
-      {
-        "id": "cool-arm-sleeves",
-        "label": "쿨토시"
-      },
-      {
-        "id": "cool-scarf",
-        "label": "쿨스카프"
-      },
-      {
-        "id": "cool-mask",
-        "label": "쿨마스크"
-      },
-      {
-        "id": "cool-towel",
-        "label": "쿨타올"
-      },
-      {
-        "id": "sets",
-        "label": "세트상품"
-      }
-    ]
-  },
-  {
     "id": "all-season",
     "label": "사계절제품",
     "eyebrow": "ALL SEASON",
@@ -116,6 +80,42 @@
       {
         "id": "buff",
         "label": "버프(멀티스카프)"
+      }
+    ]
+  },
+  {
+    "id": "magnifier",
+    "label": "돋보기명함",
+    "eyebrow": "MAGNIFIER CARD",
+    "desc": "용도에 맞는 형태의 돋보기명함을 확인하세요.",
+    "subs": [
+      {
+        "id": "business-card",
+        "label": "명함사이즈"
+      },
+      {
+        "id": "bookmark",
+        "label": "책갈피사이즈"
+      },
+      {
+        "id": "magnetic",
+        "label": "자석 돋보기"
+      }
+    ]
+  },
+  {
+    "id": "card-mirror",
+    "label": "카드거울",
+    "eyebrow": "CARD MIRROR",
+    "desc": "카드형 거울 제품을 확인하세요.",
+    "subs": [
+      {
+        "id": "standard",
+        "label": "카드거울"
+      },
+      {
+        "id": "small-qty",
+        "label": "소량제작 카드거울"
       }
     ]
   }
