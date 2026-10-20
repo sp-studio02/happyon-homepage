@@ -148,7 +148,7 @@ showHero(0);
 startHero();
 
 const cg=document.getElementById('home-categories');
-const homeCardIds=['magnifier','card-mirror','winter','summer','all-season'];
+const homeCardIds=['summer','winter','all-season','magnifier','card-mirror'];
 const homeCards=await Promise.all(homeCardIds.map(async(id,i)=>{
   const fallbackCat=d.categories.find(c=>c.id===id)||{};
   const fallback={
@@ -166,7 +166,9 @@ const homeCards=await Promise.all(homeCardIds.map(async(id,i)=>{
     return {id,...fallback};
   }
 }));
-cg.innerHTML=homeCards.map(c=>{
+cg.innerHTML=homeCards.map((c,i)=>{
+  const rawTop=String(c.top_text||'').trim();
+  const displayTop=/^\d{1,2}$/.test(rawTop) ? String(i+1).padStart(2,'0') : rawTop;
   const image=c.image
     ? `<img class="home-category-image" src="${H.esc(c.image.replace(/^\//,''))}" alt="${H.esc(c.title)}">`
     : '';
@@ -174,7 +176,7 @@ cg.innerHTML=homeCards.map(c=>{
     ${image}
     <div class="home-category-shade"></div>
     <div class="home-category-content">
-      <span class="home-category-top">${H.esc(c.top_text||'')}</span>
+      <span class="home-category-top">${H.esc(displayTop)}</span>
       <div class="home-category-bottom">
         <h3>${H.esc(c.title||'')}</h3>
         <p>${H.esc(c.description||'')}</p>
