@@ -135,6 +135,15 @@ dots.forEach(dot=>dot.addEventListener('click',()=>{
   showHero(Number(dot.dataset.go));
   startHero();
 }));
+
+hero.addEventListener('mouseenter',()=>{
+  clearInterval(heroTimer);
+});
+
+hero.addEventListener('mouseleave',()=>{
+  startHero();
+});
+
 showHero(0);
 startHero();
 
