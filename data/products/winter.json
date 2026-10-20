@@ -416,5 +416,27 @@
     "print_method": "복주머니 - 1도 실크인쇄 가능",
     "packaging": "복주머니 파우치",
     "set_type": "set_product"
+  },
+  {
+    "id": "439cd794-abbd-487c-b123-bac8fc2ece7f",
+    "title": "레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트",
+    "display_order": 17,
+    "category": "winter",
+    "subcategory": "sets",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-32.jpg",
+    "gallery": [
+      "assets/uploads/file-33.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "복주머니 - 1도 실크인쇄 가능",
+    "packaging": "복주머니 파우치",
+    "set_type": "set_product"
   }
 ]
