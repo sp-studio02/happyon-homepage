@@ -347,5 +347,28 @@
     "production_time": "약 3-4일",
     "print_method": "복주머니 - 1도 실크인쇄 가능",
     "packaging": "복주머니 파우치"
+  },
+  {
+    "id": "6f6f77e2-c41e-4a83-bf42-b81251103cfe",
+    "title": "웜가드 기모넥워머 +멀티스카프 복조리 세트",
+    "display_order": 14,
+    "category": "winter",
+    "subcategory": "sets",
+    "summary": "기모 넥워머와 멀티스카프를 복조리 파우치에 구성한 실용적인 겨울 방한 2종 세트입니다.",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-26.jpg",
+    "gallery": [
+      "assets/uploads/file-27.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "복주머니 - 1도 실크인쇄 가능",
+    "packaging": "복주머니 파우치",
+    "set_type": "set_product"
   }
 ]
