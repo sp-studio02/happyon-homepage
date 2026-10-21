@@ -431,6 +431,28 @@
     "set_image": "assets/uploads/2b-4.jpg"
   },
   {
+    "id": "55914b21-5eae-444e-8024-cfd644d8122c",
+    "title": "레포마 포그네 파우치 극세사 담요",
+    "display_order": 6,
+    "category": "winter",
+    "subcategory": "blanket",
+    "summary": "부드러운 극세사 담요를 부직포 파우치에 담아 휴대와 보관이 편리한 겨울용 담요입니다.",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-57.jpg",
+    "gallery": [
+      "assets/uploads/file-58.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 일주일",
+    "print_method": "1도 실크인쇄 포함(100개 이상)",
+    "packaging": "부직포 파우치 커버"
+  },
+  {
     "id": "f9468b33-dacf-4817-b530-c91573446212",
     "title": "레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)",
     "display_order": 7,
