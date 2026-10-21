@@ -65,92 +65,20 @@ const H = (() => {
   }
   function setupMenu(){const b=document.querySelector('.mobile-menu'), n=document.querySelector('.main-nav');if(b&&n)b.addEventListener('click',()=>n.classList.toggle('open'))}
 
-  function setupGlobalProductSearch(products){
+  function setupGlobalProductSearch(){
     const form=document.querySelector('#global-product-search-form');
     const input=document.querySelector('#global-product-search-input');
-    const dropdown=document.querySelector('#global-product-search-dropdown');
-    if(!form||!input||!dropdown) return;
+    if(!form||!input) return;
 
-    const published=(products||[]).filter(p=>p&&p.published!==false);
-
-    const normalize=(v)=>String(v||'')
-      .toLowerCase()
-      .replace(/\s+/g,'')
-      .trim();
-
-    const close=()=>{
-      dropdown.classList.remove('show');
-      dropdown.innerHTML='';
-    };
-
-    const render=()=>{
-      const raw=input.value.trim();
-      const q=normalize(raw);
-
-      if(!q){
-        close();
-        return;
-      }
-
-      const matched=published.filter(p=>{
-        const haystack=[
-          p.title,
-          p.summary,
-          catLabel(p.category),
-          subLabel(p.category,p.subcategory)
-        ].map(normalize).join(' ');
-        return haystack.includes(q);
-      });
-
-      if(!matched.length){
-        dropdown.innerHTML=`<div class="global-search-empty">"${esc(raw)}" 검색 결과가 없습니다.</div>`;
-        dropdown.classList.add('show');
-        return;
-      }
-
-      const shown=matched.slice(0,8);
-      dropdown.innerHTML=`
-        <div class="global-search-count">검색 결과 ${matched.length}개${matched.length>8?' · 상위 8개 표시':''}</div>
-        <div class="global-search-list">
-          ${shown.map(p=>{
-            const meta=[catLabel(p.category),subLabel(p.category,p.subcategory)].filter(Boolean).join(' · ');
-            const img=p.hero_image
-              ? `<img src="${esc(BASE+p.hero_image.replace(/^\//,''))}" alt="${esc(p.title||'')}">`
-              : `<span>HAPPYON</span>`;
-            return `<a class="global-search-item" href="${BASE}product.html?id=${encodeURIComponent(p.id)}">
-              <div class="global-search-thumb">${img}</div>
-              <div class="global-search-copy">
-                <div class="global-search-meta">${esc(meta)}</div>
-                <strong>${esc(p.title||'')}</strong>
-                ${p.summary?`<p>${esc(p.summary)}</p>`:''}
-              </div>
-            </a>`;
-          }).join('')}
-        </div>`;
-      dropdown.classList.add('show');
-    };
-
-    let timer=null;
-    input.addEventListener('input',()=>{
-      clearTimeout(timer);
-      timer=setTimeout(render,140);
-    });
+    // 제품소개 검색 결과 페이지에서 돌아온 경우 검색어를 상단에도 유지합니다.
+    const currentSearch=new URLSearchParams(location.search).get('search')||'';
+    if(currentSearch) input.value=currentSearch;
 
     form.addEventListener('submit',(e)=>{
       e.preventDefault();
-      render();
-    });
-
-    input.addEventListener('focus',()=>{
-      if(input.value.trim()) render();
-    });
-
-    document.addEventListener('click',(e)=>{
-      if(!e.target.closest('.global-search-shell')) close();
-    });
-
-    document.addEventListener('keydown',(e)=>{
-      if(e.key==='Escape') close();
+      const term=input.value.trim();
+      if(!term) return;
+      location.href=`${BASE}products.html?search=${encodeURIComponent(term)}#product-results`;
     });
   }
 
@@ -210,7 +138,6 @@ const H = (() => {
               >
               <button class="global-search-button" type="submit">검색</button>
             </form>
-            <div class="global-search-dropdown" id="global-product-search-dropdown"></div>
           </div>
         </div>
       </div>
@@ -225,7 +152,7 @@ const H = (() => {
     const oldHomeSearch=document.querySelector('.home-search-section');
     if(oldHomeSearch) oldHomeSearch.remove();
 
-    setupGlobalProductSearch(products);
+    setupGlobalProductSearch();
 
     const footer=document.querySelector('#site-footer');
     if(footer) footer.innerHTML=`<footer class="site-footer"><div class="container footer-grid"><a href="${BASE}index.html"><img class="footer-logo" data-site-logo src="${BASE}assets/images/logo.png" alt="HAPPYON"></a><div class="footer-info"><strong>${esc(site.company_name||'해피온')}</strong><br>대표 ${esc(site.ceo||'')} · 사업자등록번호 ${esc(site.business_number||'')}<br>${esc(site.address||'')}<br>TEL. ${esc(site.phone||'')} · FAX. ${esc(site.fax||'')} · E-mail. ${esc(site.email||'')}</div><div class="copyright">© ${new Date().getFullYear()} ${esc(site.company_name_en||'HAPPYON')}<br>All Rights Reserved.</div></div></footer>`;
