@@ -1,0 +1,27 @@
+{
+  "id": "8c173ae0-493a-4ad4-ac97-21d727d3ea31",
+  "title": "레포마 국산 프리미엄 에어웜 발토시(탁텔)",
+  "display_order": 1,
+  "category": "winter",
+  "subcategory": "foot-warmer",
+  "summary": "포근하고 폭신한 프리미엄 국산 발토시. 부드럽고 신축성이 좋아 착 감기듯이 사용할 수 있습니다.",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/file-59.jpg",
+  "gallery": [
+    "assets/uploads/10.jpg",
+    "assets/uploads/11.jpg"
+  ],
+  "dimensions": "11x18cm",
+  "material": "엘리스팍 원사",
+  "colors": "블랙,차콜",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "스티커 제작 가능(별도)",
+  "packaging": "기본 opp개별포장 / 종이케이스 옵션가능(별도)",
+  "set_type": "set_available",
+  "related_set_products": [
+    "b2eac6ec-a113-49e6-a90c-0bb94e8cf639"
+  ]
+}
