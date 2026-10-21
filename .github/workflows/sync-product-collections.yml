@@ -8,6 +8,7 @@ on:
       - "data/product-items/**"
       - "data/products/**"
       - ".pages.yml"
+      - "data/categories.json"
       - ".github/workflows/sync-product-collections.yml"
   workflow_dispatch:
 
@@ -34,7 +35,7 @@ jobs:
           import shutil
           from pathlib import Path
 
-          categories = {
+          aggregate_names = {
               "magnifier": "magnifier.json",
               "card-mirror": "card-mirror.json",
               "winter": "winter.json",
@@ -42,98 +43,44 @@ jobs:
               "all-season": "all-season.json",
           }
 
-          nested_subfolders = {
-              "winter": {
-                  "neckwarmer": "neckwarmer",
-                  "gloves": "gloves",
-                  "earmuffs": "earmuffs",
-                  "blanket": "blanket",
-                  "socks": "socks",
-                  "footwarmer": "footwarmer",
-                  "sets": "sets",
-              },
-              "summer": {
-                  "arm_sleeves": "arm_sleeves",
-                  "cool_scarf": "cool_scarf",
-                  "cool_mask": "cool_mask",
-                  "cool_towel": "cool_towel",
-                  "sets": "sets",
-              }
-          }
-
-          # Compatibility aliases: if old data used a slightly different id,
-          # move it to the correct current admin folder instead of losing it.
-          sub_aliases = {
-              "winter": {
-                  "neckwarmer": "neckwarmer",
-                  "neck_warmer": "neckwarmer",
-                  "넥워머": "neckwarmer",
-
-                  "gloves": "gloves",
-                  "glove": "gloves",
-                  "warmgloves": "gloves",
-                  "warm_gloves": "gloves",
-                  "장갑": "gloves",
-
-                  "earmuffs": "earmuffs",
-                  "earmuff": "earmuffs",
-                  "귀마개": "earmuffs",
-
-                  "blanket": "blanket",
-                  "blankets": "blanket",
-                  "담요": "blanket",
-
-                  "socks": "socks",
-                  "sock": "socks",
-                  "양말": "socks",
-
-                  "footwarmer": "footwarmer",
-                  "foot_warmer": "footwarmer",
-                  "발토시": "footwarmer",
-
-                  "sets": "sets",
-                  "set": "sets",
-                  "set_product": "sets",
-                  "세트상품": "sets",
-              },
-              "summer": {
-                  "arm_sleeves": "arm_sleeves",
-                  "armsleeves": "arm_sleeves",
-                  "cool_sleeves": "arm_sleeves",
-                  "쿨토시": "arm_sleeves",
-
-                  "cool_scarf": "cool_scarf",
-                  "coolscarf": "cool_scarf",
-                  "쿨스카프": "cool_scarf",
-
-                  "cool_mask": "cool_mask",
-                  "coolmask": "cool_mask",
-                  "쿨마스크": "cool_mask",
-
-                  "cool_towel": "cool_towel",
-                  "cooltowel": "cool_towel",
-                  "쿨타올": "cool_towel",
-
-                  "sets": "sets",
-                  "set": "sets",
-                  "set_product": "sets",
-                  "세트상품": "sets",
-              }
-          }
-
-          source_root = Path("data/products")
           item_root = Path("data/product-items")
+          aggregate_root = Path("data/products")
           item_root.mkdir(parents=True, exist_ok=True)
 
-          def read_array(path):
-              if not path.exists():
-                  return []
-              try:
-                  data = json.loads(path.read_text(encoding="utf-8"))
-              except Exception as e:
-                  print(f"Could not read {path}: {e}")
-                  return []
-              return data if isinstance(data, list) else []
+          aliases = {
+              "winter": {
+                  "neckwarmer": "neckwarmer",
+                  "gloves": "gloves",
+                  "earmuffs": "earmuffs",
+                  "blanket": "blanket",
+                  "footwarmer": "footwarmer",
+                  "foot_warmer": "footwarmer",
+                  "foot-warmer": "footwarmer",
+                  "sets": "sets",
+                  "set": "sets",
+                  "set_product": "sets",
+              },
+              "summer": {
+                  "cool_arm_sleeves": "arm_sleeves",
+                  "arm_sleeves": "arm_sleeves",
+                  "cool_scarf": "cool_scarf",
+                  "cool_mask": "cool_mask",
+                  "cool_towel": "cool_towel",
+                  "sets": "sets",
+                  "set": "sets",
+                  "set_product": "sets",
+              },
+              "all-season": {
+                  "mat": "mat",
+                  "socks": "socks",
+                  "premium_socks": "socks",
+                  "premium-socks": "socks",
+                  "buff": "buff",
+              }
+          }
+
+          def norm(v):
+              return str(v or "").strip().lower().replace(" ", "").replace("-", "_")
 
           def safe_filename(product):
               pid = str(product.get("id") or "").strip()
@@ -141,119 +88,154 @@ jobs:
                   return None
               return re.sub(r"[^A-Za-z0-9_-]+", "-", pid).strip("-") + ".json"
 
-          def norm(value):
-              return str(value or "").strip().lower().replace(" ", "").replace("-", "_")
+          def canonical_location(product, fallback_category):
+              category = str(product.get("category") or fallback_category or "").strip()
+              sub = norm(product.get("subcategory"))
 
-          def target_subfolder(category, product):
-              if category not in nested_subfolders:
-                  return None
-              raw = norm(product.get("subcategory"))
-              return sub_aliases.get(category, {}).get(raw, "_other")
+              # Move the entire socks category out of winter into all-season.
+              if category == "winter" and sub in {"socks", "sock", "premium_socks"}:
+                  product["category"] = "all-season"
+                  product["subcategory"] = "socks"
+                  return "all-season", "socks"
 
-          def add_initial_order(products):
-              for idx, product in enumerate(products, start=1):
-                  if isinstance(product, dict) and product.get("display_order") in (None, ""):
-                      product["display_order"] = idx * 10
+              # Merge old all-season premium-socks into generic socks.
+              if category == "all-season" and sub in {"socks", "sock", "premium_socks"}:
+                  product["category"] = "all-season"
+                  product["subcategory"] = "socks"
+                  return "all-season", "socks"
 
-          # 1) Migrate legacy aggregate arrays into per-product files if not already present.
-          for category, aggregate_name in categories.items():
-              aggregate_path = source_root / aggregate_name
-              category_dir = item_root / category
-              category_dir.mkdir(parents=True, exist_ok=True)
+              if category in aliases:
+                  target = aliases[category].get(sub, "_other")
+                  # Keep public subcategory ids consistent with categories.json.
+                  public_sub = target
+                  if category == "winter" and target == "footwarmer":
+                      public_sub = "foot-warmer"
+                  elif category == "summer" and target == "arm_sleeves":
+                      public_sub = "cool-arm-sleeves"
+                  elif category == "summer" and target == "cool_scarf":
+                      public_sub = "cool-scarf"
+                  elif category == "summer" and target == "cool_mask":
+                      public_sub = "cool-mask"
+                  elif category == "summer" and target == "cool_towel":
+                      public_sub = "cool-towel"
+                  if target != "_other":
+                      product["subcategory"] = public_sub
+                  return category, target
 
-              current = read_array(aggregate_path)
-              add_initial_order(current)
+              return category, None
 
-              for product in current:
-                  if not isinstance(product, dict):
-                      continue
-                  filename = safe_filename(product)
-                  if not filename:
-                      continue
+          # Seed missing per-product files from aggregate arrays.
+          existing_ids = set()
+          for p in item_root.rglob("*.json"):
+              try:
+                  obj = json.loads(p.read_text(encoding="utf-8"))
+                  if isinstance(obj, dict) and obj.get("id"):
+                      existing_ids.add(str(obj["id"]))
+              except Exception:
+                  pass
 
-                  subfolder = target_subfolder(category, product)
-                  if subfolder:
-                      dest_dir = category_dir / subfolder
-                  else:
-                      dest_dir = category_dir
-                  dest_dir.mkdir(parents=True, exist_ok=True)
-
-                  dest = dest_dir / filename
-
-                  # Don't overwrite a newer per-product CMS file.
-                  if not dest.exists():
-                      # Search recursively in case this product already exists elsewhere.
-                      existing = list(category_dir.rglob(filename))
-                      if not existing:
-                          dest.write_text(
-                              json.dumps(product, ensure_ascii=False, indent=2) + "\n",
-                              encoding="utf-8"
-                          )
-
-          # 2) Move any existing flat winter/summer JSON files into the right subfolder.
-          for category in ("winter", "summer"):
-              category_dir = item_root / category
-              if not category_dir.exists():
+          for category, agg_name in aggregate_names.items():
+              agg = aggregate_root / agg_name
+              if not agg.exists():
+                  continue
+              try:
+                  data = json.loads(agg.read_text(encoding="utf-8"))
+              except Exception:
+                  continue
+              if not isinstance(data, list):
                   continue
 
-              for flat_file in list(category_dir.glob("*.json")):
+              for idx, product in enumerate(data, start=1):
+                  if not isinstance(product, dict) or not product.get("id"):
+                      continue
+                  if str(product["id"]) in existing_ids:
+                      continue
+                  if product.get("display_order") in (None, ""):
+                      product["display_order"] = idx * 10
+
+                  target_cat, target_sub = canonical_location(product, category)
+                  target_dir = item_root / target_cat
+                  if target_sub:
+                      target_dir = target_dir / target_sub
+                  target_dir.mkdir(parents=True, exist_ok=True)
+
+                  filename = safe_filename(product)
+                  if filename:
+                      (target_dir / filename).write_text(
+                          json.dumps(product, ensure_ascii=False, indent=2) + "\n",
+                          encoding="utf-8"
+                      )
+                      existing_ids.add(str(product["id"]))
+
+          # Reorganize all existing item files into their canonical folders.
+          files = list(item_root.rglob("*.json"))
+          for src in files:
+              try:
+                  product = json.loads(src.read_text(encoding="utf-8"))
+              except Exception as e:
+                  print(f"Skip invalid {src}: {e}")
+                  continue
+              if not isinstance(product, dict):
+                  continue
+
+              try:
+                  fallback = src.relative_to(item_root).parts[0]
+              except Exception:
+                  fallback = str(product.get("category") or "")
+
+              target_cat, target_sub = canonical_location(product, fallback)
+              target_dir = item_root / target_cat
+              if target_sub:
+                  target_dir = target_dir / target_sub
+              target_dir.mkdir(parents=True, exist_ok=True)
+
+              filename = safe_filename(product) or src.name
+              dest = target_dir / filename
+
+              # Always write canonicalized JSON.
+              dest.write_text(
+                  json.dumps(product, ensure_ascii=False, indent=2) + "\n",
+                  encoding="utf-8"
+              )
+              if src.resolve() != dest.resolve() and src.exists():
+                  src.unlink()
+                  print(f"Moved {src} -> {dest}")
+
+          # Remove empty legacy directories where possible.
+          for d in sorted(item_root.rglob("*"), reverse=True):
+              if d.is_dir():
                   try:
-                      product = json.loads(flat_file.read_text(encoding="utf-8"))
-                  except Exception as e:
-                      print(f"Skip invalid {flat_file}: {e}")
-                      continue
+                      d.rmdir()
+                  except OSError:
+                      pass
 
-                  if not isinstance(product, dict):
-                      continue
-
-                  subfolder = target_subfolder(category, product) or "_other"
-                  dest_dir = category_dir / subfolder
-                  dest_dir.mkdir(parents=True, exist_ok=True)
-                  dest = dest_dir / flat_file.name
-
-                  if dest.exists():
-                      # Keep the destination copy and remove the duplicate flat file.
-                      flat_file.unlink()
-                  else:
-                      shutil.move(str(flat_file), str(dest))
-
-                  print(f"Moved {category}/{flat_file.name} -> {category}/{subfolder}/{flat_file.name}")
-
-          # 3) Rebuild website aggregate JSON from per-product files recursively.
-          for category, aggregate_name in categories.items():
-              aggregate_path = source_root / aggregate_name
-              category_dir = item_root / category
-              category_dir.mkdir(parents=True, exist_ok=True)
-
+          # Rebuild website aggregate arrays recursively.
+          for category, agg_name in aggregate_names.items():
+              cat_dir = item_root / category
               items = []
-              for item_path in sorted(category_dir.rglob("*.json")):
-                  try:
-                      product = json.loads(item_path.read_text(encoding="utf-8"))
-                  except Exception as e:
-                      print(f"Skip invalid {item_path}: {e}")
-                      continue
-
-                  if isinstance(product, dict):
-                      items.append(product)
+              if cat_dir.exists():
+                  for p in cat_dir.rglob("*.json"):
+                      try:
+                          obj = json.loads(p.read_text(encoding="utf-8"))
+                      except Exception:
+                          continue
+                      if isinstance(obj, dict):
+                          items.append(obj)
 
               def order_key(product):
-                  raw = product.get("display_order")
                   try:
-                      order = float(raw)
+                      order = float(product.get("display_order"))
                   except (TypeError, ValueError):
                       order = 999999999
                   return (order, str(product.get("title", "")).lower())
 
               items.sort(key=order_key)
-
-              aggregate_path.parent.mkdir(parents=True, exist_ok=True)
-              aggregate_path.write_text(
+              aggregate_root.mkdir(parents=True, exist_ok=True)
+              (aggregate_root / agg_name).write_text(
                   json.dumps(items, ensure_ascii=False, indent=2) + "\n",
                   encoding="utf-8"
               )
-
               print(f"[{category}] synced {len(items)} products")
-
           PY
 
       - name: Sync related set product choices
