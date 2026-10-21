@@ -1,3 +1,74 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>제품소개 | 해피온</title><meta name="description" content="해피온 제품 카탈로그"><link rel="icon" href="assets/images/logo.png"><link rel="stylesheet" href="assets/css/style.css"></head><body><div id="site-header"></div>
 <main><section class="sub-hero"><div class="container"><div class="breadcrumbs"><a href="index.html">홈</a><span>›</span><strong>제품소개</strong></div><p class="eyebrow">PRODUCTS</p><h1>제품소개</h1><p>대분류를 선택해 세부 품목과 등록된 상품을 확인할 수 있습니다.</p></div></section><section class="section"><div class="container"><div class="category-grid" id="category-list"></div></div></section><section class="section soft"><div class="container"><div class="section-head"><div><p class="eyebrow">ALL PRODUCTS</p><h2>전체 상품</h2></div></div><div class="products-toolbar"><div class="search-box"><input id="product-search" type="search" placeholder="상품명 검색"></div><span class="product-count" id="product-count"></span></div><div class="product-grid" id="all-products"></div></div></section></main>
-<div id="site-footer"></div><script src="data/seed.js"></script><script src="assets/js/app.js"></script><script>(async()=>{const d=await H.load();H.headerFooter(d.site,'products');document.getElementById('category-list').innerHTML=d.categories.map((c,i)=>`<a class="category-card" href="category.html?category=${encodeURIComponent(c.id)}"><span class="index">0${i+1}</span><div><h3>${H.esc(c.label)}</h3><p>${H.esc(c.desc)}</p><div class="arrow">→</div></div></a>`).join('');const input=document.getElementById('product-search'),grid=document.getElementById('all-products'),count=document.getElementById('product-count');function render(){const term=input.value.trim().toLowerCase();const list=d.products.filter(p=>p.published!==false&&(!term||(p.title+' '+(p.summary||'')).toLowerCase().includes(term)));grid.innerHTML=list.map(H.productCard).join('')||'<div class="empty">등록된 상품이 없습니다.</div>';count.textContent=`${list.length}개 상품`;}input.addEventListener('input',render);render();})();</script></body></html>
+<div id="site-footer"></div><script src="data/seed.js"></script><script src="assets/js/app.js"></script><script>(async()=>{
+const d=await H.load();
+H.headerFooter(d.site,'products');
+
+// 제품소개 대분류 카드:
+// 메인에서 지정한 카테고리 대표이미지를 그대로 사용하고,
+// 지정 이미지가 없으면 해당 카테고리 첫 상품 대표이미지를 사용합니다.
+const categoryList=document.getElementById('category-list');
+const categoryOrder=['summer','winter','all-season','magnifier','card-mirror'];
+const orderedCategories=categoryOrder
+  .map(id=>d.categories.find(c=>c.id===id))
+  .filter(Boolean);
+
+const categoryCards=await Promise.all(orderedCategories.map(async(c,i)=>{
+  let saved={};
+  try{
+    const r=await fetch(`data/home-categories/${c.id}.json?ts=${Date.now()}`,{cache:'no-store'});
+    if(r.ok) saved=await r.json();
+  }catch(e){}
+
+  const firstProduct=d.products.find(p=>
+    p.published!==false &&
+    p.category===c.id &&
+    p.hero_image
+  );
+
+  return {
+    id:c.id,
+    title:saved.title||c.label||'',
+    description:saved.description||c.desc||'',
+    top_text:String(i+1).padStart(2,'0'),
+    link_text:saved.link_text||'제품 보기 →',
+    image:saved.image || (firstProduct&&firstProduct.hero_image) || ''
+  };
+}));
+
+categoryList.innerHTML=categoryCards.map(c=>{
+  const image=c.image
+    ? `<img class="home-category-image" src="${H.esc(c.image.replace(/^\//,''))}" alt="${H.esc(c.title)}">`
+    : '';
+
+  return `<a class="home-category-card ${c.image?'has-image':'no-image'}" href="category.html?category=${encodeURIComponent(c.id)}">
+    ${image}
+    <div class="home-category-shade"></div>
+    <div class="home-category-content">
+      <span class="home-category-top">${H.esc(c.top_text)}</span>
+      <div class="home-category-bottom">
+        <h3>${H.esc(c.title)}</h3>
+        <p>${H.esc(c.description)}</p>
+        <span class="home-category-link">${H.esc(c.link_text)}</span>
+      </div>
+    </div>
+  </a>`;
+}).join('');
+
+const input=document.getElementById('product-search');
+const grid=document.getElementById('all-products');
+const count=document.getElementById('product-count');
+
+function render(){
+  const term=input.value.trim().toLowerCase();
+  const list=d.products.filter(p=>
+    p.published!==false &&
+    (!term || (p.title+' '+(p.summary||'')).toLowerCase().includes(term))
+  );
+  grid.innerHTML=list.map(H.productCard).join('')||'<div class="empty">등록된 상품이 없습니다.</div>';
+  count.textContent=`${list.length}개 상품`;
+}
+
+input.addEventListener('input',render);
+render();
+})();</script></body></html>
