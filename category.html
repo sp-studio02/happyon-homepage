@@ -54,6 +54,13 @@
 <script>
 (async()=>{
   const d = await H.load();
+
+  let categoryThumbs = {};
+  try{
+    const r = await fetch(`data/category-thumbnails.json?ts=${Date.now()}`, {cache:'no-store'});
+    if(r.ok) categoryThumbs = await r.json();
+  }catch(e){}
+
   H.headerFooter(d.site,'products');
 
   const cid = H.q('category');
@@ -121,8 +128,12 @@
           actionText = `${n}개 상품 보기 →`;
         }
 
-        const thumb = first && first.hero_image
-          ? `<img src="${H.esc(first.hero_image.replace(/^\//,''))}" alt="${H.esc(x.label)}">`
+        const thumbKey = `${c.id}_${x.id}`.replace(/-/g,'_');
+        const customThumb = categoryThumbs[thumbKey] || '';
+        const thumbSrc = customThumb || (first && first.hero_image ? first.hero_image : '');
+
+        const thumb = thumbSrc
+          ? `<img src="${H.esc(thumbSrc.replace(/^\//,''))}" alt="${H.esc(x.label)}">`
           : `<div class="subcategory-placeholder"><span>${H.esc(x.label)}</span></div>`;
 
         return `

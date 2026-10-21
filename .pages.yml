@@ -255,6 +255,235 @@ content:
       label: 아래 링크 문구
       type: string
       description: 예) 제품 보기 →
+- name: subcategory_thumbnail_management
+  label: 세부 카테고리 이미지
+  type: file
+  path: data/category-thumbnails.json
+  format: json
+  operations:
+    delete: false
+    rename: false
+  fields:
+  - name: summer_cool_arm_sleeves
+    label: 여름제품 · 쿨토시
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: summer_cool_scarf
+    label: 여름제품 · 쿨스카프
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: summer_cool_mask
+    label: 여름제품 · 쿨마스크
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: summer_cool_towel
+    label: 여름제품 · 쿨타올
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: summer_sets
+    label: 여름제품 · 세트상품
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: winter_neckwarmer
+    label: 겨울제품 · 넥워머
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: winter_gloves
+    label: 겨울제품 · 장갑
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: winter_earmuffs
+    label: 겨울제품 · 귀마개
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: winter_blanket
+    label: 겨울제품 · 담요
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: winter_socks
+    label: 겨울제품 · 양말
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: winter_foot_warmer
+    label: 겨울제품 · 발토시
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: winter_sets
+    label: 겨울제품 · 세트상품
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: all_season_mat
+    label: 사계절제품 · 돗자리
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: all_season_premium_socks
+    label: 사계절제품 · 프리미엄 양말
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: all_season_buff
+    label: 사계절제품 · 버프(멀티스카프)
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: magnifier_business_card
+    label: 돋보기명함 · 명함사이즈
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: magnifier_bookmark
+    label: 돋보기명함 · 책갈피사이즈
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: magnifier_magnetic
+    label: 돋보기명함 · 자석 돋보기
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: card_mirror_standard
+    label: 카드거울 · 카드거울
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
+  - name: card_mirror_small_qty
+    label: 카드거울 · 소량제작 카드거울
+    type: image
+    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      rename: safe
 - name: product_management
   label: 상품 관리
   type: group
@@ -438,64 +667,6 @@ content:
           values:
           - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
             label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-          - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-            label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-          - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-            label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-          - name: c07454f6-4577-4069-8ce7-44353b586e0d
-            label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-          - name: 1f2c2303-396d-4645-b29c-c0389c324291
-            label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-          - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-            label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-          - name: f9468b33-dacf-4817-b530-c91573446212
-            label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-          - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-            label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-          - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-            label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-          - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-            label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-          - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-            label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-          - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-            label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-          - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-            label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-          - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-            label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-          - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-            label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-          - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-            label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-          - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-            label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-          - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-            label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-          - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-            label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-          - name: f3c65384-8457-4b97-a640-687de003f37a
-            label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-          - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-            label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-          - name: 686e4359-9002-49b5-890f-5904f68fd29c
-            label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-          - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-            label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-          - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-            label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-          - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-            label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-          - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-            label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-          - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-            label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-          - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-            label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-          - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-            label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-          - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-            label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -699,64 +870,6 @@ content:
           values:
           - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
             label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-          - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-            label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-          - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-            label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-          - name: c07454f6-4577-4069-8ce7-44353b586e0d
-            label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-          - name: 1f2c2303-396d-4645-b29c-c0389c324291
-            label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-          - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-            label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-          - name: f9468b33-dacf-4817-b530-c91573446212
-            label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-          - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-            label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-          - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-            label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-          - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-            label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-          - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-            label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-          - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-            label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-          - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-            label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-          - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-            label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-          - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-            label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-          - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-            label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-          - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-            label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-          - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-            label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-          - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-            label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-          - name: f3c65384-8457-4b97-a640-687de003f37a
-            label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-          - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-            label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-          - name: 686e4359-9002-49b5-890f-5904f68fd29c
-            label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-          - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-            label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-          - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-            label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-          - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-            label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-          - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-            label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-          - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-            label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-          - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-            label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-          - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-            label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-          - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-            label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -960,64 +1073,6 @@ content:
           values:
           - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
             label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-          - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-            label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-          - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-            label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-          - name: c07454f6-4577-4069-8ce7-44353b586e0d
-            label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-          - name: 1f2c2303-396d-4645-b29c-c0389c324291
-            label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-          - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-            label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-          - name: f9468b33-dacf-4817-b530-c91573446212
-            label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-          - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-            label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-          - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-            label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-          - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-            label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-          - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-            label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-          - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-            label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-          - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-            label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-          - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-            label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-          - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-            label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-          - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-            label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-          - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-            label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-          - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-            label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-          - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-            label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-          - name: f3c65384-8457-4b97-a640-687de003f37a
-            label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-          - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-            label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-          - name: 686e4359-9002-49b5-890f-5904f68fd29c
-            label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-          - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-            label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-          - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-            label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-          - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-            label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-          - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-            label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-          - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-            label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-          - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-            label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-          - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-            label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-          - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-            label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -1221,64 +1276,6 @@ content:
           values:
           - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
             label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-          - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-            label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-          - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-            label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-          - name: c07454f6-4577-4069-8ce7-44353b586e0d
-            label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-          - name: 1f2c2303-396d-4645-b29c-c0389c324291
-            label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-          - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-            label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-          - name: f9468b33-dacf-4817-b530-c91573446212
-            label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-          - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-            label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-          - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-            label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-          - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-            label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-          - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-            label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-          - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-            label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-          - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-            label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-          - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-            label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-          - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-            label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-          - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-            label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-          - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-            label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-          - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-            label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-          - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-            label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-          - name: f3c65384-8457-4b97-a640-687de003f37a
-            label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-          - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-            label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-          - name: 686e4359-9002-49b5-890f-5904f68fd29c
-            label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-          - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-            label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-          - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-            label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-          - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-            label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-          - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-            label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-          - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-            label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-          - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-            label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-          - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-            label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-          - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-            label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -1482,64 +1479,6 @@ content:
           values:
           - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
             label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-          - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-            label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-          - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-            label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-          - name: c07454f6-4577-4069-8ce7-44353b586e0d
-            label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-          - name: 1f2c2303-396d-4645-b29c-c0389c324291
-            label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-          - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-            label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-          - name: f9468b33-dacf-4817-b530-c91573446212
-            label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-          - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-            label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-          - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-            label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-          - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-            label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-          - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-            label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-          - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-            label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-          - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-            label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-          - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-            label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-          - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-            label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-          - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-            label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-          - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-            label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-          - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-            label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-          - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-            label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-          - name: f3c65384-8457-4b97-a640-687de003f37a
-            label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-          - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-            label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-          - name: 686e4359-9002-49b5-890f-5904f68fd29c
-            label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-          - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-            label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-          - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-            label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-          - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-            label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-          - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-            label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-          - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-            label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-          - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-            label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-          - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-            label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-          - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-            label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -1751,64 +1690,6 @@ content:
           values:
           - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
             label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-          - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-            label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-          - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-            label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-          - name: c07454f6-4577-4069-8ce7-44353b586e0d
-            label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-          - name: 1f2c2303-396d-4645-b29c-c0389c324291
-            label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-          - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-            label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-          - name: f9468b33-dacf-4817-b530-c91573446212
-            label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-          - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-            label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-          - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-            label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-          - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-            label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-          - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-            label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-          - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-            label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-          - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-            label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-          - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-            label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-          - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-            label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-          - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-            label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-          - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-            label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-          - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-            label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-          - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-            label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-          - name: f3c65384-8457-4b97-a640-687de003f37a
-            label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-          - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-            label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-          - name: 686e4359-9002-49b5-890f-5904f68fd29c
-            label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-          - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-            label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-          - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-            label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-          - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-            label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-          - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-            label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-          - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-            label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-          - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-            label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-          - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-            label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-          - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-            label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -2016,64 +1897,6 @@ content:
           values:
           - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
             label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-          - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-            label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-          - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-            label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-          - name: c07454f6-4577-4069-8ce7-44353b586e0d
-            label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-          - name: 1f2c2303-396d-4645-b29c-c0389c324291
-            label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-          - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-            label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-          - name: f9468b33-dacf-4817-b530-c91573446212
-            label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-          - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-            label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-          - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-            label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-          - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-            label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-          - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-            label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-          - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-            label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-          - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-            label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-          - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-            label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-          - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-            label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-          - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-            label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-          - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-            label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-          - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-            label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-          - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-            label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-          - name: f3c65384-8457-4b97-a640-687de003f37a
-            label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-          - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-            label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-          - name: 686e4359-9002-49b5-890f-5904f68fd29c
-            label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-          - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-            label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-          - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-            label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-          - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-            label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-          - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-            label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-          - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-            label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-          - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-            label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-          - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-            label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-          - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-            label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -2281,64 +2104,6 @@ content:
           values:
           - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
             label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-          - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-            label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-          - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-            label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-          - name: c07454f6-4577-4069-8ce7-44353b586e0d
-            label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-          - name: 1f2c2303-396d-4645-b29c-c0389c324291
-            label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-          - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-            label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-          - name: f9468b33-dacf-4817-b530-c91573446212
-            label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-          - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-            label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-          - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-            label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-          - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-            label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-          - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-            label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-          - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-            label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-          - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-            label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-          - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-            label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-          - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-            label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-          - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-            label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-          - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-            label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-          - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-            label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-          - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-            label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-          - name: f3c65384-8457-4b97-a640-687de003f37a
-            label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-          - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-            label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-          - name: 686e4359-9002-49b5-890f-5904f68fd29c
-            label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-          - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-            label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-          - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-            label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-          - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-            label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-          - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-            label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-          - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-            label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-          - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-            label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-          - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-            label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-          - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-            label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -2546,64 +2311,6 @@ content:
           values:
           - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
             label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-          - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-            label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-          - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-            label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-          - name: c07454f6-4577-4069-8ce7-44353b586e0d
-            label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-          - name: 1f2c2303-396d-4645-b29c-c0389c324291
-            label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-          - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-            label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-          - name: f9468b33-dacf-4817-b530-c91573446212
-            label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-          - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-            label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-          - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-            label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-          - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-            label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-          - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-            label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-          - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-            label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-          - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-            label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-          - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-            label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-          - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-            label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-          - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-            label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-          - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-            label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-          - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-            label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-          - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-            label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-          - name: f3c65384-8457-4b97-a640-687de003f37a
-            label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-          - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-            label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-          - name: 686e4359-9002-49b5-890f-5904f68fd29c
-            label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-          - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-            label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-          - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-            label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-          - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-            label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-          - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-            label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-          - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-            label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-          - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-            label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-          - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-            label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-          - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-            label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -2811,64 +2518,6 @@ content:
           values:
           - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
             label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-          - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-            label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-          - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-            label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-          - name: c07454f6-4577-4069-8ce7-44353b586e0d
-            label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-          - name: 1f2c2303-396d-4645-b29c-c0389c324291
-            label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-          - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-            label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-          - name: f9468b33-dacf-4817-b530-c91573446212
-            label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-          - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-            label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-          - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-            label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-          - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-            label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-          - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-            label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-          - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-            label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-          - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-            label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-          - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-            label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-          - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-            label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-          - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-            label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-          - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-            label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-          - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-            label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-          - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-            label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-          - name: f3c65384-8457-4b97-a640-687de003f37a
-            label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-          - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-            label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-          - name: 686e4359-9002-49b5-890f-5904f68fd29c
-            label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-          - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-            label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-          - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-            label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-          - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-            label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-          - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-            label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-          - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-            label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-          - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-            label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-          - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-            label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-          - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-            label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -3076,64 +2725,6 @@ content:
           values:
           - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
             label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-          - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-            label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-          - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-            label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-          - name: c07454f6-4577-4069-8ce7-44353b586e0d
-            label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-          - name: 1f2c2303-396d-4645-b29c-c0389c324291
-            label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-          - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-            label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-          - name: f9468b33-dacf-4817-b530-c91573446212
-            label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-          - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-            label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-          - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-            label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-          - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-            label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-          - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-            label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-          - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-            label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-          - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-            label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-          - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-            label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-          - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-            label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-          - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-            label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-          - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-            label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-          - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-            label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-          - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-            label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-          - name: f3c65384-8457-4b97-a640-687de003f37a
-            label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-          - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-            label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-          - name: 686e4359-9002-49b5-890f-5904f68fd29c
-            label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-          - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-            label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-          - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-            label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-          - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-            label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-          - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-            label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-          - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-            label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-          - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-            label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-          - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-            label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-          - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-            label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -3341,64 +2932,6 @@ content:
           values:
           - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
             label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-          - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-            label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-          - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-            label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-          - name: c07454f6-4577-4069-8ce7-44353b586e0d
-            label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-          - name: 1f2c2303-396d-4645-b29c-c0389c324291
-            label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-          - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-            label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-          - name: f9468b33-dacf-4817-b530-c91573446212
-            label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-          - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-            label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-          - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-            label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-          - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-            label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-          - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-            label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-          - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-            label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-          - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-            label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-          - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-            label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-          - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-            label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-          - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-            label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-          - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-            label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-          - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-            label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-          - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-            label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-          - name: f3c65384-8457-4b97-a640-687de003f37a
-            label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-          - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-            label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-          - name: 686e4359-9002-49b5-890f-5904f68fd29c
-            label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-          - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-            label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-          - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-            label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-          - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-            label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-          - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-            label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-          - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-            label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-          - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-            label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-          - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-            label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-          - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-            label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -3566,64 +3099,6 @@ content:
         values:
         - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
           label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-        - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-          label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-        - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-          label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-        - name: c07454f6-4577-4069-8ce7-44353b586e0d
-          label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-        - name: 1f2c2303-396d-4645-b29c-c0389c324291
-          label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-        - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-          label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-        - name: f9468b33-dacf-4817-b530-c91573446212
-          label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-        - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-          label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-        - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-          label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-        - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-          label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-        - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-          label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-        - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-          label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-        - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-          label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-        - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-          label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-        - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-          label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-        - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-          label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-        - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-          label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-        - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-          label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-        - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-          label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-        - name: f3c65384-8457-4b97-a640-687de003f37a
-          label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-        - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-          label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-        - name: 686e4359-9002-49b5-890f-5904f68fd29c
-          label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-        - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-          label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-        - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-          label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-        - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-          label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-        - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-          label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-        - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-          label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-        - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-          label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-        - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-          label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-        - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-          label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
     - name: set_name
       label: 세트 구성명
       type: string
@@ -3815,64 +3290,6 @@ content:
         values:
         - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
           label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-        - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-          label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-        - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-          label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-        - name: c07454f6-4577-4069-8ce7-44353b586e0d
-          label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-        - name: 1f2c2303-396d-4645-b29c-c0389c324291
-          label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-        - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-          label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-        - name: f9468b33-dacf-4817-b530-c91573446212
-          label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-        - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-          label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-        - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-          label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-        - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-          label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-        - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-          label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-        - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-          label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-        - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-          label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-        - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-          label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-        - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-          label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-        - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-          label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-        - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-          label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-        - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-          label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-        - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-          label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-        - name: f3c65384-8457-4b97-a640-687de003f37a
-          label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-        - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-          label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-        - name: 686e4359-9002-49b5-890f-5904f68fd29c
-          label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-        - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-          label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-        - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-          label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-        - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-          label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-        - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-          label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-        - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-          label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-        - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-          label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-        - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-          label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-        - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-          label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
     - name: set_name
       label: 세트 구성명
       type: string
@@ -4062,64 +3479,6 @@ content:
         values:
         - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
           label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-        - name: ea23da25-90c9-469e-9617-7401ff0b1e07
-          label: 레포마 추위대비 2종 B세트(넥워머+귀마개)
-        - name: 0c6bea85-6457-4d54-8057-d05a6a772dc2
-          label: 레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)
-        - name: c07454f6-4577-4069-8ce7-44353b586e0d
-          label: 레포마 추위대비 3종 S세트(넥워머+웜장갑+귀마개)
-        - name: 1f2c2303-396d-4645-b29c-c0389c324291
-          label: 레포마 까사 윈터 2종 A세트(까사장갑+넥워머)
-        - name: c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4
-          label: 레포마 까사 윈터 2종 B세트(까사장갑+귀마개)
-        - name: f9468b33-dacf-4817-b530-c91573446212
-          label: 레포마 까사 윈터 3종 S세트(까사장갑+넥워머+귀마개)
-        - name: 2cf9f72f-4ddd-4383-96a2-a7f42b703cc3
-          label: 레포마 실용한파 2종 복조리개 세트(웜장갑+넥워머)
-        - name: ba90f3e7-978e-4295-9fcb-39b44833ab26
-          label: 레포마 실용한파 3종 복조리개 세트(웜장갑+넥워머+귀마개)
-        - name: 892f9a24-1644-4443-bef3-4a04cc50a5d4
-          label: 레포마 겨울대비 3종 복주머니 세트(융 스토퍼 넥워머+폰터치겨울장갑+귀마개)
-        - name: 5b705771-eba1-4477-a74d-f12ba2d9731c
-          label: 레포마 웜가드 기모넥워머 + 귀마개 복조리세트
-        - name: 4a6d7a89-7c52-4b0f-9985-259b135aa767
-          label: 레포마 웜가드 기모넥워머 + 폰터치겨울장갑 복조리 세트
-        - name: dd55dcd2-5651-4b2e-bd4c-fdf3666d633c
-          label: 레포마 웜가드 기모넥워머 + 3중 등산양말 복조리 세트
-        - name: 6f6f77e2-c41e-4a83-bf42-b81251103cfe
-          label: 레포마 웜가드 기모넥워머 + 멀티스카프 복조리 세트
-        - name: 857a1a18-a3ed-4061-8a94-5159e8a0784d
-          label: 레포마 리버시블 양면 넥워머 + 귀마개 복조리세트
-        - name: a4f4f601-b21e-428e-81b8-b4a599e2287b
-          label: 레포마 리버시블 양면 넥워머 + 폰 터치 겨울장갑 복조리세트
-        - name: 439cd794-abbd-487c-b123-bac8fc2ece7f
-          label: 레포마 리버시블 양면 넥워머 + 3중 등산양말 복조리세트
-        - name: afd03e83-2e89-4cec-9824-2f6eab9ff569
-          label: 레포마 겨울온기 2종 A세트(보온 물주머니 + 넥워머)
-        - name: 211ae1a3-a1db-406f-981c-ceb165d33154
-          label: 레포마 겨울온기 2종 B세트(보온 물주머니 + 웜장갑)
-        - name: f3c65384-8457-4b97-a640-687de003f37a
-          label: ' 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)'
-        - name: 21452405-d79d-48e2-a6df-f426dc65e23f
-          label: 레포마 한파 온 2종 세트(보온 물주머니 + 넥워머)
-        - name: 686e4359-9002-49b5-890f-5904f68fd29c
-          label: 레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)
-        - name: 915a29e7-9e26-401f-b496-8ca5dc1e4d98
-          label: 레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)
-        - name: 4de7a372-3b85-49c8-baa5-c7aa07bbfbab
-          label: 레포마 한파 온 3종 복주머니 세트(보온 물주머니 + 넥워머 + 귀마개)
-        - name: 19ab6f0f-1ece-4293-8124-20af0d1d6101
-          label: 레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)
-        - name: 009e4d41-8cf4-4539-b529-456296a66f3b
-          label: 레포마 포그네 겨울케어 2종 B세트(극세사담요 + 웜장갑)
-        - name: f4b2c919-5bc8-4155-81a5-89ba257ce927
-          label: 레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)
-        - name: b2eac6ec-a113-49e6-a90c-0bb94e8cf639
-          label: 레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)
-        - name: 2469b0b0-3654-47d9-b57a-a20456ff9763
-          label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
-        - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
-          label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
     - name: set_name
       label: 세트 구성명
       type: string
