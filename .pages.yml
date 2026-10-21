@@ -255,74 +255,19 @@ content:
       label: 아래 링크 문구
       type: string
       description: 예) 제품 보기 →
-- name: subcategory_thumbnail_management
-  label: 세부 카테고리 이미지
+- name: winter_category_image_management
+  label: 겨울 카테고리 이미지
   type: file
-  path: data/category-thumbnails.json
+  path: data/winter-category-thumbnails.json
   format: json
   operations:
     delete: false
     rename: false
   fields:
-  - name: summer_cool_arm_sleeves
-    label: 여름제품 · 쿨토시
-    type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
-    options:
-      extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-      rename: safe
-  - name: summer_cool_scarf
-    label: 여름제품 · 쿨스카프
-    type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
-    options:
-      extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-      rename: safe
-  - name: summer_cool_mask
-    label: 여름제품 · 쿨마스크
-    type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
-    options:
-      extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-      rename: safe
-  - name: summer_cool_towel
-    label: 여름제품 · 쿨타올
-    type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
-    options:
-      extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-      rename: safe
-  - name: summer_sets
-    label: 여름제품 · 세트상품
-    type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
-    options:
-      extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-      rename: safe
   - name: winter_neckwarmer
-    label: 겨울제품 · 넥워머
+    label: 넥워머
     type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    description: 겨울제품 카테고리 카드에 표시할 이미지입니다. 비워두면 해당 품목 첫 상품 대표이미지를 사용합니다.
     options:
       extensions:
       - jpg
@@ -331,9 +276,9 @@ content:
       - webp
       rename: safe
   - name: winter_gloves
-    label: 겨울제품 · 장갑
+    label: 장갑
     type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    description: 겨울제품 카테고리 카드에 표시할 이미지입니다. 비워두면 해당 품목 첫 상품 대표이미지를 사용합니다.
     options:
       extensions:
       - jpg
@@ -342,9 +287,9 @@ content:
       - webp
       rename: safe
   - name: winter_earmuffs
-    label: 겨울제품 · 귀마개
+    label: 귀마개
     type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    description: 겨울제품 카테고리 카드에 표시할 이미지입니다. 비워두면 해당 품목 첫 상품 대표이미지를 사용합니다.
     options:
       extensions:
       - jpg
@@ -353,20 +298,9 @@ content:
       - webp
       rename: safe
   - name: winter_blanket
-    label: 겨울제품 · 담요
+    label: 담요
     type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
-    options:
-      extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-      rename: safe
-  - name: winter_socks
-    label: 겨울제품 · 양말
-    type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    description: 겨울제품 카테고리 카드에 표시할 이미지입니다. 비워두면 해당 품목 첫 상품 대표이미지를 사용합니다.
     options:
       extensions:
       - jpg
@@ -375,9 +309,9 @@ content:
       - webp
       rename: safe
   - name: winter_foot_warmer
-    label: 겨울제품 · 발토시
+    label: 발토시
     type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    description: 겨울제품 카테고리 카드에 표시할 이미지입니다. 비워두면 해당 품목 첫 상품 대표이미지를 사용합니다.
     options:
       extensions:
       - jpg
@@ -386,97 +320,9 @@ content:
       - webp
       rename: safe
   - name: winter_sets
-    label: 겨울제품 · 세트상품
+    label: 세트상품
     type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
-    options:
-      extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-      rename: safe
-  - name: all_season_mat
-    label: 사계절제품 · 돗자리
-    type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
-    options:
-      extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-      rename: safe
-  - name: all_season_premium_socks
-    label: 사계절제품 · 프리미엄 양말
-    type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
-    options:
-      extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-      rename: safe
-  - name: all_season_buff
-    label: 사계절제품 · 버프(멀티스카프)
-    type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
-    options:
-      extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-      rename: safe
-  - name: magnifier_business_card
-    label: 돋보기명함 · 명함사이즈
-    type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
-    options:
-      extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-      rename: safe
-  - name: magnifier_bookmark
-    label: 돋보기명함 · 책갈피사이즈
-    type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
-    options:
-      extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-      rename: safe
-  - name: magnifier_magnetic
-    label: 돋보기명함 · 자석 돋보기
-    type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
-    options:
-      extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-      rename: safe
-  - name: card_mirror_standard
-    label: 카드거울 · 카드거울
-    type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
-    options:
-      extensions:
-      - jpg
-      - jpeg
-      - png
-      - webp
-      rename: safe
-  - name: card_mirror_small_qty
-    label: 카드거울 · 소량제작 카드거울
-    type: image
-    description: 세부 품목 카드에 표시할 대표이미지입니다. 비워두면 해당 품목의 첫 상품 대표이미지를 사용합니다.
+    description: 겨울제품 카테고리 카드에 표시할 이미지입니다. 비워두면 해당 품목 첫 상품 대표이미지를 사용합니다.
     options:
       extensions:
       - jpg
@@ -2339,213 +2185,6 @@ content:
           - png
           - webp
           rename: safe
-    - name: winter_socks
-      label: 양말
-      type: collection
-      path: data/product-items/winter/socks
-      format: json
-      filename:
-        template: '{fields.id}.json'
-        field: false
-      view:
-        primary: title
-        fields:
-        - display_order
-        - title
-        - published
-        search:
-        - title
-        sort:
-        - display_order
-        - title
-        default:
-          sort: display_order
-          order: asc
-      operations:
-        create: true
-        rename: false
-        delete: true
-      fields:
-      - name: id
-        label: 상품 ID
-        type: uuid
-        readonly: true
-        options:
-          editable: false
-      - name: title
-        label: 상품명
-        type: string
-        required: true
-      - name: display_order
-        label: 노출 순서
-        type: number
-        description: '숫자가 작을수록 먼저 표시됩니다. 예: 10, 20, 30 / 중간 삽입은 15'
-      - name: category
-        label: 대분류
-        type: select
-        required: true
-        default: winter
-        options:
-          values:
-          - name: winter
-            label: 겨울제품
-      - name: subcategory
-        label: 세부 품목
-        type: select
-        required: true
-        options:
-          values:
-          - name: neckwarmer
-            label: 넥워머
-          - name: gloves
-            label: 장갑
-          - name: earmuffs
-            label: 귀마개
-          - name: blanket
-            label: 담요
-          - name: socks
-            label: 양말
-          - name: foot-warmer
-            label: 발토시
-          - name: sets
-            label: 세트상품
-      - name: summary
-        label: 한 줄 설명
-        type: text
-      - name: published
-        label: 홈페이지 공개
-        type: boolean
-        default: true
-      - name: featured
-        label: 메인 대표상품
-        type: boolean
-        default: false
-      - name: home_slide_order
-        label: 메인 슬라이드 노출 순서
-        type: select
-        default: none
-        description: 메인 슬라이드에 보여줄 상품 3개만 1·2·3 순서로 지정하세요.
-        options:
-          values:
-          - name: none
-            label: 노출 안 함
-          - name: '1'
-            label: 1번째
-          - name: '2'
-            label: 2번째
-          - name: '3'
-            label: 3번째
-      - name: hero_image
-        label: 대표이미지
-        type: image
-        options:
-          extensions:
-          - jpg
-          - jpeg
-          - png
-          - webp
-          rename: safe
-      - name: gallery
-        label: 상세이미지
-        type: image
-        description: 여러 장을 한 번에 선택할 수 있습니다.
-        options:
-          multiple:
-            max: 30
-          unique: true
-          extensions:
-          - jpg
-          - jpeg
-          - png
-          - webp
-          rename: safe
-      - name: features
-        label: 주요 특징
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: '{title}'
-        fields:
-        - name: title
-          label: 특징 제목
-          type: string
-        - name: description
-          label: 설명
-          type: text
-      - name: dimensions
-        label: 규격
-        type: string
-        description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
-      - name: material
-        label: 재질
-        type: string
-        description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
-      - name: colors
-        label: 색상
-        type: string
-      - name: default_order_quantity
-        label: 기본 주문수량
-        type: string
-        description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다.
-      - name: production_time
-        label: 제작기간
-        type: string
-      - name: print_method
-        label: 인쇄·제작 방식
-        type: text
-      - name: packaging
-        label: 포장 방식
-        type: text
-      - name: set_type
-        label: 세트 유형
-        type: select
-        description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
-        options:
-          values:
-          - name: set_product
-            label: 세트상품
-          - name: set_available
-            label: 세트 구성 가능
-          - name: set_unavailable
-            label: 세트 구성 불가
-      - name: related_set_products
-        label: 관련 세트상품
-        type: select
-        description: 이미 등록된 세트상품 중 상세페이지에 보여줄 상품을 여러 개 선택하세요.
-        options:
-          multiple: true
-          values:
-          - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
-            label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-      - name: set_name
-        label: 세트 구성명
-        type: string
-        description: 세트상품을 선택한 경우에만 작성하세요.
-      - name: set_contents
-        label: 구성 제품
-        type: string
-        list: true
-        description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
-      - name: set_packaging
-        label: 세트 포장 형태
-        type: string
-        description: 세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스
-      - name: set_description
-        label: 세트 설명
-        type: text
-        description: 세트상품을 선택한 경우에만 작성하세요.
-      - name: set_image
-        label: 세트 이미지
-        type: image
-        description: 세트상품을 선택한 경우에만 등록하세요.
-        options:
-          extensions:
-          - jpg
-          - jpeg
-          - png
-          - webp
-          rename: safe
     - name: winter_footwarmer
       label: 발토시
       type: collection
@@ -2960,192 +2599,562 @@ content:
           - png
           - webp
           rename: safe
-  - name: products_all_season
+  - name: all_season_products_group
     label: 사계절제품
-    type: collection
-    path: data/product-items/all-season
-    format: json
-    operations:
-      create: true
-      rename: false
-      delete: true
-    fields:
-    - name: id
-      label: 상품 ID
-      type: uuid
-      readonly: true
-      options:
-        editable: false
-    - name: title
-      label: 상품명
-      type: string
-      required: true
-    - name: display_order
-      label: 노출 순서
-      type: number
-      description: '숫자가 작을수록 먼저 표시됩니다. 예: 10, 20, 30 / 중간 삽입은 15'
-    - name: category
-      label: 대분류
-      type: select
-      required: true
-      default: all-season
-      options:
-        values:
-        - name: all-season
-          label: 사계절제품
-    - name: subcategory
-      label: 세부 품목
-      type: select
-      required: true
-      options:
-        values:
-        - name: mat
-          label: 돗자리
-        - name: premium-socks
-          label: 프리미엄 양말
-        - name: buff
-          label: 버프(멀티스카프)
-    - name: summary
-      label: 한 줄 설명
-      type: text
-    - name: published
-      label: 홈페이지 공개
-      type: boolean
-      default: true
-    - name: featured
-      label: 메인 대표상품
-      type: boolean
-      default: false
-    - name: hero_image
-      label: 대표이미지
-      type: image
-      options:
-        extensions:
-        - jpg
-        - jpeg
-        - png
-        - webp
-        rename: safe
-    - name: gallery
-      label: 상세이미지
-      type: image
-      description: 여러 장을 한 번에 선택할 수 있습니다.
-      options:
-        multiple:
-          max: 30
-        unique: true
-        extensions:
-        - jpg
-        - jpeg
-        - png
-        - webp
-        rename: safe
-    - name: features
-      label: 주요 특징
-      type: object
-      list:
-        collapsible:
-          collapsed: true
-          summary: '{title}'
+    type: group
+    items:
+    - name: all_season_mat
+      label: 돗자리
+      type: collection
+      path: data/product-items/all-season/mat
+      format: json
+      filename:
+        template: '{fields.id}.json'
+        field: false
+      view:
+        primary: title
+        fields:
+        - display_order
+        - title
+        - published
+        search:
+        - title
+        sort:
+        - display_order
+        - title
+        default:
+          sort: display_order
+          order: asc
+      operations:
+        create: true
+        rename: false
+        delete: true
       fields:
+      - name: id
+        label: 상품 ID
+        type: uuid
+        readonly: true
+        options:
+          editable: false
       - name: title
-        label: 특징 제목
+        label: 상품명
         type: string
-      - name: description
-        label: 설명
+        required: true
+      - name: display_order
+        label: 노출 순서
+        type: number
+        description: '숫자가 작을수록 먼저 표시됩니다. 예: 10, 20, 30 / 중간 삽입은 15'
+      - name: category
+        label: 대분류
+        type: select
+        required: true
+        default: all-season
+        options:
+          values:
+          - name: all-season
+            label: 사계절제품
+      - name: subcategory
+        label: 세부 품목
+        type: select
+        required: true
+        options:
+          values:
+          - name: mat
+            label: 돗자리
+          - name: socks
+            label: 양말
+          - name: buff
+            label: 버프(멀티스카프)
+      - name: summary
+        label: 한 줄 설명
         type: text
-    - name: dimensions
-      label: 규격
-      type: string
-      description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
-    - name: material
-      label: 재질
-      type: string
-      description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
-    - name: colors
-      label: 색상
-      type: string
-    - name: default_order_quantity
-      label: 기본 주문수량
-      type: string
-      description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다.
-    - name: production_time
-      label: 제작기간
-      type: string
-    - name: print_method
-      label: 인쇄·제작 방식
-      type: text
-    - name: packaging
-      label: 포장 방식
-      type: text
-    - name: set_type
-      label: 세트 유형
-      type: select
-      description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
-      options:
-        values:
-        - name: set_product
-          label: 세트상품
-        - name: set_available
-          label: 세트 구성 가능
-        - name: set_unavailable
-          label: 세트 구성 불가
-    - name: related_set_products
-      label: 관련 세트상품
-      type: select
-      description: 이미 등록된 세트상품 중 상세페이지에 보여줄 상품을 여러 개 선택하세요.
-      options:
-        multiple: true
-        values:
-        - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
-          label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
-    - name: set_name
-      label: 세트 구성명
-      type: string
-      description: 세트상품을 선택한 경우에만 작성하세요.
-    - name: set_contents
-      label: 구성 제품
-      type: string
-      list: true
-      description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
-    - name: set_packaging
-      label: 세트 포장 형태
-      type: string
-      description: 세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스
-    - name: set_description
-      label: 세트 설명
-      type: text
-      description: 세트상품을 선택한 경우에만 작성하세요.
-    - name: set_image
-      label: 세트 이미지
-      type: image
-      description: 세트상품을 선택한 경우에만 등록하세요.
-      options:
-        extensions:
-        - jpg
-        - jpeg
-        - png
-        - webp
-        rename: safe
-    filename:
-      template: '{fields.id}.json'
-      field: false
-    view:
-      primary: title
+      - name: published
+        label: 홈페이지 공개
+        type: boolean
+        default: true
+      - name: featured
+        label: 메인 대표상품
+        type: boolean
+        default: false
+      - name: hero_image
+        label: 대표이미지
+        type: image
+        options:
+          extensions:
+          - jpg
+          - jpeg
+          - png
+          - webp
+          rename: safe
+      - name: gallery
+        label: 상세이미지
+        type: image
+        description: 여러 장을 한 번에 선택할 수 있습니다.
+        options:
+          multiple:
+            max: 30
+          unique: true
+          extensions:
+          - jpg
+          - jpeg
+          - png
+          - webp
+          rename: safe
+      - name: features
+        label: 주요 특징
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{title}'
+        fields:
+        - name: title
+          label: 특징 제목
+          type: string
+        - name: description
+          label: 설명
+          type: text
+      - name: dimensions
+        label: 규격
+        type: string
+        description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+      - name: material
+        label: 재질
+        type: string
+        description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+      - name: colors
+        label: 색상
+        type: string
+      - name: default_order_quantity
+        label: 기본 주문수량
+        type: string
+        description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다.
+      - name: production_time
+        label: 제작기간
+        type: string
+      - name: print_method
+        label: 인쇄·제작 방식
+        type: text
+      - name: packaging
+        label: 포장 방식
+        type: text
+      - name: set_type
+        label: 세트 유형
+        type: select
+        description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
+        options:
+          values:
+          - name: set_product
+            label: 세트상품
+          - name: set_available
+            label: 세트 구성 가능
+          - name: set_unavailable
+            label: 세트 구성 불가
+      - name: related_set_products
+        label: 관련 세트상품
+        type: select
+        description: 이미 등록된 세트상품 중 상세페이지에 보여줄 상품을 여러 개 선택하세요.
+        options:
+          multiple: true
+          values:
+          - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
+            label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
+      - name: set_name
+        label: 세트 구성명
+        type: string
+        description: 세트상품을 선택한 경우에만 작성하세요.
+      - name: set_contents
+        label: 구성 제품
+        type: string
+        list: true
+        description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
+      - name: set_packaging
+        label: 세트 포장 형태
+        type: string
+        description: 세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스
+      - name: set_description
+        label: 세트 설명
+        type: text
+        description: 세트상품을 선택한 경우에만 작성하세요.
+      - name: set_image
+        label: 세트 이미지
+        type: image
+        description: 세트상품을 선택한 경우에만 등록하세요.
+        options:
+          extensions:
+          - jpg
+          - jpeg
+          - png
+          - webp
+          rename: safe
+    - name: all_season_socks
+      label: 양말
+      type: collection
+      path: data/product-items/all-season/socks
+      format: json
+      filename:
+        template: '{fields.id}.json'
+        field: false
+      view:
+        primary: title
+        fields:
+        - display_order
+        - title
+        - published
+        search:
+        - title
+        sort:
+        - display_order
+        - title
+        default:
+          sort: display_order
+          order: asc
+      operations:
+        create: true
+        rename: false
+        delete: true
       fields:
-      - display_order
-      - title
-      - subcategory
-      - published
-      search:
-      - title
-      - subcategory
-      sort:
-      - display_order
-      - title
-      default:
-        sort: display_order
-        order: asc
+      - name: id
+        label: 상품 ID
+        type: uuid
+        readonly: true
+        options:
+          editable: false
+      - name: title
+        label: 상품명
+        type: string
+        required: true
+      - name: display_order
+        label: 노출 순서
+        type: number
+        description: '숫자가 작을수록 먼저 표시됩니다. 예: 10, 20, 30 / 중간 삽입은 15'
+      - name: category
+        label: 대분류
+        type: select
+        required: true
+        default: all-season
+        options:
+          values:
+          - name: all-season
+            label: 사계절제품
+      - name: subcategory
+        label: 세부 품목
+        type: select
+        required: true
+        options:
+          values:
+          - name: mat
+            label: 돗자리
+          - name: socks
+            label: 양말
+          - name: buff
+            label: 버프(멀티스카프)
+      - name: summary
+        label: 한 줄 설명
+        type: text
+      - name: published
+        label: 홈페이지 공개
+        type: boolean
+        default: true
+      - name: featured
+        label: 메인 대표상품
+        type: boolean
+        default: false
+      - name: hero_image
+        label: 대표이미지
+        type: image
+        options:
+          extensions:
+          - jpg
+          - jpeg
+          - png
+          - webp
+          rename: safe
+      - name: gallery
+        label: 상세이미지
+        type: image
+        description: 여러 장을 한 번에 선택할 수 있습니다.
+        options:
+          multiple:
+            max: 30
+          unique: true
+          extensions:
+          - jpg
+          - jpeg
+          - png
+          - webp
+          rename: safe
+      - name: features
+        label: 주요 특징
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{title}'
+        fields:
+        - name: title
+          label: 특징 제목
+          type: string
+        - name: description
+          label: 설명
+          type: text
+      - name: dimensions
+        label: 규격
+        type: string
+        description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+      - name: material
+        label: 재질
+        type: string
+        description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+      - name: colors
+        label: 색상
+        type: string
+      - name: default_order_quantity
+        label: 기본 주문수량
+        type: string
+        description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다.
+      - name: production_time
+        label: 제작기간
+        type: string
+      - name: print_method
+        label: 인쇄·제작 방식
+        type: text
+      - name: packaging
+        label: 포장 방식
+        type: text
+      - name: set_type
+        label: 세트 유형
+        type: select
+        description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
+        options:
+          values:
+          - name: set_product
+            label: 세트상품
+          - name: set_available
+            label: 세트 구성 가능
+          - name: set_unavailable
+            label: 세트 구성 불가
+      - name: related_set_products
+        label: 관련 세트상품
+        type: select
+        description: 이미 등록된 세트상품 중 상세페이지에 보여줄 상품을 여러 개 선택하세요.
+        options:
+          multiple: true
+          values:
+          - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
+            label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
+      - name: set_name
+        label: 세트 구성명
+        type: string
+        description: 세트상품을 선택한 경우에만 작성하세요.
+      - name: set_contents
+        label: 구성 제품
+        type: string
+        list: true
+        description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
+      - name: set_packaging
+        label: 세트 포장 형태
+        type: string
+        description: 세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스
+      - name: set_description
+        label: 세트 설명
+        type: text
+        description: 세트상품을 선택한 경우에만 작성하세요.
+      - name: set_image
+        label: 세트 이미지
+        type: image
+        description: 세트상품을 선택한 경우에만 등록하세요.
+        options:
+          extensions:
+          - jpg
+          - jpeg
+          - png
+          - webp
+          rename: safe
+    - name: all_season_buff
+      label: 버프(멀티스카프)
+      type: collection
+      path: data/product-items/all-season/buff
+      format: json
+      filename:
+        template: '{fields.id}.json'
+        field: false
+      view:
+        primary: title
+        fields:
+        - display_order
+        - title
+        - published
+        search:
+        - title
+        sort:
+        - display_order
+        - title
+        default:
+          sort: display_order
+          order: asc
+      operations:
+        create: true
+        rename: false
+        delete: true
+      fields:
+      - name: id
+        label: 상품 ID
+        type: uuid
+        readonly: true
+        options:
+          editable: false
+      - name: title
+        label: 상품명
+        type: string
+        required: true
+      - name: display_order
+        label: 노출 순서
+        type: number
+        description: '숫자가 작을수록 먼저 표시됩니다. 예: 10, 20, 30 / 중간 삽입은 15'
+      - name: category
+        label: 대분류
+        type: select
+        required: true
+        default: all-season
+        options:
+          values:
+          - name: all-season
+            label: 사계절제품
+      - name: subcategory
+        label: 세부 품목
+        type: select
+        required: true
+        options:
+          values:
+          - name: mat
+            label: 돗자리
+          - name: socks
+            label: 양말
+          - name: buff
+            label: 버프(멀티스카프)
+      - name: summary
+        label: 한 줄 설명
+        type: text
+      - name: published
+        label: 홈페이지 공개
+        type: boolean
+        default: true
+      - name: featured
+        label: 메인 대표상품
+        type: boolean
+        default: false
+      - name: hero_image
+        label: 대표이미지
+        type: image
+        options:
+          extensions:
+          - jpg
+          - jpeg
+          - png
+          - webp
+          rename: safe
+      - name: gallery
+        label: 상세이미지
+        type: image
+        description: 여러 장을 한 번에 선택할 수 있습니다.
+        options:
+          multiple:
+            max: 30
+          unique: true
+          extensions:
+          - jpg
+          - jpeg
+          - png
+          - webp
+          rename: safe
+      - name: features
+        label: 주요 특징
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{title}'
+        fields:
+        - name: title
+          label: 특징 제목
+          type: string
+        - name: description
+          label: 설명
+          type: text
+      - name: dimensions
+        label: 규격
+        type: string
+        description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+      - name: material
+        label: 재질
+        type: string
+        description: 상세페이지 이미지에만 표기할 경우 '상세페이지 참고'로 두세요.
+      - name: colors
+        label: 색상
+        type: string
+      - name: default_order_quantity
+        label: 기본 주문수량
+        type: string
+        description: 예) 100개. 입력하면 '기본 주문수량 미만은 별도 연락해 주세요.' 문구가 자동 표시됩니다.
+      - name: production_time
+        label: 제작기간
+        type: string
+      - name: print_method
+        label: 인쇄·제작 방식
+        type: text
+      - name: packaging
+        label: 포장 방식
+        type: text
+      - name: set_type
+        label: 세트 유형
+        type: select
+        description: 세트상품 / 세트 구성 가능 / 세트 구성 불가 중 해당 유형을 선택하세요.
+        options:
+          values:
+          - name: set_product
+            label: 세트상품
+          - name: set_available
+            label: 세트 구성 가능
+          - name: set_unavailable
+            label: 세트 구성 불가
+      - name: related_set_products
+        label: 관련 세트상품
+        type: select
+        description: 이미 등록된 세트상품 중 상세페이지에 보여줄 상품을 여러 개 선택하세요.
+        options:
+          multiple: true
+          values:
+          - name: ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2
+            label: 레포마 추위대비 2종 A세트(넥워머+방한장갑)
+      - name: set_name
+        label: 세트 구성명
+        type: string
+        description: 세트상품을 선택한 경우에만 작성하세요.
+      - name: set_contents
+        label: 구성 제품
+        type: string
+        list: true
+        description: 세트상품을 선택한 경우에만 구성품을 추가하세요.
+      - name: set_packaging
+        label: 세트 포장 형태
+        type: string
+        description: 세트상품을 선택한 경우에만 작성하세요. 예) 지퍼백 / 복주머니 / 종이케이스
+      - name: set_description
+        label: 세트 설명
+        type: text
+        description: 세트상품을 선택한 경우에만 작성하세요.
+      - name: set_image
+        label: 세트 이미지
+        type: image
+        description: 세트상품을 선택한 경우에만 등록하세요.
+        options:
+          extensions:
+          - jpg
+          - jpeg
+          - png
+          - webp
+          rename: safe
   - name: products_magnifier
     label: 돋보기명함
     type: collection
