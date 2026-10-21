@@ -18,5 +18,11 @@
   "default_order_quantity": "100개",
   "production_time": "약4~5일",
   "print_method": "1도 실크인쇄 별도",
-  "packaging": "기본 opp 개별포장"
+  "packaging": "기본 opp 개별포장",
+  "set_type": "set_available",
+  "related_set_products": [
+    "857a1a18-a3ed-4061-8a94-5159e8a0784d",
+    "a4f4f601-b21e-428e-81b8-b4a599e2287b",
+    "439cd794-abbd-487c-b123-bac8fc2ece7f"
+  ]
 }
