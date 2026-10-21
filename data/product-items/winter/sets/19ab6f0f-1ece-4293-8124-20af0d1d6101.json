@@ -1,0 +1,22 @@
+{
+  "id": "19ab6f0f-1ece-4293-8124-20af0d1d6101",
+  "title": "레포마 포그네 겨울케어 2종 A세트(극세사담요 + 귀마개)",
+  "display_order": 24,
+  "category": "winter",
+  "subcategory": "sets",
+  "published": true,
+  "featured": true,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/2a-10.jpg",
+  "gallery": [
+    "assets/uploads/2a-11.jpg"
+  ],
+  "dimensions": "상세페이지 참고",
+  "material": "상세페이지 참고",
+  "colors": "상세페이지 참고",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
+  "packaging": "기본 지퍼백 포장",
+  "set_type": "set_product"
+}
