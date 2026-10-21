@@ -243,6 +243,31 @@
     "packaging": "복주머니 파우치"
   },
   {
+    "id": "5a3e4277-26ea-4b3e-b08a-86b4a96db8d1",
+    "title": "포레앙 폰터치 겨울장갑",
+    "display_order": 2,
+    "category": "winter",
+    "subcategory": "gloves",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-62.jpg",
+    "gallery": [
+      "assets/uploads/file-63.jpg"
+    ],
+    "dimensions": "남,여",
+    "material": "상세페이지 참고",
+    "colors": "남-블랙, 그레이, 블루 / 여-블랙, 그레이, 퍼플",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "스티커 제작 별도",
+    "packaging": "기본 opp 개별포장 / 종이케이스 옵션(별도)",
+    "set_type": "set_available",
+    "related_set_products": [
+      "892f9a24-1644-4443-bef3-4a04cc50a5d4"
+    ]
+  },
+  {
     "id": "0c6bea85-6457-4d54-8057-d05a6a772dc2",
     "title": "레포마 추위대비 2종 C세트(웜 방한장갑+귀마개)",
     "category": "winter",
