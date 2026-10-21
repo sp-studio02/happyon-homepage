@@ -1,22 +1,6 @@
 {
-  "summer_cool_arm_sleeves": "",
-  "summer_cool_scarf": "",
-  "summer_cool_mask": "",
-  "summer_cool_towel": "",
-  "summer_sets": "",
-  "winter_neckwarmer": "",
-  "winter_gloves": "",
-  "winter_earmuffs": "",
-  "winter_blanket": "",
-  "winter_socks": "",
-  "winter_foot_warmer": "",
-  "winter_sets": "",
-  "all_season_mat": "",
-  "all_season_premium_socks": "",
-  "all_season_buff": "",
-  "magnifier_business_card": "",
-  "magnifier_bookmark": "",
-  "magnifier_magnetic": "",
-  "card_mirror_standard": "",
-  "card_mirror_small_qty": ""
+  "winter_neckwarmer": "assets/uploads/file-43.jpg",
+  "winter_gloves": "assets/uploads/file-44.jpg",
+  "winter_earmuffs": "assets/uploads/file-45.jpg",
+  "winter_blanket": "assets/uploads/file-46.jpg"
 }
