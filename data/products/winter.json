@@ -88,6 +88,33 @@
     "display_order": 1
   },
   {
+    "id": "e5a435ff-df42-4b32-8647-79ceee1c8fa1",
+    "title": "레포마 까사 방한장갑",
+    "display_order": 2,
+    "category": "winter",
+    "subcategory": "gloves",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-42.jpg",
+    "gallery": [
+      "assets/uploads/file-41.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "블랙",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "스티커 제작 가능(별도)",
+    "packaging": "기본 opp개별포장 / 종이케이스 옵션 가능(별도)",
+    "set_type": "set_available",
+    "related_set_products": [
+      "1f2c2303-396d-4645-b29c-c0389c324291",
+      "c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4",
+      "f9468b33-dacf-4817-b530-c91573446212"
+    ]
+  },
+  {
     "id": "ea23da25-90c9-469e-9617-7401ff0b1e07",
     "title": "레포마 추위대비 2종 B세트(넥워머+귀마개)",
     "category": "winter",
