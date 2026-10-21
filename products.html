@@ -1,5 +1,5 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>제품소개 | 해피온</title><meta name="description" content="해피온 제품 카탈로그"><link rel="icon" href="assets/images/logo.png"><link rel="stylesheet" href="assets/css/style.css"></head><body><div id="site-header"></div>
-<main><section class="sub-hero"><div class="container"><div class="breadcrumbs"><a href="index.html">홈</a><span>›</span><strong>제품소개</strong></div><p class="eyebrow">PRODUCTS</p><h1>제품소개</h1><p>대분류를 선택해 세부 품목과 등록된 상품을 확인할 수 있습니다.</p></div></section><section class="section"><div class="container"><div class="category-grid" id="category-list"></div></div></section><section class="section soft"><div class="container"><div class="section-head"><div><p class="eyebrow">ALL PRODUCTS</p><h2>전체 상품</h2></div></div><div class="products-toolbar"><div class="search-box"><input id="product-search" type="search" placeholder="상품명 검색"></div><span class="product-count" id="product-count"></span></div><div class="product-grid" id="all-products"></div></div></section></main>
+<main><section class="sub-hero"><div class="container"><div class="breadcrumbs"><a href="index.html">홈</a><span>›</span><strong>제품소개</strong></div><p class="eyebrow">PRODUCTS</p><h1>제품소개</h1><p>대분류를 선택해 세부 품목과 등록된 상품을 확인할 수 있습니다.</p></div></section><section class="section"><div class="container"><div class="category-grid" id="category-list"></div></div></section><section class="section soft" id="product-results"><div class="container"><div class="section-head"><div><p class="eyebrow" id="product-list-eyebrow">ALL PRODUCTS</p><h2 id="product-list-title">전체 상품</h2></div></div><div class="products-toolbar"><div class="search-box"><input id="product-search" type="search" placeholder="상품명 검색"></div><span class="product-count" id="product-count"></span></div><div class="product-grid" id="all-products"></div></div></section></main>
 <div id="site-footer"></div><script src="data/seed.js"></script><script src="assets/js/app.js"></script><script>(async()=>{
 const d=await H.load();
 H.headerFooter(d.site,'products');
@@ -58,14 +58,44 @@ categoryList.innerHTML=categoryCards.map(c=>{
 const input=document.getElementById('product-search');
 const grid=document.getElementById('all-products');
 const count=document.getElementById('product-count');
+const title=document.getElementById('product-list-title');
+const eyebrow=document.getElementById('product-list-eyebrow');
+
+const params=new URLSearchParams(location.search);
+const initialSearch=params.get('search')||'';
+if(initialSearch) input.value=initialSearch;
+
+const normalize=(v)=>String(v||'').toLowerCase().replace(/\s+/g,'').trim();
 
 function render(){
-  const term=input.value.trim().toLowerCase();
-  const list=d.products.filter(p=>
-    p.published!==false &&
-    (!term || (p.title+' '+(p.summary||'')).toLowerCase().includes(term))
-  );
-  grid.innerHTML=list.map(H.productCard).join('')||'<div class="empty">등록된 상품이 없습니다.</div>';
+  const raw=input.value.trim();
+  const term=normalize(raw);
+
+  const list=d.products.filter(p=>{
+    if(p.published===false) return false;
+    if(!term) return true;
+
+    const text=[
+      p.title,
+      p.summary,
+      H.catLabel(p.category),
+      H.subLabel(p.category,p.subcategory)
+    ].map(normalize).join(' ');
+
+    return text.includes(term);
+  });
+
+  if(raw){
+    eyebrow.textContent='SEARCH RESULTS';
+    title.textContent=`'${raw}' 검색 결과`;
+  }else{
+    eyebrow.textContent='ALL PRODUCTS';
+    title.textContent='전체 상품';
+  }
+
+  grid.innerHTML=list.map(H.productCard).join('') ||
+    `<div class="empty">${raw ? `'${H.esc(raw)}' 검색 결과가 없습니다.` : '등록된 상품이 없습니다.'}</div>`;
+
   count.textContent=`${list.length}개 상품`;
 }
 
