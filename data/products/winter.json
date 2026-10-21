@@ -485,5 +485,28 @@
     "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
     "packaging": "기본 지퍼백 포장",
     "set_type": "set_product"
+  },
+  {
+    "id": "f3c65384-8457-4b97-a640-687de003f37a",
+    "title": " 레포마 겨울온기 2종 C세트(보온 물주머니 + 귀마개)",
+    "display_order": 20,
+    "category": "winter",
+    "subcategory": "sets",
+    "summary": "보온 물주머니와 귀마개를 함께 구성한 따뜻하고 실용적인 겨울 방한 2종 세트입니다.",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/2c-3.jpg",
+    "gallery": [
+      "assets/uploads/2c-4.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
+    "packaging": "기본 지퍼백 포장",
+    "set_type": "set_product"
   }
 ]
