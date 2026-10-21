@@ -382,6 +382,28 @@
     "display_order": 5
   },
   {
+    "id": "20dc6f16-a061-4f77-a033-0de6f49a0ebb",
+    "title": "레포마 포그네 클러치 극세사 담요",
+    "display_order": 5,
+    "category": "winter",
+    "subcategory": "blanket",
+    "summary": "부드러운 극세사 담요를 클러치 커버에 담아 휴대와 보관이 편리한 겨울용 담요입니다.",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-55.jpg",
+    "gallery": [
+      "assets/uploads/file-56.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 일주일",
+    "print_method": "1도 실크인쇄 포함(100개 이상)",
+    "packaging": "클러치 커"
+  },
+  {
     "id": "c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4",
     "title": "레포마 까사 윈터 2종 B세트(까사장갑+귀마개)",
     "display_order": 6,
