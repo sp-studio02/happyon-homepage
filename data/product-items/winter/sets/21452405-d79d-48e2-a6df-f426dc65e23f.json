@@ -1,0 +1,22 @@
+{
+  "id": "21452405-d79d-48e2-a6df-f426dc65e23f",
+  "title": "레포마 한파 온 2종 세트(물주머니 + 보온 넥워머)",
+  "display_order": 21,
+  "category": "winter",
+  "subcategory": "sets",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/2-3.jpg",
+  "gallery": [
+    "assets/uploads/22.jpg"
+  ],
+  "dimensions": "상세페이지 참고",
+  "material": "상세페이지 참고",
+  "colors": "상세페이지 참고",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "스티커 부착 가능(별도)",
+  "packaging": "기본 opp 개별포장",
+  "set_type": "set_product"
+}
