@@ -1,0 +1,28 @@
+{
+  "id": "48bc067b-5cb6-4074-8944-d9f24051f16f",
+  "title": "레포마 국산 에어웜 프리미엄 넥워머(탁텔)",
+  "display_order": 4,
+  "category": "winter",
+  "subcategory": "neckwarmer",
+  "summary": "포근하고 폭신한 프리미엄 국산 넥워머. 부드럽고 신축성이 좋아 착 감기듯이 사용할 수 있습니다.",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/file-36.jpg",
+  "gallery": [
+    "assets/uploads/file-37.jpg"
+  ],
+  "dimensions": "17x12.5cm",
+  "material": "엘리스팍 원사",
+  "colors": "블랙,차콜",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "스티커 제작 가능(별도)",
+  "packaging": "기본 opp개별포장 / 종이케이스 옵션가능(별도)",
+  "set_type": "set_available",
+  "related_set_products": [
+    "b2eac6ec-a113-49e6-a90c-0bb94e8cf639",
+    "2469b0b0-3654-47d9-b57a-a20456ff9763",
+    "ef88e6ae-f07e-4a9a-aa99-436afc998c4d"
+  ]
+}
