@@ -61,7 +61,16 @@
     "production_time": "약 3-4일",
     "print_method": "스티커 제작 가능(별도)",
     "packaging": "기본 opp개별포장",
-    "set_type": "set_product"
+    "set_type": "set_available",
+    "related_set_products": [
+      "ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2",
+      "0c6bea85-6457-4d54-8057-d05a6a772dc2",
+      "2cf9f72f-4ddd-4383-96a2-a7f42b703cc3",
+      "ba90f3e7-978e-4295-9fcb-39b44833ab26",
+      "211ae1a3-a1db-406f-981c-ceb165d33154",
+      "009e4d41-8cf4-4539-b529-456296a66f3b",
+      "ef88e6ae-f07e-4a9a-aa99-436afc998c4d"
+    ]
   },
   {
     "id": "ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2",
