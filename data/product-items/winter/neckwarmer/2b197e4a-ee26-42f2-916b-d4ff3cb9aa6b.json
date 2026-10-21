@@ -20,7 +20,22 @@
   "packaging": "기본 opp개별포장",
   "set_type": "set_available",
   "related_set_products": [
-    "ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2"
+    "ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2",
+    "ea23da25-90c9-469e-9617-7401ff0b1e07",
+    "c07454f6-4577-4069-8ce7-44353b586e0d",
+    "1f2c2303-396d-4645-b29c-c0389c324291",
+    "f9468b33-dacf-4817-b530-c91573446212",
+    "2cf9f72f-4ddd-4383-96a2-a7f42b703cc3",
+    "ba90f3e7-978e-4295-9fcb-39b44833ab26",
+    "5b705771-eba1-4477-a74d-f12ba2d9731c",
+    "4a6d7a89-7c52-4b0f-9985-259b135aa767",
+    "dd55dcd2-5651-4b2e-bd4c-fdf3666d633c",
+    "6f6f77e2-c41e-4a83-bf42-b81251103cfe",
+    "afd03e83-2e89-4cec-9824-2f6eab9ff569",
+    "21452405-d79d-48e2-a6df-f426dc65e23f",
+    "686e4359-9002-49b5-890f-5904f68fd29c",
+    "4de7a372-3b85-49c8-baa5-c7aa07bbfbab",
+    "f4b2c919-5bc8-4155-81a5-89ba257ce927"
   ],
   "display_order": 1
 }
