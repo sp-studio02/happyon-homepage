@@ -41,6 +41,29 @@
     "display_order": 1
   },
   {
+    "id": "eff43402-d707-4bf2-b251-c63aa1ab4111",
+    "title": "레포마 웜스마트 방한장갑",
+    "display_order": 1,
+    "category": "winter",
+    "subcategory": "gloves",
+    "summary": "내부 기모와 스마트폰 터치 기능을 갖춘 실용적인 겨울 방한장갑입니다. 가격대비 퀄리티 Good!",
+    "published": true,
+    "featured": true,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-38.jpg",
+    "gallery": [
+      "assets/uploads/file-39.jpg"
+    ],
+    "dimensions": "남,여",
+    "material": "상세페이지 참고",
+    "colors": "블랙",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "스티커 제작 가능(별도)",
+    "packaging": "기본 opp개별포장",
+    "set_type": "set_product"
+  },
+  {
     "id": "ee0cfb2d-dfef-41ab-a65a-fc8c2b9818f2",
     "title": "레포마 추위대비 2종 A세트(넥워머+방한장갑)",
     "category": "winter",
