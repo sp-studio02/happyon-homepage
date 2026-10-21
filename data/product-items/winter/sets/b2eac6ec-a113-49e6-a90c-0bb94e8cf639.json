@@ -1,0 +1,23 @@
+{
+  "id": "b2eac6ec-a113-49e6-a90c-0bb94e8cf639",
+  "title": "레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)",
+  "display_order": 29,
+  "category": "winter",
+  "subcategory": "sets",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/2a-14.jpg",
+  "gallery": [
+    "assets/uploads/1-1.jpg",
+    "assets/uploads/2-6.jpg"
+  ],
+  "dimensions": "상세페이지 참고",
+  "material": "상세페이지 참고",
+  "colors": "상세페이지 참고",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "복주머니 - 1도 실크인쇄 가능(별도)",
+  "packaging": "복주머니 파우치",
+  "set_type": "set_product"
+}
