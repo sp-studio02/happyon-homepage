@@ -1,5 +1,5 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>제품소개 | 해피온</title><meta name="description" content="해피온 제품 카탈로그"><link rel="icon" href="assets/images/logo.png"><link rel="stylesheet" href="assets/css/style.css"></head><body><div id="site-header"></div>
-<main><section class="sub-hero"><div class="container"><div class="breadcrumbs"><a href="index.html">홈</a><span>›</span><strong>제품소개</strong></div><p class="eyebrow">PRODUCTS</p><h1>제품소개</h1><p>대분류를 선택해 세부 품목과 등록된 상품을 확인할 수 있습니다.</p></div></section><section class="section"><div class="container"><div class="category-grid" id="category-list"></div></div></section><section class="section soft" id="product-results"><div class="container"><div class="section-head"><div><p class="eyebrow" id="product-list-eyebrow">ALL PRODUCTS</p><h2 id="product-list-title">전체 상품</h2></div></div><div class="products-toolbar"><div class="search-box"><input id="product-search" type="search" placeholder="상품명 검색"></div><span class="product-count" id="product-count"></span></div><div class="product-grid" id="all-products"></div></div></section></main>
+<main><section class="sub-hero"><div class="container"><div class="breadcrumbs"><a href="index.html">홈</a><span>›</span><strong>제품소개</strong></div><p class="eyebrow">PRODUCTS</p><h1>제품소개</h1><p>대분류를 선택해 세부 품목과 등록된 상품을 확인할 수 있습니다.</p></div></section><section class="section" id="products-category-section"><div class="container"><div class="category-grid" id="category-list"></div></div></section><section class="section soft" id="product-results"><div class="container"><div class="section-head"><div><p class="eyebrow" id="product-list-eyebrow">ALL PRODUCTS</p><h2 id="product-list-title">전체 상품</h2></div></div><div class="products-toolbar"><div class="search-box"><input id="product-search" type="search" placeholder="상품명 검색"></div><span class="product-count" id="product-count"></span></div><div class="product-grid" id="all-products"></div></div></section></main>
 <div id="site-footer"></div><script src="data/seed.js"></script><script src="assets/js/app.js"></script><script>(async()=>{
 const d=await H.load();
 H.headerFooter(d.site,'products');
@@ -63,7 +63,17 @@ const eyebrow=document.getElementById('product-list-eyebrow');
 
 const params=new URLSearchParams(location.search);
 const initialSearch=params.get('search')||'';
-if(initialSearch) input.value=initialSearch;
+
+if(initialSearch){
+  input.value=initialSearch;
+
+  // 검색으로 들어온 경우에는 제품소개 상단 설명과 대분류 카드를 숨기고
+  // 검색 결과만 바로 보여줍니다.
+  const intro=document.getElementById('products-intro');
+  const categorySection=document.getElementById('products-category-section');
+  if(intro) intro.style.display='none';
+  if(categorySection) categorySection.style.display='none';
+}
 
 const normalize=(v)=>String(v||'').toLowerCase().replace(/\s+/g,'').trim();
 
