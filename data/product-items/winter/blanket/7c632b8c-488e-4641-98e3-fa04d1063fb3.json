@@ -1,0 +1,21 @@
+{
+  "id": "7c632b8c-488e-4641-98e3-fa04d1063fb3",
+  "title": "레포마 포그네 캠핑 극세사 담요",
+  "display_order": 4,
+  "category": "winter",
+  "subcategory": "blanket",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/file-53.jpg",
+  "gallery": [
+    "assets/uploads/file-54.jpg"
+  ],
+  "dimensions": "상세페이지 참고",
+  "material": "상세페이지 참고",
+  "colors": "상세페이지 참고",
+  "default_order_quantity": "100개",
+  "production_time": "약 일주일",
+  "print_method": "1도 실크인쇄 포함(100개 이상)",
+  "packaging": "캠핑 커버"
+}
