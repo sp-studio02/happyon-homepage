@@ -643,5 +643,28 @@
     "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
     "packaging": "기본 지퍼백 포장",
     "set_type": "set_product"
+  },
+  {
+    "id": "f4b2c919-5bc8-4155-81a5-89ba257ce927",
+    "title": "레포마 포그네 겨울케어 2종 S세트(극세사담요 + 넥워머)",
+    "display_order": 27,
+    "category": "winter",
+    "subcategory": "sets",
+    "summary": "극세사담요와 넥워머를 지퍼백에 함께 구성한 포근하고 실용적인 겨울 방한 2종 세트입니다.",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/2s.jpg",
+    "gallery": [
+      "assets/uploads/2s-1.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
+    "packaging": "기본 지퍼백 포장",
+    "set_type": "set_product"
   }
 ]
