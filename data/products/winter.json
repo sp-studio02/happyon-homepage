@@ -533,9 +533,32 @@
     "summary": "보온 물주머니와 보온 넥워머를 함께 구성한 따뜻하고 실용적인 겨울 방한 2종 세트입니다."
   },
   {
+    "id": "686e4359-9002-49b5-890f-5904f68fd29c",
+    "title": "레포마 한파 온 2종 복주머니 세트(보온 물주머니 + 넥워머)",
+    "display_order": 22,
+    "category": "winter",
+    "subcategory": "sets",
+    "summary": "보온 물주머니와 보온 넥워머를 복주머니 파우치에 담아 구성한 따뜻하고 실용적인 겨울 방한 2종 세트입니다.",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/2-4.jpg",
+    "gallery": [
+      "assets/uploads/2-5.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "복주머니 1도 실크인쇄(100개 이상 포함)",
+    "packaging": "복주머니 파우치",
+    "set_type": "set_product"
+  },
+  {
     "id": "915a29e7-9e26-401f-b496-8ca5dc1e4d98",
     "title": "레포마 한파 온 2종 A 복주머니 세트(보온 물주머니 + 귀마개)",
-    "display_order": 22,
+    "display_order": 23,
     "category": "winter",
     "subcategory": "sets",
     "summary": "보온 물주머니와 귀마개를 함께 구성한 따뜻하고 실용적인 겨울 방한 2종 세트입니다.",
