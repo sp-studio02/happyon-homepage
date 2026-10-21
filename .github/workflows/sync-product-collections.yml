@@ -21,6 +21,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install YAML library
+        run: python -m pip install pyyaml
+
       - name: Migrate and sync products
         shell: bash
         run: |
@@ -252,10 +255,124 @@ jobs:
 
           PY
 
+      - name: Sync related set product choices
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import copy
+          from pathlib import Path
+          import yaml
+
+          pages_path = Path(".pages.yml")
+          item_root = Path("data/product-items")
+
+          config = yaml.safe_load(pages_path.read_text(encoding="utf-8"))
+
+          def norm(value):
+              return str(value or "").strip().lower().replace(" ", "").replace("-", "_")
+
+          def is_set_product(product):
+              return (
+                  norm(product.get("set_type")) in {"set_product", "setproduct", "세트상품"}
+                  or norm(product.get("subcategory")) in {"sets", "set", "set_product", "setproduct", "세트상품"}
+              )
+
+          set_products = []
+
+          for item_path in sorted(item_root.rglob("*.json")):
+              try:
+                  product = json.loads(item_path.read_text(encoding="utf-8"))
+              except Exception:
+                  continue
+
+              if not isinstance(product, dict):
+                  continue
+
+              if (
+                  product.get("id")
+                  and product.get("published", True) is not False
+                  and is_set_product(product)
+              ):
+                  set_products.append(product)
+
+          def order_key(product):
+              raw = product.get("display_order")
+              try:
+                  order = float(raw)
+              except (TypeError, ValueError):
+                  order = 999999999
+              return (order, str(product.get("title", "")).lower())
+
+          set_products.sort(key=order_key)
+
+          values = [
+              {
+                  "name": str(product["id"]),
+                  "label": str(product.get("title") or product["id"])
+              }
+              for product in set_products
+          ]
+
+          def update_node(node):
+              updated = 0
+
+              if isinstance(node, dict):
+                  fields = node.get("fields")
+                  if isinstance(fields, list):
+                      for field in fields:
+                          if isinstance(field, dict) and field.get("name") == "related_set_products":
+                              field.clear()
+                              field.update({
+                                  "name": "related_set_products",
+                                  "label": "관련 세트상품",
+                                  "type": "select",
+                                  "description": "이미 등록된 세트상품 중 상세페이지에 보여줄 상품을 여러 개 선택하세요.",
+                                  "options": {
+                                      "multiple": True,
+                                      "values": copy.deepcopy(values)
+                                  }
+                              })
+                              updated += 1
+
+                  items = node.get("items")
+                  if isinstance(items, list):
+                      for item in items:
+                          updated += update_node(item)
+
+              elif isinstance(node, list):
+                  for item in node:
+                      updated += update_node(item)
+
+              return updated
+
+          updated = update_node(config.get("content", []))
+
+          class NoAliasDumper(yaml.SafeDumper):
+              def ignore_aliases(self, data):
+                  return True
+
+          pages_path.write_text(
+              yaml.dump(
+                  config,
+                  Dumper=NoAliasDumper,
+                  allow_unicode=True,
+                  sort_keys=False,
+                  width=120
+              ),
+              encoding="utf-8"
+          )
+
+          print(f"Found {len(set_products)} set products.")
+          print(f"Updated {updated} related-set fields.")
+          for product in set_products:
+              print(" -", product.get("title", ""))
+          PY
+
       - name: Commit migrated and synced files
         shell: bash
         run: |
-          git add data/product-items data/products
+          git add data/product-items data/products .pages.yml
 
           if git diff --cached --quiet; then
             echo "No product sync changes."
