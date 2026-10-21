@@ -1037,5 +1037,43 @@
     "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
     "packaging": "기본 지퍼백 포장",
     "set_type": "set_product"
+  },
+  {
+    "id": "9c02ddd3-a124-4616-b11a-01cbef0f805c",
+    "title": "레포마 프리미엄 극세사 방한 귀마개",
+    "category": "winter",
+    "subcategory": "earmuffs",
+    "summary": "12mm 극세사 내피 / 청음구 / 얼굴 구조에 맞춘 착용감",
+    "published": true,
+    "featured": true,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-60.jpg",
+    "gallery": [
+      "assets/uploads/file-61.jpg"
+    ],
+    "dimensions": "총둘레 38 x 가로 11cm",
+    "material": "폴리",
+    "colors": "블랙",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "스티커 제작 별도",
+    "packaging": "기본 지퍼백 개별포장",
+    "set_type": "set_available",
+    "related_set_products": [
+      "ea23da25-90c9-469e-9617-7401ff0b1e07",
+      "0c6bea85-6457-4d54-8057-d05a6a772dc2",
+      "c07454f6-4577-4069-8ce7-44353b586e0d",
+      "c2f380a6-9d96-44e8-8ecc-8fa8efc0b7a4",
+      "f9468b33-dacf-4817-b530-c91573446212",
+      "ba90f3e7-978e-4295-9fcb-39b44833ab26",
+      "892f9a24-1644-4443-bef3-4a04cc50a5d4",
+      "5b705771-eba1-4477-a74d-f12ba2d9731c",
+      "857a1a18-a3ed-4061-8a94-5159e8a0784d",
+      "f3c65384-8457-4b97-a640-687de003f37a",
+      "915a29e7-9e26-401f-b496-8ca5dc1e4d98",
+      "4de7a372-3b85-49c8-baa5-c7aa07bbfbab",
+      "19ab6f0f-1ece-4293-8124-20af0d1d6101",
+      "ef88e6ae-f07e-4a9a-aa99-436afc998c4d"
+    ]
   }
 ]
