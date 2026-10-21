@@ -1,0 +1,28 @@
+{
+  "id": "7bf2aa7a-4e66-4b51-b57b-fb08c48ebdc3",
+  "title": "레포마 포그네 극세사 담요",
+  "display_order": 1,
+  "category": "winter",
+  "subcategory": "blanket",
+  "summary": "부드러운 극세사 원단으로 따뜻하고 포근하게 사용할 수 있는 겨울용 담요입니다.",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/file-47.jpg",
+  "gallery": [
+    "assets/uploads/file-48.jpg"
+  ],
+  "dimensions": "100x70cm",
+  "material": "극세사",
+  "colors": "더스티 블루, 오트 베이지",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "스티커 부착(별도)",
+  "packaging": "기본 opp개별포장/ 지퍼백 가능(옵션)-지퍼백 1도 인쇄, 스티커 가능(옵션)",
+  "set_type": "set_available",
+  "related_set_products": [
+    "19ab6f0f-1ece-4293-8124-20af0d1d6101",
+    "009e4d41-8cf4-4539-b529-456296a66f3b",
+    "f4b2c919-5bc8-4155-81a5-89ba257ce927"
+  ]
+}
