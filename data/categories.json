@@ -50,10 +50,6 @@
         "label": "담요"
       },
       {
-        "id": "socks",
-        "label": "양말"
-      },
-      {
         "id": "foot-warmer",
         "label": "발토시"
       },
@@ -74,8 +70,8 @@
         "label": "돗자리"
       },
       {
-        "id": "premium-socks",
-        "label": "프리미엄 양말"
+        "id": "socks",
+        "label": "양말"
       },
       {
         "id": "buff",
