@@ -239,6 +239,28 @@
     "display_order": 3
   },
   {
+    "id": "f5488b0e-26a8-4c57-b98c-1230243eb690",
+    "title": "레포마 포그네 원통 극세사 담요",
+    "display_order": 3,
+    "category": "winter",
+    "subcategory": "blanket",
+    "summary": "부드러운 극세사 담요를 원통형 파우치에 담아 휴대와 보관이 편리한 겨울용 담요입니다.",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-51.jpg",
+    "gallery": [
+      "assets/uploads/file-52.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 일주일",
+    "print_method": "1도 실크인쇄 포함(100개 이상)",
+    "packaging": "원통 파우치"
+  },
+  {
     "id": "be4c5a3f-f20b-42c1-8363-1d449e3f5df9",
     "title": "포레앙 융 스토퍼 넥워머",
     "category": "winter",
