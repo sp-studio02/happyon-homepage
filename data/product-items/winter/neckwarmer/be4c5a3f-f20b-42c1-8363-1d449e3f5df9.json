@@ -1,0 +1,22 @@
+{
+  "id": "be4c5a3f-f20b-42c1-8363-1d449e3f5df9",
+  "title": "포레앙 융 스토퍼 넥워머",
+  "category": "winter",
+  "subcategory": "neckwarmer",
+  "summary": "융 안감에 김서림방지기능, 흘러내림방지 기능이 있습니다.",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/file-34.jpg",
+  "gallery": [
+    "assets/uploads/file-35.jpg"
+  ],
+  "dimensions": "28x30cm",
+  "material": "폴리",
+  "colors": "블랙, 그레이",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "스티커 가능(별도)",
+  "packaging": "기본 opp 개별포장",
+  "set_type": "set_available"
+}
