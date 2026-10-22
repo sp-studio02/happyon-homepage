@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": "235fc733-c463-43fe-831e-3430894f2862",
+    "title": "레포마 폭염예방 실용 3종 쿨키트 S (스노우 쿨토시+스노우 쿨마스크+최고급 쿨타올)",
+    "display_order": 1,
+    "category": "summer",
+    "subcategory": "sets",
+    "summary": "실용적으로 쿨토시, 쿨마스크, 쿨타올을 한 번에 지퍼백에 구성 하였습니다. ",
+    "published": true,
+    "featured": true,
+    "home_slide_order": "1",
+    "hero_image": "assets/uploads/3s-7.jpg",
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도)",
+    "packaging": "지퍼백",
+    "set_type": "set_product"
+  }
+]
