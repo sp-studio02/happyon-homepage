@@ -1,0 +1,21 @@
+{
+  "id": "af278b3d-d44c-4e43-a32f-79dc2ef30904",
+  "title": "레포마 최고급 돗자리",
+  "display_order": 1,
+  "category": "all-season",
+  "subcategory": "mat",
+  "summary": "고급 주머니 커버 세트, 방수&발수(생활방수), 해리마감, 컴팩트한 보관사이즈",
+  "published": true,
+  "featured": false,
+  "hero_image": "assets/uploads/2-9.jpg",
+  "gallery": [
+    "assets/uploads/2-10.jpg"
+  ],
+  "dimensions": "S-100x75cm / L-110x150cm",
+  "material": "상세페이지 참고",
+  "colors": "라임, 그레이",
+  "default_order_quantity": "100개",
+  "production_time": "약 일주일",
+  "print_method": "커버 1도 실크인쇄(100개 이상 포함)",
+  "packaging": "돗자리 커버"
+}
