@@ -1,0 +1,23 @@
+{
+  "id": "23c9c605-6471-4425-9f76-e4dd34d2f4d6",
+  "title": "레포마 나이스 3종 여름 쿨세트 B(스노우 쿨토시+스노우 쿨마스크+나이스 쿨타올)",
+  "display_order": 10,
+  "category": "summer",
+  "subcategory": "sets",
+  "summary": "실용적으로 쿨토시, 쿨마스크, 쿨타올을 한 번에 지퍼백에 구성 하였습니다. ",
+  "published": true,
+  "featured": true,
+  "home_slide_order": "2",
+  "hero_image": "assets/uploads/3b.jpg",
+  "gallery": [
+    "assets/uploads/1-4.jpg",
+    "assets/uploads/2-11.jpg"
+  ],
+  "dimensions": "상세페이지 참고",
+  "material": "상세페이지 참고",
+  "colors": "상세페이지 참고",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도)",
+  "packaging": "지퍼백"
+}
