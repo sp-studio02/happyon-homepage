@@ -76,6 +76,9 @@ jobs:
                   "premium_socks": "socks",
                   "premium-socks": "socks",
                   "buff": "buff",
+                  "sets": "sets",
+                  "set": "sets",
+                  "set_product": "sets",
               }
           }
 
