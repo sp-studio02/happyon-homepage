@@ -129,17 +129,25 @@ const showHero=(idx)=>{
 };
 const startHero=()=>{
   clearInterval(heroTimer);
-  heroTimer=setInterval(()=>showHero(heroIndex+1),3000);
+  heroTimer=setInterval(()=>{
+    // 슬라이드 영역에 마우스가 올라가 있으면 자동 전환하지 않음
+    if(hero.matches(':hover')) return;
+    showHero(heroIndex+1);
+  },3000);
 };
+
 dots.forEach(dot=>dot.addEventListener('click',()=>{
   showHero(Number(dot.dataset.go));
   startHero();
 }));
 
+// 마우스가 올라간 순간에도 현재 타이머를 즉시 멈춤
 hero.addEventListener('mouseenter',()=>{
   clearInterval(heroTimer);
+  heroTimer=null;
 });
 
+// 마우스가 빠져나오면 다시 3초 자동전환 시작
 hero.addEventListener('mouseleave',()=>{
   startHero();
 });
