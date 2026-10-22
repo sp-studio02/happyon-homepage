@@ -7,7 +7,7 @@
     "subcategory": "sets",
     "summary": "실용적으로 쿨토시, 쿨마스크, 쿨타올을 한 번에 지퍼백에 구성 하였습니다. ",
     "published": true,
-    "featured": true,
+    "featured": false,
     "home_slide_order": "1",
     "hero_image": "assets/uploads/3s-7.jpg",
     "dimensions": "상세페이지 참고",
@@ -27,7 +27,7 @@
     "subcategory": "sets",
     "summary": "실용적으로 쿨토시, 쿨마스크, 쿨타올을 한 번에 지퍼백에 구성 하였습니다. ",
     "published": true,
-    "featured": true,
+    "featured": false,
     "home_slide_order": "2",
     "hero_image": "assets/uploads/3b.jpg",
     "gallery": [
@@ -41,5 +41,28 @@
     "production_time": "약 3-4일",
     "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도)",
     "packaging": "지퍼백"
+  },
+  {
+    "id": "2f7c347b-3e33-4451-b4d0-8e65f1b72971",
+    "title": "레포마 폭염예방 실용 2종 쿨키트 B(스노우 쿨토시+스노우 쿨스카프)",
+    "display_order": 20,
+    "category": "summer",
+    "subcategory": "sets",
+    "summary": "강력 추천! 쿨토시, 쿨스카프 세트를 지퍼백에 담에 드립니다.",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "3",
+    "hero_image": "assets/uploads/2b-8.jpg",
+    "gallery": [
+      "assets/uploads/2b-9.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도)",
+    "packaging": "지퍼백",
+    "set_type": "set_product"
   }
 ]
