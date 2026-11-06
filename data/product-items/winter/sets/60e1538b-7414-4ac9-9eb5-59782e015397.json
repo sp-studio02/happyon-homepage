@@ -1,0 +1,24 @@
+{
+  "id": "60e1538b-7414-4ac9-9eb5-59782e015397",
+  "title": "레포마 겨울 방한용품 3종 A 선물세트(담요+넥워머+귀마개)",
+  "display_order": 28,
+  "category": "winter",
+  "subcategory": "sets",
+  "summary": "담요와 넥워머, 귀마개를 손잡이 선물케이스에 담아드립니다. ",
+  "published": true,
+  "featured": true,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/3a.jpg",
+  "gallery": [
+    "assets/uploads/1-5.jpg",
+    "assets/uploads/2-12.jpg"
+  ],
+  "dimensions": "상세페이지 참고",
+  "material": "상세페이지 참고",
+  "colors": "상세페이지 참고",
+  "default_order_quantity": "34개",
+  "production_time": "약 3-4일",
+  "print_method": "종이케이스 위에 스티커 가능(별도)",
+  "packaging": "손잡이 종이케이스",
+  "set_type": "set_product"
+}
