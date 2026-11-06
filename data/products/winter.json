@@ -1041,6 +1041,30 @@
     "set_type": "set_product"
   },
   {
+    "id": "4d4145f1-cb2c-42ae-b813-832fb3fcae5c",
+    "title": "레포미 겨울 생활용품 3종 선물세트(담요+넥워머+텀블러)",
+    "display_order": 28,
+    "category": "winter",
+    "subcategory": "sets",
+    "summary": "담요와 넥워머, 텀블러를 손잡이 선물케이스에 담아드립니다. ",
+    "published": true,
+    "featured": true,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/3-7.jpg",
+    "gallery": [
+      "assets/uploads/1-7.jpg",
+      "assets/uploads/2-14.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "34개",
+    "production_time": "약 3-4일",
+    "print_method": "종이케이스 위에 스티커 가능(별도)",
+    "packaging": "손잡이 종이케이스",
+    "set_type": "set_product"
+  },
+  {
     "id": "b2eac6ec-a113-49e6-a90c-0bb94e8cf639",
     "title": "레포마 프리미엄 에어웜 2종 A 복주머니 세트(넥워머+발토시)",
     "display_order": 29,
