@@ -22,5 +22,6 @@
   "set_type": "set_product",
   "set_packaging": "복주머니 파우치",
   "set_description": "겨울철 활용도가 높은 웜장갑과 넥워머를 복조리개 파우치에 담아 구성했습니다. 실용적인 방한용품과 포장을 함께 갖춰 겨울철 단체선물과 판촉용으로 활용하기 좋은 세트입니다.",
-  "set_image": "assets/uploads/file-20.jpg"
+  "set_image": "assets/uploads/file-20.jpg",
+  "set_package_category": "pouch"
 }
