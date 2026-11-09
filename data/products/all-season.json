@@ -19,7 +19,10 @@
     "production_time": "약 4-5일",
     "print_method": "기본수량 이상 스티커 무료",
     "packaging": "종이케이스 + 선물포장",
-    "set_type": "set_available"
+    "set_type": "set_available",
+    "related_set_products": [
+      "9e1139c6-d747-4518-a7c8-1282f8b182e2"
+    ]
   },
   {
     "id": "64da2257-ba07-4107-8e96-7222dba6bd89",
