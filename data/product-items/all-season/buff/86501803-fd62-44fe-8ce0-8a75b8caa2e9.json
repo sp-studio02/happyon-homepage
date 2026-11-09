@@ -14,5 +14,9 @@
   "default_order_quantity": "100개",
   "production_time": "약 4-5일",
   "print_method": "스티커 부착(별도)",
-  "packaging": "기본 종이케이스"
+  "packaging": "기본 종이케이스",
+  "gallery": [
+    "assets/uploads/1-13.jpg",
+    "assets/uploads/2-20.jpg"
+  ]
 }
