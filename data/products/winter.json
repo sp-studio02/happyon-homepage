@@ -27,6 +27,34 @@
     ]
   },
   {
+    "id": "ec0f85ea-ab6a-48c7-9b20-d1660794c968",
+    "title": "레포마 국산 프리미엄 에어웜 핸드워머(탁텔)",
+    "display_order": 1,
+    "category": "winter",
+    "subcategory": "handwarmer",
+    "summary": "포근하고 폭신한 프리미엄 국산 핸드워머. 부드럽고 신축성이 좋아 착 감기듯이 사용할 수 있습니다.",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-64.jpg",
+    "gallery": [
+      "assets/uploads/11-1.jpg",
+      "assets/uploads/22-1.jpg"
+    ],
+    "dimensions": "약 9x20cm",
+    "material": "엘리스팍 원사",
+    "colors": "블랙,차콜",
+    "default_order_quantity": "100개",
+    "production_time": "주문제작상품(별도 문의필수)",
+    "print_method": "스티커 제작 가능(별도)",
+    "packaging": "기본 opp개별포장 / 종이케이스 옵션가능(별도)",
+    "related_set_products": [
+      "b2eac6ec-a113-49e6-a90c-0bb94e8cf639",
+      "2469b0b0-3654-47d9-b57a-a20456ff9763",
+      "ef88e6ae-f07e-4a9a-aa99-436afc998c4d"
+    ]
+  },
+  {
     "id": "2b197e4a-ee26-42f2-916b-d4ff3cb9aa6b",
     "title": "레포마 웜가드 넥워머",
     "category": "winter",
