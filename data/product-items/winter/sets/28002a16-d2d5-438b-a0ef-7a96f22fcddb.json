@@ -1,0 +1,25 @@
+{
+  "id": "28002a16-d2d5-438b-a0ef-7a96f22fcddb",
+  "title": "레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)",
+  "display_order": 34,
+  "category": "winter",
+  "subcategory": "sets",
+  "set_package_category": "zipper_bag",
+  "summary": "기모 넥워머와 포근하고 폭신한 프리미엄 국산 핸드워머를 지퍼백에 담에 깔끔하게 전달 가능합니다.",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/2c-6.jpg",
+  "gallery": [
+    "assets/uploads/1-10.jpg",
+    "assets/uploads/2-17.jpg"
+  ],
+  "dimensions": "상세페이지 참고",
+  "material": "상세페이지 참고",
+  "colors": "상세페이지 참고",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
+  "packaging": "기본 지퍼백 포장",
+  "set_type": "set_product"
+}
