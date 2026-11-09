@@ -731,7 +731,8 @@
     "production_time": "약 3-4일",
     "print_method": "복주머니 - 1도 실크인쇄 가능",
     "packaging": "복주머니 파우치",
-    "set_type": "set_product"
+    "set_type": "set_product",
+    "set_package_category": "pouch"
   },
   {
     "id": "a4f4f601-b21e-428e-81b8-b4a599e2287b",
@@ -754,7 +755,8 @@
     "production_time": "약 3-4일",
     "print_method": "복주머니 - 1도 실크인쇄 가능",
     "packaging": "복주머니 파우치",
-    "set_type": "set_product"
+    "set_type": "set_product",
+    "set_package_category": "pouch"
   },
   {
     "id": "439cd794-abbd-487c-b123-bac8fc2ece7f",
@@ -777,7 +779,8 @@
     "print_method": "복주머니 - 1도 실크인쇄 가능",
     "packaging": "복주머니 파우치",
     "set_type": "set_product",
-    "summary": "리버시블 양면 넥워머와 3중 등산양말을 복조리 파우치에 구성한 실용적인 겨울 방한 2종 세트입니다."
+    "summary": "리버시블 양면 넥워머와 3중 등산양말을 복조리 파우치에 구성한 실용적인 겨울 방한 2종 세트입니다.",
+    "set_package_category": "pouch"
   },
   {
     "id": "afd03e83-2e89-4cec-9824-2f6eab9ff569",
