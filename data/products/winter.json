@@ -827,7 +827,8 @@
     "production_time": "약 3-4일",
     "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
     "packaging": "기본 지퍼백 포장",
-    "set_type": "set_product"
+    "set_type": "set_product",
+    "set_package_category": "zipper_bag"
   },
   {
     "id": "f3c65384-8457-4b97-a640-687de003f37a",
@@ -850,7 +851,8 @@
     "production_time": "약 3-4일",
     "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
     "packaging": "기본 지퍼백 포장",
-    "set_type": "set_product"
+    "set_type": "set_product",
+    "set_package_category": "zipper_bag"
   },
   {
     "id": "21452405-d79d-48e2-a6df-f426dc65e23f",
