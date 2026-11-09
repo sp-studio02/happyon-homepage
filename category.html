@@ -113,8 +113,8 @@
   };
 
   const activeSetPack = setPackGroups.find(x=>x.id===setpack);
-  const isWinterSets =
-    c.id==='winter' &&
+  const isPackageSets =
+    (c.id==='winter' || c.id==='summer') &&
     s &&
     setSubValues.has(normValue(s.id));
 
@@ -153,10 +153,10 @@
   const listsec = document.getElementById('list-section');
   const back = document.getElementById('back-cat');
 
-  if(isWinterSets){
+  if(isPackageSets){
     const allSetProducts = d.products.filter(p =>
       p.published !== false &&
-      p.category === 'winter' &&
+      p.category === c.id &&
       setSubValues.has(normValue(p.subcategory))
     );
 
@@ -164,7 +164,7 @@
       // 세트 포장 소카테고리를 선택한 화면
       subsec.style.display = 'none';
       listsec.style.display = 'block';
-      back.href = `category.html?category=winter&sub=sets`;
+      back.href = `category.html?category=${encodeURIComponent(c.id)}&sub=sets`;
       back.textContent = '세트상품 소카테고리 보기 →';
       document.getElementById('list-title').textContent = activeSetPack.label;
 
@@ -176,7 +176,7 @@
         list.map(H.productCard).join('') ||
         '<div class="empty">아직 이 소카테고리로 분류된 상품이 없습니다.</div>';
     }else{
-      // 겨울 > 세트상품 첫 화면:
+      // 겨울/여름 > 세트상품 첫 화면:
       // 포장 기준 소카테고리 3개 + 전체 세트상품을 함께 보여준다.
       subsec.style.display = 'block';
       listsec.style.display = 'block';
@@ -184,8 +184,8 @@
       document.getElementById('sub-section-eyebrow').textContent = 'SET CATEGORY';
       document.getElementById('sub-section-title').textContent = '세트상품 소카테고리';
 
-      back.href = `category.html?category=winter`;
-      back.textContent = '겨울제품 전체 세부 품목 보기 →';
+      back.href = `category.html?category=${encodeURIComponent(c.id)}`;
+      back.textContent = `${c.label} 전체 세부 품목 보기 →`;
       document.getElementById('list-title').textContent = '전체 세트상품';
 
       document.getElementById('subcategory-list').innerHTML =
@@ -197,7 +197,7 @@
           const n = items.length;
           const first = items[0];
           const thumbKey = `winter_sets_${group.id}`.replace(/-/g,'_');
-          const customThumb = winterThumbs[thumbKey] || '';
+          const customThumb = c.id==='winter' ? (winterThumbs[thumbKey] || '') : '';
           const thumbSrc = customThumb || (first && first.hero_image ? first.hero_image : '');
 
           const thumb = thumbSrc
@@ -205,7 +205,7 @@
             : `<div class="subcategory-placeholder"><span>${H.esc(group.label)}</span></div>`;
 
           return `
-            <a class="subcategory-card subcategory-card-with-image ${n===0?'is-empty':''}" href="category.html?category=winter&sub=sets&setpack=${encodeURIComponent(group.id)}">
+            <a class="subcategory-card subcategory-card-with-image ${n===0?'is-empty':''}" href="category.html?category=${encodeURIComponent(c.id)}&sub=sets&setpack=${encodeURIComponent(group.id)}">
               <div class="subcategory-media">${thumb}</div>
               <div class="subcategory-content">
                 <span class="tag">${String(i+1).padStart(2,'0')}</span>
