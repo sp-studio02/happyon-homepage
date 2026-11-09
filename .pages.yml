@@ -594,6 +594,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -867,6 +869,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -1140,6 +1144,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -1413,6 +1419,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -1686,6 +1694,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -1967,6 +1977,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -2244,6 +2256,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -2521,6 +2535,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -2798,6 +2814,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -3075,6 +3093,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -3352,6 +3372,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -3642,6 +3664,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -3902,6 +3926,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -4158,6 +4184,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -4414,6 +4442,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -4670,6 +4700,8 @@ content:
             label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
           - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
             label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+          - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+            label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
       - name: set_name
         label: 세트 구성명
         type: string
@@ -4912,6 +4944,8 @@ content:
           label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
         - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
           label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+        - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+          label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
     - name: set_name
       label: 세트 구성명
       type: string
@@ -5171,6 +5205,8 @@ content:
           label: 레포마 프리미엄 에어웜 2종 B 복주머니 세트(넥워머+핸드워머)
         - name: ef88e6ae-f07e-4a9a-aa99-436afc998c4d
           label: 레포마 프리미엄 에어웜 3종 S세트(넥워머+웜장갑+귀마개)
+        - name: 9037a125-c52d-45eb-8fb5-71bdde1ea1c6
+          label: 레포마 에어웜 방한 2종 A세트(넥워머+귀마개)
     - name: set_name
       label: 세트 구성명
       type: string
