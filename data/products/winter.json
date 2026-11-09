@@ -898,7 +898,8 @@
     "production_time": "약 3-4일",
     "print_method": "복주머니 1도 실크인쇄(100개 이상 포함)",
     "packaging": "복주머니 파우치",
-    "set_type": "set_product"
+    "set_type": "set_product",
+    "set_package_category": "pouch"
   },
   {
     "id": "915a29e7-9e26-401f-b496-8ca5dc1e4d98",
@@ -921,7 +922,8 @@
     "production_time": "약 3-4일",
     "print_method": "복주머니 1도 실크인쇄(100개 이상 포함)",
     "packaging": "복주머니 파우치",
-    "set_type": "set_product"
+    "set_type": "set_product",
+    "set_package_category": "pouch"
   },
   {
     "id": "4de7a372-3b85-49c8-baa5-c7aa07bbfbab",
@@ -941,7 +943,8 @@
     "production_time": "약 3-4일",
     "print_method": "복주머니 1도 실크인쇄(100개 이상 포함)",
     "packaging": "복주머니 파우치",
-    "set_type": "set_product"
+    "set_type": "set_product",
+    "set_package_category": "pouch"
   },
   {
     "id": "19ab6f0f-1ece-4293-8124-20af0d1d6101",
