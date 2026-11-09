@@ -74,8 +74,49 @@
     {id:'pouch', label:'복주머니 세트'},
     {id:'paper_handle_case', label:'손잡이 종이케이스 세트'}
   ];
+
+  const normValue=(v)=>String(v||'')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g,'')
+    .replace(/-/g,'_');
+
+  const setSubValues=new Set([
+    'sets','set','set_product','setproduct','세트상품'
+  ]);
+
+  const packageValueMap={
+    'zipper_bag':'zipper_bag',
+    'zipperbag':'zipper_bag',
+    '지퍼백':'zipper_bag',
+    '지퍼백세트':'zipper_bag',
+
+    'pouch':'pouch',
+    '복주머니':'pouch',
+    '복주머니세트':'pouch',
+    '복조리':'pouch',
+    '복조리세트':'pouch',
+    '복조리개':'pouch',
+    '복조리개세트':'pouch',
+
+    'paper_handle_case':'paper_handle_case',
+    'paperhandlecase':'paper_handle_case',
+    '손잡이종이케이스':'paper_handle_case',
+    '손잡이종이케이스세트':'paper_handle_case',
+    '종이케이스':'paper_handle_case',
+    '종이케이스세트':'paper_handle_case'
+  };
+
+  const getPackageId=(p)=>{
+    const raw=normValue(p && p.set_package_category);
+    return packageValueMap[raw] || raw;
+  };
+
   const activeSetPack = setPackGroups.find(x=>x.id===setpack);
-  const isWinterSets = c.id==='winter' && s && s.id==='sets';
+  const isWinterSets =
+    c.id==='winter' &&
+    s &&
+    setSubValues.has(normValue(s.id));
 
   document.title =
     (activeSetPack ? activeSetPack.label+' | ' : '') +
@@ -116,19 +157,19 @@
     const allSetProducts = d.products.filter(p =>
       p.published !== false &&
       p.category === 'winter' &&
-      p.subcategory === 'sets'
+      setSubValues.has(normValue(p.subcategory))
     );
 
     if(activeSetPack){
       // 세트 포장 소카테고리를 선택한 화면
       subsec.style.display = 'none';
-      listsec.style.display = '';
+      listsec.style.display = 'block';
       back.href = `category.html?category=winter&sub=sets`;
       back.textContent = '세트상품 소카테고리 보기 →';
       document.getElementById('list-title').textContent = activeSetPack.label;
 
       const list = allSetProducts.filter(p =>
-        p.set_package_category === activeSetPack.id
+        getPackageId(p) === activeSetPack.id
       );
 
       document.getElementById('category-products').innerHTML =
@@ -137,8 +178,8 @@
     }else{
       // 겨울 > 세트상품 첫 화면:
       // 포장 기준 소카테고리 3개 + 전체 세트상품을 함께 보여준다.
-      subsec.style.display = '';
-      listsec.style.display = '';
+      subsec.style.display = 'block';
+      listsec.style.display = 'block';
 
       document.getElementById('sub-section-eyebrow').textContent = 'SET CATEGORY';
       document.getElementById('sub-section-title').textContent = '세트상품 소카테고리';
@@ -149,16 +190,28 @@
 
       document.getElementById('subcategory-list').innerHTML =
         setPackGroups.map((group,i)=>{
-          const n = allSetProducts.filter(p =>
-            p.set_package_category === group.id
-          ).length;
+          const items = allSetProducts.filter(p =>
+            getPackageId(p) === group.id
+          );
+
+          const n = items.length;
+          const first = items[0];
+          const thumbKey = `winter_sets_${group.id}`.replace(/-/g,'_');
+          const customThumb = winterThumbs[thumbKey] || '';
+          const thumbSrc = customThumb || (first && first.hero_image ? first.hero_image : '');
+
+          const thumb = thumbSrc
+            ? `<img src="${H.esc(thumbSrc.replace(/^\//,''))}" alt="${H.esc(group.label)}">`
+            : `<div class="subcategory-placeholder"><span>${H.esc(group.label)}</span></div>`;
 
           return `
-            <a class="subcategory-card" href="category.html?category=winter&sub=sets&setpack=${encodeURIComponent(group.id)}">
-              <span class="tag">${String(i+1).padStart(2,'0')}</span>
-              <div>
+            <a class="subcategory-card subcategory-card-with-image ${n===0?'is-empty':''}" href="category.html?category=winter&sub=sets&setpack=${encodeURIComponent(group.id)}">
+              <div class="subcategory-media">${thumb}</div>
+              <div class="subcategory-content">
+                <span class="tag">${String(i+1).padStart(2,'0')}</span>
                 <h3>${H.esc(group.label)}</h3>
                 <span class="count">${n}개 상품</span>
+                <span class="subcategory-action">${n>0 ? `${n}개 상품 보기 →` : '상품 준비중'}</span>
               </div>
             </a>`;
         }).join('');
@@ -170,7 +223,7 @@
   }else if(s){
     // 여러 상품이 있는 일반 세부 품목
     subsec.style.display = 'none';
-    listsec.style.display = '';
+    listsec.style.display = 'block';
     back.href = `category.html?category=${encodeURIComponent(c.id)}`;
     back.textContent = '전체 세부 품목 보기 →';
     document.getElementById('list-title').textContent = s.label;
