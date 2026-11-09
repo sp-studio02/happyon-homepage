@@ -1040,7 +1040,8 @@
     "production_time": "약 3-4일",
     "print_method": "종이케이스 위에 스티커 가능(별도)",
     "packaging": "손잡이 종이케이스",
-    "set_type": "set_product"
+    "set_type": "set_product",
+    "set_package_category": "paper_handle_case"
   },
   {
     "id": "3843d8c4-7b06-47fa-9706-3ef0ee19f4a0",
