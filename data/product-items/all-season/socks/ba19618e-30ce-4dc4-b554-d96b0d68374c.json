@@ -1,0 +1,22 @@
+{
+  "id": "ba19618e-30ce-4dc4-b554-d96b0d68374c",
+  "title": "국산 프리미엄 3중 양말(종이케이스+선물포장+스티커 무료)",
+  "display_order": 1,
+  "category": "all-season",
+  "subcategory": "socks",
+  "summary": "도톰한 3중 구조로 폭신한 바닥과 쫀쫀한 발목,발등 밴딩으로 장시간 착용시에도 편안하게! ",
+  "published": true,
+  "featured": false,
+  "hero_image": "assets/uploads/file-65.jpg",
+  "gallery": [
+    "assets/uploads/file-66.jpg"
+  ],
+  "dimensions": "남,여",
+  "material": "상세페이지 참고",
+  "colors": "랜덤",
+  "default_order_quantity": "100개",
+  "production_time": "약 4-5일",
+  "print_method": "기본수량 이상 스티커 무료",
+  "packaging": "종이케이스 + 선물포장",
+  "set_type": "set_available"
+}
