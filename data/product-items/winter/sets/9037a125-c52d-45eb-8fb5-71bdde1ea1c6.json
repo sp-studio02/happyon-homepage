@@ -1,0 +1,25 @@
+{
+  "id": "9037a125-c52d-45eb-8fb5-71bdde1ea1c6",
+  "title": "레포마 에어웜 방한 2종 A세트(넥워머+귀마개)",
+  "display_order": 32,
+  "category": "winter",
+  "subcategory": "sets",
+  "set_package_category": "zipper_bag",
+  "summary": "포근하고 폭신한 프리미엄 국산 넥워머와 프리미엄 방한 귀마개를 지퍼백에 담에 깔끔하게 전달 가능합니다.",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/2a-15.jpg",
+  "gallery": [
+    "assets/uploads/1-8.jpg",
+    "assets/uploads/2-15.jpg"
+  ],
+  "dimensions": "상세페이지 참고",
+  "material": "상세페이지 참고",
+  "colors": "상세페이지 참고",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "지퍼백 - 1도 실크인쇄 가능(별도), 지퍼백 - 스티커 부착 가능(별도)",
+  "packaging": "기본 지퍼백 포장",
+  "set_type": "set_product"
+}
