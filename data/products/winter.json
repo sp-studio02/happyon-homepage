@@ -563,7 +563,8 @@
     "set_type": "set_product",
     "set_packaging": "복주머니 파우치",
     "set_description": "겨울철 활용도가 높은 웜장갑과 넥워머를 복조리개 파우치에 담아 구성했습니다. 실용적인 방한용품과 포장을 함께 갖춰 겨울철 단체선물과 판촉용으로 활용하기 좋은 세트입니다.",
-    "set_image": "assets/uploads/file-20.jpg"
+    "set_image": "assets/uploads/file-20.jpg",
+    "set_package_category": "pouch"
   },
   {
     "id": "ba90f3e7-978e-4295-9fcb-39b44833ab26",
@@ -589,7 +590,8 @@
     "set_type": "set_product",
     "set_packaging": "웜장갑, 넥워머, 귀마개",
     "set_description": "겨울철 활용도가 높은 웜장갑, 넥워머, 귀마개를 복조리개 파우치에 담아 구성했습니다. 손과 목, 귀를 함께 따뜻하게 보호할 수 있어 겨울철 단체선물과 판촉용으로 활용하기 좋은 3종 방한 세트입니다.",
-    "set_image": "assets/uploads/file-21.jpg"
+    "set_image": "assets/uploads/file-21.jpg",
+    "set_package_category": "pouch"
   },
   {
     "id": "892f9a24-1644-4443-bef3-4a04cc50a5d4",
@@ -612,7 +614,8 @@
     "production_time": "약 3-4일",
     "print_method": "복주머니 - 1도 실크인쇄 가능",
     "packaging": "기본 복주머니 파우치 ",
-    "set_type": "set_product"
+    "set_type": "set_product",
+    "set_package_category": "pouch"
   },
   {
     "id": "5b705771-eba1-4477-a74d-f12ba2d9731c",
@@ -634,7 +637,8 @@
     "default_order_quantity": "100개",
     "production_time": "약 3-4일",
     "print_method": "복주머니 - 1도 실크인쇄 가능",
-    "packaging": "복주머니 파우치"
+    "packaging": "복주머니 파우치",
+    "set_package_category": "pouch"
   },
   {
     "id": "4a6d7a89-7c52-4b0f-9985-259b135aa767",
@@ -656,7 +660,8 @@
     "default_order_quantity": "100개",
     "production_time": "약 3-4일",
     "print_method": "복주머니 - 1도 실크인쇄 가능",
-    "packaging": "복주머니 파우치"
+    "packaging": "복주머니 파우치",
+    "set_package_category": "pouch"
   },
   {
     "id": "dd55dcd2-5651-4b2e-bd4c-fdf3666d633c",
@@ -678,7 +683,8 @@
     "default_order_quantity": "100개",
     "production_time": "약 3-4일",
     "print_method": "복주머니 - 1도 실크인쇄 가능",
-    "packaging": "복주머니 파우치"
+    "packaging": "복주머니 파우치",
+    "set_package_category": "pouch"
   },
   {
     "id": "6f6f77e2-c41e-4a83-bf42-b81251103cfe",
@@ -701,7 +707,8 @@
     "production_time": "약 3-4일",
     "print_method": "복주머니 - 1도 실크인쇄 가능",
     "packaging": "복주머니 파우치",
-    "set_type": "set_product"
+    "set_type": "set_product",
+    "set_package_category": "pouch"
   },
   {
     "id": "857a1a18-a3ed-4061-8a94-5159e8a0784d",
