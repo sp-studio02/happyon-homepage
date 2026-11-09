@@ -1140,7 +1140,8 @@
     "production_time": "약 3-4일",
     "print_method": "복주머니 - 1도 실크인쇄 가능(별도)",
     "packaging": "복주머니 파우치",
-    "set_type": "set_product"
+    "set_type": "set_product",
+    "set_package_category": "pouch"
   },
   {
     "id": "ef88e6ae-f07e-4a9a-aa99-436afc998c4d",
