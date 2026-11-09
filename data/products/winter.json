@@ -112,7 +112,8 @@
       "assets/uploads/2a-1.jpg"
     ],
     "set_type": "set_available",
-    "display_order": 1
+    "display_order": 1,
+    "set_package_category": "zipper_bag"
   },
   {
     "id": "7bf2aa7a-4e66-4b51-b57b-fb08c48ebdc3",
