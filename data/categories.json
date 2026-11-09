@@ -42,6 +42,10 @@
         "label": "장갑"
       },
       {
+        "id": "handwarmer",
+        "label": "핸드워머"
+      },
+      {
         "id": "earmuffs",
         "label": "귀마개"
       },
