@@ -51,6 +51,8 @@ jobs:
               "winter": {
                   "neckwarmer": "neckwarmer",
                   "gloves": "gloves",
+                  "handwarmer": "handwarmer",
+                  "hand_warmer": "handwarmer",
                   "earmuffs": "earmuffs",
                   "blanket": "blanket",
                   "footwarmer": "footwarmer",
