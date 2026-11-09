@@ -25,8 +25,8 @@
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="eyebrow">SUB CATEGORY</p>
-          <h2>세부 품목</h2>
+          <p class="eyebrow" id="sub-section-eyebrow">SUB CATEGORY</p>
+          <h2 id="sub-section-title">세부 품목</h2>
         </div>
       </div>
       <div class="subcategory-grid" id="subcategory-list"></div>
@@ -65,32 +65,114 @@
 
   const cid = H.q('category');
   const sid = H.q('sub');
+  const setpack = H.q('setpack');
   const c = d.categories.find(x=>x.id===cid) || d.categories[0];
   const s = (c.subs||[]).find(x=>x.id===sid);
 
-  document.title = (s ? s.label+' | ' : '') + c.label + ' | 해피온';
+  const setPackGroups = [
+    {id:'zipper_bag', label:'지퍼백 세트'},
+    {id:'pouch', label:'복주머니 세트'},
+    {id:'paper_handle_case', label:'손잡이 종이케이스 세트'}
+  ];
+  const activeSetPack = setPackGroups.find(x=>x.id===setpack);
+  const isWinterSets = c.id==='winter' && s && s.id==='sets';
+
+  document.title =
+    (activeSetPack ? activeSetPack.label+' | ' : '') +
+    (s ? s.label+' | ' : '') +
+    c.label + ' | 해피온';
+
   document.getElementById('cat-eyebrow').textContent = c.eyebrow || 'PRODUCTS';
-  document.getElementById('cat-title').textContent = s ? s.label : c.label;
-  document.getElementById('cat-desc').textContent = s
-    ? `${c.label} > ${s.label}에 등록된 상품입니다.`
-    : c.desc;
+  document.getElementById('cat-title').textContent = activeSetPack
+    ? activeSetPack.label
+    : (s ? s.label : c.label);
+
+  document.getElementById('cat-desc').textContent = activeSetPack
+    ? `${c.label} > 세트상품 > ${activeSetPack.label}에 등록된 상품입니다.`
+    : (s
+        ? `${c.label} > ${s.label}에 등록된 상품입니다.`
+        : c.desc);
+
+  let breadcrumbTail = `<strong>${H.esc(c.label)}</strong>`;
+
+  if(s){
+    breadcrumbTail =
+      `<a href="category.html?category=${encodeURIComponent(c.id)}">${H.esc(c.label)}</a><span>›</span>` +
+      (activeSetPack
+        ? `<a href="category.html?category=${encodeURIComponent(c.id)}&sub=sets">세트상품</a><span>›</span><strong>${H.esc(activeSetPack.label)}</strong>`
+        : `<strong>${H.esc(s.label)}</strong>`);
+  }
 
   document.getElementById('breadcrumbs').innerHTML =
     `<a href="index.html">홈</a><span>›</span>
      <a href="products.html">제품소개</a><span>›</span>
-     ${s
-       ? `<a href="category.html?category=${encodeURIComponent(c.id)}">${H.esc(c.label)}</a><span>›</span><strong>${H.esc(s.label)}</strong>`
-       : `<strong>${H.esc(c.label)}</strong>`}`;
+     ${breadcrumbTail}`;
 
   const subsec = document.getElementById('sub-section');
   const listsec = document.getElementById('list-section');
   const back = document.getElementById('back-cat');
 
-  if(s){
-    // 여러 상품이 있는 세부 품목에서만 이 화면을 사용
+  if(isWinterSets){
+    const allSetProducts = d.products.filter(p =>
+      p.published !== false &&
+      p.category === 'winter' &&
+      p.subcategory === 'sets'
+    );
+
+    if(activeSetPack){
+      // 세트 포장 소카테고리를 선택한 화면
+      subsec.style.display = 'none';
+      listsec.style.display = '';
+      back.href = `category.html?category=winter&sub=sets`;
+      back.textContent = '세트상품 소카테고리 보기 →';
+      document.getElementById('list-title').textContent = activeSetPack.label;
+
+      const list = allSetProducts.filter(p =>
+        p.set_package_category === activeSetPack.id
+      );
+
+      document.getElementById('category-products').innerHTML =
+        list.map(H.productCard).join('') ||
+        '<div class="empty">아직 이 소카테고리로 분류된 상품이 없습니다.</div>';
+    }else{
+      // 겨울 > 세트상품 첫 화면:
+      // 포장 기준 소카테고리 3개 + 전체 세트상품을 함께 보여준다.
+      subsec.style.display = '';
+      listsec.style.display = '';
+
+      document.getElementById('sub-section-eyebrow').textContent = 'SET CATEGORY';
+      document.getElementById('sub-section-title').textContent = '세트상품 소카테고리';
+
+      back.href = `category.html?category=winter`;
+      back.textContent = '겨울제품 전체 세부 품목 보기 →';
+      document.getElementById('list-title').textContent = '전체 세트상품';
+
+      document.getElementById('subcategory-list').innerHTML =
+        setPackGroups.map((group,i)=>{
+          const n = allSetProducts.filter(p =>
+            p.set_package_category === group.id
+          ).length;
+
+          return `
+            <a class="subcategory-card" href="category.html?category=winter&sub=sets&setpack=${encodeURIComponent(group.id)}">
+              <span class="tag">${String(i+1).padStart(2,'0')}</span>
+              <div>
+                <h3>${H.esc(group.label)}</h3>
+                <span class="count">${n}개 상품</span>
+              </div>
+            </a>`;
+        }).join('');
+
+      document.getElementById('category-products').innerHTML =
+        allSetProducts.map(H.productCard).join('') ||
+        '<div class="empty">아직 등록된 세트상품이 없습니다.</div>';
+    }
+  }else if(s){
+    // 여러 상품이 있는 일반 세부 품목
     subsec.style.display = 'none';
     listsec.style.display = '';
     back.href = `category.html?category=${encodeURIComponent(c.id)}`;
+    back.textContent = '전체 세부 품목 보기 →';
     document.getElementById('list-title').textContent = s.label;
 
     const list = d.products.filter(p =>
