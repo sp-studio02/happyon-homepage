@@ -1,0 +1,22 @@
+{
+  "id": "2174e1c2-2a70-4077-af5f-c259c6c6f85f",
+  "title": "소량제작 카드거울",
+  "category": "card-mirror",
+  "subcategory": "small-qty",
+  "summary": "500개 미만 소량제작을 원하시는 분들을 위한 소량제작 카드거울입니다.",
+  "published": true,
+  "featured": false,
+  "home_slide_page2": false,
+  "hero_image": "assets/uploads/file-72.jpg",
+  "gallery": [
+    "assets/uploads/file-73.jpg"
+  ],
+  "dimensions": "86x54mm(두께0.8mm)",
+  "material": "아크릴",
+  "colors": "주문제작",
+  "default_order_quantity": "100개",
+  "production_time": "약 일주일",
+  "print_method": "스티커 부착",
+  "packaging": "개별 opp 기본포장",
+  "set_type": "set_unavailable"
+}
