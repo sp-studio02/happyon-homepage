@@ -134,6 +134,27 @@
     "packaging": "종이케이스 + 선물포장"
   },
   {
+    "id": "b1664ba4-e987-4c28-ac48-8d9bd5246feb",
+    "title": "국산 3중 등산양말 + 메쉬 긴장갑 복주머니 세트",
+    "category": "all-season",
+    "subcategory": "sets",
+    "summary": "프리미엄 3중양말과 메쉬 긴장갑을 복주머니에 넣어드립니다. 기본수량 이상 인쇄 무료!",
+    "published": true,
+    "featured": false,
+    "hero_image": "assets/uploads/3-8.jpg",
+    "gallery": [
+      "assets/uploads/3-9.jpg"
+    ],
+    "dimensions": "남,여",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "복주머니 1도 실크인쇄. 100개 이상 무료",
+    "packaging": "기본 복주머니 파우치",
+    "set_type": "set_product"
+  },
+  {
     "id": "3333b076-4a72-428c-bbca-a73653572656",
     "title": "국산 프리미엄 3중 양말 2p 복주머니세트",
     "category": "all-season",
