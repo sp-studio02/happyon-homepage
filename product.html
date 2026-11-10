@@ -3,7 +3,7 @@
 /* 상세페이지 > 관련 세트상품 카드만 컴팩트하게 */
 .related-set-grid{
   display:grid;
-  grid-template-columns:repeat(5,minmax(0,1fr));
+  grid-template-columns:repeat(4,minmax(0,1fr));
   gap:14px;
   margin-top:18px;
 }
@@ -89,8 +89,72 @@
   }
 }
 </style>
+
+<style>
+/* 관련 세트상품 영역을 상세본문과 명확히 구분 */
+.related-set-section{
+  margin:34px 0 38px;
+  padding:24px 24px 26px;
+  background:#f7f8fa;
+  border:1px solid #e1e5ea;
+  border-radius:16px;
+}
+
+.related-set-heading{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:4px;
+}
+
+.related-set-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:5px 9px;
+  border-radius:999px;
+  background:#1f2d44;
+  color:#fff;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+
+.related-set-section h2{
+  margin:0;
+  font-size:20px;
+  line-height:1.35;
+}
+
+.related-set-guide{
+  margin:7px 0 0;
+  color:#6c737d;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.related-set-grid{
+  margin-top:18px;
+}
+
+@media(max-width:640px){
+  .related-set-section{
+    margin:26px 0 30px;
+    padding:18px 14px 18px;
+    border-radius:13px;
+  }
+
+  .related-set-section h2{
+    font-size:17px;
+  }
+
+  .related-set-guide{
+    font-size:12px;
+  }
+}
+</style>
 </head><body><div id="site-header"></div>
-<main><section class="detail-wrap"><div class="container"><div class="breadcrumbs" id="detail-breadcrumbs"></div><div class="detail-top"><div class="detail-main-image" id="detail-image"></div><div class="detail-info"><p class="eyebrow" id="detail-meta"></p><h1 id="detail-title"></h1><p class="detail-summary" id="detail-summary"></p><div class="quick-spec" id="quick-spec"></div><p class="order-note" id="order-note"></p></div></div><section class="detail-section" id="set-section"></section><section class="detail-section" id="spec-section"><h2>제품 정보</h2><div class="spec-table" id="spec-table"></div></section><section class="detail-section" id="features-section"><h2>주요 특징</h2><div class="feature-grid" id="feature-grid"></div></section><div class="gallery" id="gallery"></div><section class="detail-section"><div class="section-head"><div><p class="eyebrow">RELATED PRODUCTS</p><h2>같은 품목의 다른 상품</h2></div></div><div class="related-grid" id="related-grid"></div></section></div></section></main>
+<main><section class="detail-wrap"><div class="container"><div class="breadcrumbs" id="detail-breadcrumbs"></div><div class="detail-top"><div class="detail-main-image" id="detail-image"></div><div class="detail-info"><p class="eyebrow" id="detail-meta"></p><h1 id="detail-title"></h1><p class="detail-summary" id="detail-summary"></p><div class="quick-spec" id="quick-spec"></div><p class="order-note" id="order-note"></p></div></div><section class="detail-section" id="set-section"></section><section class="detail-section" id="spec-section"><h2>제품 정보</h2><div class="spec-table" id="spec-table"></div></section><section class="detail-section" id="features-section"><h2>주요 특징</h2><div class="feature-grid" id="feature-grid"></div></section><div class="gallery" id="gallery"></div><section class="related-set-section detail-section"><div class="section-head"><div><p class="eyebrow">RELATED PRODUCTS</p><h2>같은 품목의 다른 상품</h2></div></div><div class="related-grid" id="related-grid"></div></section></div></section></main>
 <div id="site-footer"></div><script src="data/seed.js"></script><script src="assets/js/app.js"></script><script>(async()=>{const d=await H.load();H.headerFooter(d.site,'products');const id=H.q('id');const p=d.products.find(x=>String(x.id)===String(id));if(!p){document.querySelector('.detail-wrap .container').innerHTML='<div class="empty">상품을 찾을 수 없습니다.</div>';return;}const c=d.categories.find(x=>x.id===p.category),s=c?.subs?.find(x=>x.id===p.subcategory);document.title=p.title+' | 해피온';document.getElementById('detail-breadcrumbs').innerHTML=`<a href="index.html">홈</a><span>›</span><a href="products.html">제품소개</a><span>›</span><a href="category.html?category=${encodeURIComponent(p.category)}">${H.esc(c?.label||p.category)}</a><span>›</span><a href="category.html?category=${encodeURIComponent(p.category)}&sub=${encodeURIComponent(p.subcategory)}">${H.esc(s?.label||p.subcategory)}</a><span>›</span><strong>${H.esc(p.title)}</strong>`;document.getElementById('detail-image').innerHTML=H.imageHTML(p.hero_image,p.title);document.getElementById('detail-meta').textContent=(c?.label||'')+' · '+(s?.label||'');document.getElementById('detail-title').textContent=p.title;document.getElementById('detail-summary').textContent=p.summary||'';const quick=[['기본 주문수량',p.default_order_quantity],['제작기간',p.production_time]].filter(x=>x[1]);document.getElementById('quick-spec').innerHTML=quick.map(x=>`<div class="quick-row"><strong>${H.esc(x[0])}</strong><span>${H.esc(x[1])}</span></div>`).join('');document.getElementById('order-note').textContent=p.default_order_quantity?'※ 기본 주문수량 미만은 별도 연락해 주세요.':'';const gal=(p.gallery||[]).filter(Boolean);const ge=document.getElementById('gallery');if(gal.length)ge.innerHTML=gal.map(x=>`<img src="${H.esc(String(x).replace(/^\//,''))}" alt="${H.esc(p.title)} 상세 이미지">`).join('');else ge.style.display='none';const ft=(p.features||[]).filter(x=>x&&x.title);const fs=document.getElementById('features-section');if(ft.length)document.getElementById('feature-grid').innerHTML=ft.map(x=>`<div class="feature-card"><h3>${H.esc(x.title)}</h3><p>${H.esc(x.description||'')}</p></div>`).join('');else fs.style.display='none';const specs=[['규격',p.dimensions],['재질',p.material],['색상',p.colors],['인쇄·제작 방식',p.print_method],['포장 방식',p.packaging],['기본 주문수량',p.default_order_quantity],['제작기간',p.production_time]].filter(x=>x[1]);document.getElementById('spec-table').innerHTML=specs.map(x=>`<div class="row"><strong>${H.esc(x[0])}</strong><span>${H.esc(x[1])}</span></div>`).join('');const set=document.getElementById('set-section');
 const selectedSetIds=(Array.isArray(p.related_set_products)?p.related_set_products:[])
   .map(x=>typeof x==='string'?x:(x?.id||x?.value||''))
@@ -118,7 +182,12 @@ if(linkedSets.length){
         <h2>함께 구성 가능한 세트상품</h2>
       </div>
     </div>
-    <div class="related-set-grid">${linkedSets.map(H.productCard).join('')}</div>
+    <div class="related-set-heading">
+          <span class="related-set-badge">SET PRODUCT</span>
+          <h2>함께 구성 가능한 세트상품</h2>
+        </div>
+        <p class="related-set-guide">이 상품과 함께 구성할 수 있는 세트상품입니다. 카드를 누르면 해당 세트 상세페이지로 이동합니다.</p>
+        <div class="related-set-grid">${linkedSets.map(H.productCard).join('')}</div>
   </div>`);
 }else if(p.set_type==='set_available'){
   setParts.push('<div class="set-box"><h3>세트 구성도 가능합니다.</h3><p>등록된 세트상품을 연결하면 이곳에 바로가기 카드가 표시됩니다.</p></div>');
