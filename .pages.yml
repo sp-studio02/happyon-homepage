@@ -606,6 +606,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -891,6 +893,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -1176,6 +1180,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -1461,6 +1467,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -1759,6 +1767,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -2052,6 +2062,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -2341,6 +2353,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -2630,6 +2644,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -2919,6 +2935,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -3208,6 +3226,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -3497,6 +3517,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -3799,6 +3821,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -4071,6 +4095,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -4339,6 +4365,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -4607,6 +4635,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -4875,6 +4905,8 @@ content:
             label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
           - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
             label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+          - name: 3333b076-4a72-428c-bbca-a73653572656
+            label: 국산 프리미엄 3중 양말 2p 복주머니세트
       - name: set_name
         label: 세트 구성명
         type: string
@@ -5129,6 +5161,8 @@ content:
           label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
         - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
           label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+        - name: 3333b076-4a72-428c-bbca-a73653572656
+          label: 국산 프리미엄 3중 양말 2p 복주머니세트
     - name: set_name
       label: 세트 구성명
       type: string
@@ -5400,6 +5434,8 @@ content:
           label: 레포마 에어웜 방한 2종 B 복주머니 세트(넥워머+웜장갑)
         - name: 28002a16-d2d5-438b-a0ef-7a96f22fcddb
           label: 레포마 에어웜 방한 2종 C세트(넥워머+핸드워머)
+        - name: 3333b076-4a72-428c-bbca-a73653572656
+          label: 국산 프리미엄 3중 양말 2p 복주머니세트
     - name: set_name
       label: 세트 구성명
       type: string
