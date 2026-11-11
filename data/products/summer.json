@@ -109,7 +109,8 @@
     "production_time": "약 3-4일",
     "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도)",
     "packaging": "지퍼백",
-    "set_type": "set_product"
+    "set_type": "set_product",
+    "set_package_category": "zipper_bag"
   },
   {
     "id": "4193b6d6-d649-4c5b-8aa0-24565fa711fa",
@@ -247,7 +248,8 @@
     "default_order_quantity": "100개",
     "production_time": "약 3-4일",
     "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도)",
-    "packaging": "지퍼백"
+    "packaging": "지퍼백",
+    "set_package_category": "zipper_bag"
   },
   {
     "id": "f06a424f-cb71-4d96-93f9-0b880472f237",
