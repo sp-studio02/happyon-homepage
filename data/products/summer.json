@@ -43,6 +43,29 @@
     "set_type": "set_product"
   },
   {
+    "id": "4193b6d6-d649-4c5b-8aa0-24565fa711fa",
+    "title": "국산 아쿠아 쿨토시",
+    "display_order": 5,
+    "category": "summer",
+    "subcategory": "cool-arm-sleeves",
+    "summary": "국내 생산된 스노우 쿨토시입니다. 효성 냉감 아쿠아 원사, 흡습속건, 자외선 차단, 우수한 신축성",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/2-21.jpg",
+    "gallery": [
+      "assets/uploads/2-22.jpg"
+    ],
+    "dimensions": "free사이즈",
+    "material": "효성 아쿠아엑스 원사 외",
+    "colors": "블랙, 화이트",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "1도 실크인쇄(별도)",
+    "packaging": "기본 지퍼백 개별 포장",
+    "set_type": "set_product"
+  },
+  {
     "id": "23c9c605-6471-4425-9f76-e4dd34d2f4d6",
     "title": "레포마 나이스 3종 여름 쿨세트 B(스노우 쿨토시+스노우 쿨마스크+나이스 쿨타올)",
     "display_order": 10,
