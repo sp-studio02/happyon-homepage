@@ -61,7 +61,7 @@
     ],
     "dimensions": "free사이즈",
     "material": "나일론 86%, 폴리우레탄 14%",
-    "colors": "블랙, 화이트",
+    "colors": "블랙, 화이트, 네이비",
     "default_order_quantity": "100개",
     "production_time": "약 일주일",
     "print_method": "스티커 제작 & 부착 (별도)",
@@ -110,6 +110,29 @@
     "print_method": "1도 실크인쇄(별도)",
     "packaging": "기본 지퍼백 개별 포장",
     "set_type": "set_product"
+  },
+  {
+    "id": "584fb3fd-e26d-40f9-8ecb-5a10dd3417ca",
+    "title": "레포마 에어핏 메쉬 쿨마스크(쿨멀티스카프)",
+    "display_order": 5,
+    "category": "summer",
+    "subcategory": "cool-mask",
+    "summary": "릴랙스핏 / ALL메쉬 / 초경량 / 귀걸이형 디자인 + 앞면 펀칭 / 자외선 차단 / 4WAY신축 / 흡습속건",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-80.jpg",
+    "gallery": [
+      "assets/uploads/file-81.jpg"
+    ],
+    "dimensions": "free사이즈",
+    "material": "폴리에스터 89%, 폴리우레탄 11%",
+    "colors": "블랙, 화이트",
+    "default_order_quantity": "100개",
+    "production_time": "약 일주일",
+    "print_method": "스티커 제작 & 부착 (별도)",
+    "packaging": "기본 opp 개별포장 / 지퍼백 옵션(별도)",
+    "set_type": "set_available"
   },
   {
     "id": "3f170e39-a63f-4234-be9a-88ad14ecc861",
