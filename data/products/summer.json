@@ -46,6 +46,29 @@
     "set_type": "set_available"
   },
   {
+    "id": "a3d4d1b3-fb80-4551-90ae-f930b16a81d7",
+    "title": "레포마 스노우 쿨마스크(쿨멀티스카프)",
+    "display_order": 1,
+    "category": "summer",
+    "subcategory": "cool-mask",
+    "summary": "핏되는 착용감 / 귀걸이형 디자인 + 앞면 펀칭 / 자외선 차단 / 4WAY신축 / 흡습속건",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-78.jpg",
+    "gallery": [
+      "assets/uploads/file-79.jpg"
+    ],
+    "dimensions": "free사이즈",
+    "material": "나일론 86%, 폴리우레탄 14%",
+    "colors": "블랙, 화이트",
+    "default_order_quantity": "100개",
+    "production_time": "약 일주일",
+    "print_method": "스티커 제작 & 부착 (별도)",
+    "packaging": "기본 opp 개별포장 / 지퍼백 옵션(별도)",
+    "set_type": "set_available"
+  },
+  {
     "id": "235fc733-c463-43fe-831e-3430894f2862",
     "title": "레포마 폭염예방 실용 3종 쿨키트 S (스노우 쿨토시+스노우 쿨마스크+최고급 쿨타올)",
     "display_order": 1,
