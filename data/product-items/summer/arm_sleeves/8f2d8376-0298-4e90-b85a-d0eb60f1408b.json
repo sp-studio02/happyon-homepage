@@ -1,0 +1,23 @@
+{
+  "id": "8f2d8376-0298-4e90-b85a-d0eb60f1408b",
+  "title": "레포마 스트라이프 쿨토시",
+  "display_order": 20,
+  "category": "summer",
+  "subcategory": "cool-arm-sleeves",
+  "summary": "스트라이프로 밋밋하지 않게. 쿨링감 + 신축성 Good!, 자외선 차단, 흡습속건",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/5.jpg",
+  "gallery": [
+    "assets/uploads/5-1.jpg"
+  ],
+  "dimensions": "free사이즈",
+  "material": "폴리 외",
+  "colors": "블랙, 화이트, 그레이",
+  "default_order_quantity": "100개",
+  "production_time": "약 일주일",
+  "print_method": "스티커 제작 & 부착가능(별도)",
+  "packaging": "기본 opp 개별포장 / 지퍼백 옵션(별도)",
+  "set_type": "set_available"
+}
