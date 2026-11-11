@@ -66,6 +66,29 @@
     "set_type": "set_product"
   },
   {
+    "id": "242e69e7-516a-4fe6-a93e-725cf1aa1875",
+    "title": "(품절임박)레포마 3D 뉴 무봉제 쿨토시",
+    "display_order": 10,
+    "category": "summer",
+    "subcategory": "cool-arm-sleeves",
+    "summary": "시원한 촉감, 무봉제 타입, 자외선 차단",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/33d.jpg",
+    "gallery": [
+      "assets/uploads/33d-1.jpg"
+    ],
+    "dimensions": "free사이즈",
+    "material": "폴리아미드 외",
+    "colors": "블랙",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "1도 실크인쇄(별도)",
+    "packaging": "기본 지퍼백 개별 포장",
+    "set_type": "set_available"
+  },
+  {
     "id": "23c9c605-6471-4425-9f76-e4dd34d2f4d6",
     "title": "레포마 나이스 3종 여름 쿨세트 B(스노우 쿨토시+스노우 쿨마스크+나이스 쿨타올)",
     "display_order": 10,
