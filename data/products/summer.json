@@ -46,6 +46,29 @@
     "set_type": "set_available"
   },
   {
+    "id": "78ba550b-f46c-4bbc-95ab-9472600301e9",
+    "title": "레포마 국산 최고급 펭귄 쿨타올",
+    "display_order": 1,
+    "category": "summer",
+    "subcategory": "cool-towel",
+    "summary": "즉각 냉감 / 재사용 가능 / 흡습속건 / 항균&항취 / 딱딱해지지 않는",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-82.jpg",
+    "gallery": [
+      "assets/uploads/file-83.jpg"
+    ],
+    "dimensions": "95x24cm(±3cm)",
+    "material": "폴리",
+    "colors": "블루, 라임",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "1도 실크인쇄(별도)",
+    "packaging": "기본 지퍼백 개별 포장",
+    "set_type": "set_available"
+  },
+  {
     "id": "a3d4d1b3-fb80-4551-90ae-f930b16a81d7",
     "title": "레포마 스노우 쿨마스크(쿨멀티스카프)",
     "display_order": 1,
