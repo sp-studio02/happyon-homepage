@@ -158,6 +158,29 @@
     "set_type": "set_available"
   },
   {
+    "id": "1c862bf1-18f6-4667-98ad-fb908d6f6398",
+    "title": "레포마 쿨 헤드밴드",
+    "display_order": 5,
+    "category": "summer",
+    "subcategory": "cool-towel",
+    "summary": "맨살보다 더 시원한 신개념 냉감 소재 / 부드러운 착용감 / 이중밴드로 탄탄한 탄성 / 중복세탁에도 일어나지 않는 부푸라기",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/file-84.jpg",
+    "gallery": [
+      "assets/uploads/file-85.jpg"
+    ],
+    "dimensions": "free사이즈",
+    "material": "폴리아미드 외",
+    "colors": "블루, 블랙, 오렌지 - 별도 문의필요",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "1도 실크인쇄(별도)",
+    "packaging": "기본 opp개별 포장",
+    "set_type": "set_available"
+  },
+  {
     "id": "3f170e39-a63f-4234-be9a-88ad14ecc861",
     "title": "포레앙 국산 최고급 스토퍼 쿨스카프",
     "display_order": 5,
