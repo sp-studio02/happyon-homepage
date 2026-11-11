@@ -1,0 +1,23 @@
+{
+  "id": "f06a424f-cb71-4d96-93f9-0b880472f237",
+  "title": "레포마 뉴 무봉제 '손등' 쿨토시",
+  "display_order": 15,
+  "category": "summer",
+  "subcategory": "cool-arm-sleeves",
+  "summary": "손등 타입. 시원한 촉감, 무봉제, 자외선 차단",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/3d.jpg",
+  "gallery": [
+    "assets/uploads/3d-1.jpg"
+  ],
+  "dimensions": "free사이즈",
+  "material": "폴리아미드 외",
+  "colors": "블랙, 화이트, 그레이",
+  "default_order_quantity": "100개",
+  "production_time": "약 4-5일",
+  "print_method": "1도 실크인쇄(별도)",
+  "packaging": "기본 지퍼백 개별 포장",
+  "set_type": "set_available"
+}
