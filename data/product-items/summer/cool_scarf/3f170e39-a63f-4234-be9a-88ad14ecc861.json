@@ -1,0 +1,23 @@
+{
+  "id": "3f170e39-a63f-4234-be9a-88ad14ecc861",
+  "title": "포레앙 국산 최고급 스토퍼 쿨스카프",
+  "display_order": 5,
+  "category": "summer",
+  "subcategory": "cool-scarf",
+  "summary": "국산 쿨스카프 입니다! 스토퍼가 있어 고정이 편리합니다.",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/file-76.jpg",
+  "gallery": [
+    "assets/uploads/file-77.jpg"
+  ],
+  "dimensions": "90x5cm",
+  "material": "폴리, 아이스 폴리머",
+  "colors": "블루트렉, 스퀠, 페더",
+  "default_order_quantity": "100개",
+  "production_time": "약 일주일",
+  "print_method": "스티커 제작&부착(별도)",
+  "packaging": "기본 지퍼백 개별포장",
+  "set_type": "set_available"
+}
