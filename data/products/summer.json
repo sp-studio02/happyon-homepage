@@ -1,28 +1,5 @@
 [
   {
-    "id": "170fe380-f8d6-4787-9fb8-c74122d5714f",
-    "title": "국산 스노우 쿨토시",
-    "display_order": 1,
-    "category": "summer",
-    "subcategory": "cool-arm-sleeves",
-    "summary": "국내 생산된 스노우 쿨토시입니다. 흡습속건, 자외선 차단, 우수한 신축성",
-    "published": true,
-    "featured": false,
-    "home_slide_order": "none",
-    "hero_image": "assets/uploads/1-14.jpg",
-    "gallery": [
-      "assets/uploads/1-15.jpg"
-    ],
-    "dimensions": "free사이즈",
-    "material": "폴리아미드 외",
-    "colors": "블랙, 화이트",
-    "default_order_quantity": "100",
-    "production_time": "약 3-4일",
-    "print_method": "1도 실크인쇄(별도)",
-    "packaging": "기본 지퍼백 개별 포장",
-    "set_type": "set_available"
-  },
-  {
     "id": "ba3c095a-7ea0-4733-b567-85b17606f839",
     "title": "레포마 국산 스노우 쿨스카프",
     "display_order": 1,
@@ -42,6 +19,29 @@
     "default_order_quantity": "100개",
     "production_time": "약 3-4일",
     "print_method": "1도 실크인쇄 (별도)",
+    "packaging": "기본 지퍼백 개별 포장",
+    "set_type": "set_available"
+  },
+  {
+    "id": "170fe380-f8d6-4787-9fb8-c74122d5714f",
+    "title": "레포마 국산 스노우 쿨토시",
+    "display_order": 1,
+    "category": "summer",
+    "subcategory": "cool-arm-sleeves",
+    "summary": "국내 생산된 스노우 쿨토시입니다. 흡습속건, 자외선 차단, 우수한 신축성",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/1-14.jpg",
+    "gallery": [
+      "assets/uploads/1-15.jpg"
+    ],
+    "dimensions": "free사이즈",
+    "material": "폴리아미드 외",
+    "colors": "블랙, 화이트",
+    "default_order_quantity": "100",
+    "production_time": "약 3-4일",
+    "print_method": "1도 실크인쇄(별도)",
     "packaging": "기본 지퍼백 개별 포장",
     "set_type": "set_available"
   },
@@ -90,7 +90,7 @@
   },
   {
     "id": "4193b6d6-d649-4c5b-8aa0-24565fa711fa",
-    "title": "국산 아쿠아 쿨토시",
+    "title": "레포마 국산 아쿠아 쿨토시",
     "display_order": 5,
     "category": "summer",
     "subcategory": "cool-arm-sleeves",
