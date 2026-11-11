@@ -1,0 +1,23 @@
+{
+  "id": "ba3c095a-7ea0-4733-b567-85b17606f839",
+  "title": "레포마 국산 스노우 쿨스카프",
+  "display_order": 1,
+  "category": "summer",
+  "subcategory": "cool-scarf",
+  "summary": "국산 쿨스카프로 뜨거운 여름, 시원하게 목을 보호해보세요.",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/file-74.jpg",
+  "gallery": [
+    "assets/uploads/file-75.jpg"
+  ],
+  "dimensions": "110x5cm(냉감 40cm)",
+  "material": "폴리, 아이스 폴리머",
+  "colors": "블루, 퍼플",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "1도 실크인쇄 (별도)",
+  "packaging": "기본 지퍼백 개별 포장",
+  "set_type": "set_available"
+}
