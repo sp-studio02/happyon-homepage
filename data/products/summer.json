@@ -344,5 +344,29 @@
     "packaging": "지퍼백",
     "set_type": "set_product",
     "set_package_category": "zipper_bag"
+  },
+  {
+    "id": "31736094-bc76-4497-b4e4-697b49a08688",
+    "title": "레포마 폭염예방 실용 2종 쿨키트 C(아쿠아 쿨토시+스노우 쿨마스크)",
+    "display_order": 21,
+    "category": "summer",
+    "subcategory": "sets",
+    "set_package_category": "zipper_bag",
+    "summary": "아쿠아 쿨토시, 쿨마스크 세트를 지퍼백에 담에 드립니다.",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/2c-9.jpg",
+    "gallery": [
+      "assets/uploads/2c-10.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도)",
+    "packaging": "기본 지퍼백 개별포장",
+    "set_type": "set_product"
   }
 ]
