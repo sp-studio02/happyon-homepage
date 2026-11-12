@@ -164,33 +164,24 @@ const linkedSets=selectedSetIds
   .filter(Boolean);
 
 const setParts=[];
-if(p.set_type==='set_product'){
-  const items=(p.set_contents||[]).filter(Boolean);
-  setParts.push(`<div class="set-box">
-    <p class="eyebrow">SET PRODUCT</p>
-    <h3>${H.esc(p.set_name||'세트 구성')}</h3>
-    ${p.set_packaging?`<p>포장 형태: ${H.esc(p.set_packaging)}</p>`:''}
-    ${p.set_description?`<p>${H.esc(p.set_description)}</p>`:''}
-    ${items.length?`<ul class="set-items">${items.map(x=>`<li>${H.esc(typeof x==='string'?x:(x.name||''))}</li>`).join('')}</ul>`:''}
-  </div>`);
-}
-if(linkedSets.length){
-  setParts.push(`<div class="linked-set-products">
-    <div class="section-head">
-      <div>
-        <p class="eyebrow">SET PRODUCTS</p>
+
+// 실제 '세트상품' 자체의 상세페이지에는 별도 세트 안내 영역을 표시하지 않습니다.
+// '세트 구성 불가'도 동일하게 아무것도 표시하지 않습니다.
+// 단품이 '세트 구성 가능'인 경우에만 연결된 세트상품을 보여줍니다.
+if(p.set_type==='set_available'){
+  if(linkedSets.length){
+    setParts.push(`<div class="linked-set-products">
+      <div class="related-set-heading">
+        <span class="related-set-badge">SET PRODUCT</span>
         <h2>함께 구성 가능한 세트상품</h2>
       </div>
-    </div>
-    <div class="related-set-heading">
-          <span class="related-set-badge">SET PRODUCT</span>
-          <h2>함께 구성 가능한 세트상품</h2>
-        </div>
-        <p class="related-set-guide">이 상품과 함께 구성할 수 있는 세트상품입니다. 카드를 누르면 해당 세트 상세페이지로 이동합니다.</p>
-        <div class="related-set-grid">${linkedSets.map(H.productCard).join('')}</div>
-  </div>`);
-}else if(p.set_type==='set_available'){
-  setParts.push('<div class="set-box"><h3>세트 구성도 가능합니다.</h3><p>등록된 세트상품을 연결하면 이곳에 바로가기 카드가 표시됩니다.</p></div>');
+      <p class="related-set-guide">이 상품과 함께 구성할 수 있는 세트상품입니다. 카드를 누르면 해당 세트 상세페이지로 이동합니다.</p>
+      <div class="related-set-grid">${linkedSets.map(H.productCard).join('')}</div>
+    </div>`);
+  }else{
+    setParts.push('<div class="set-box"><h3>세트 구성도 가능합니다.</h3><p>세트상품 카테고리를 확인해주세요.</p></div>');
+  }
 }
+
 if(setParts.length)set.innerHTML=setParts.join('');
 else set.style.display='none';const rel=d.products.filter(x=>x.published!==false&&x.id!==p.id&&x.category===p.category&&x.subcategory===p.subcategory).slice(0,4);const rg=document.getElementById('related-grid');if(rel.length)rg.innerHTML=rel.map(H.productCard).join('');else rg.innerHTML='<div class="empty">같은 품목의 다른 등록 상품이 없습니다.</div>';})();</script></body></html>
