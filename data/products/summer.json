@@ -139,7 +139,7 @@
     "production_time": "약 3-4일",
     "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도) - 약 일주일 소요",
     "packaging": "기본 지퍼백 포장",
-    "set_type": "set_product"
+    "set_type": "set_unavailable"
   },
   {
     "id": "d831ff5f-4155-406f-8562-7f708ddf17f9",
@@ -164,7 +164,7 @@
     "production_time": "약 3-4일",
     "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도) - 약 일주일 소요",
     "packaging": "기본 지퍼백 포장",
-    "set_type": "set_product"
+    "set_type": "set_unavailable"
   },
   {
     "id": "a8177624-0ddc-4699-ab92-8830dafc2bee",
