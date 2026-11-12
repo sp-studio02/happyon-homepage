@@ -496,7 +496,7 @@
     "production_time": "약 3-4일",
     "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도) - 약 일주일 소요",
     "packaging": "기본 지퍼백 포장",
-    "set_type": "set_product"
+    "set_type": "set_unavailable"
   },
   {
     "id": "e1145e3b-9bb8-4cba-91b0-01b0474d8386",
@@ -520,7 +520,7 @@
     "production_time": "약 3-4일",
     "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도) - 약 일주일 소요",
     "packaging": "기본 지퍼백 포장",
-    "set_type": "set_product"
+    "set_type": "set_unavailable"
   },
   {
     "id": "6222df0b-4db1-4c7b-9dbd-56d5385d881a",
@@ -544,7 +544,8 @@
     "default_order_quantity": "100개",
     "production_time": "약 3-4일",
     "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도) - 약 일주일 소요",
-    "packaging": "기본 지퍼백 포장"
+    "packaging": "기본 지퍼백 포장",
+    "set_type": "set_unavailable"
   },
   {
     "id": "4470447a-8c38-4c4a-af6c-ba3615fcebee",
@@ -569,6 +570,6 @@
     "production_time": "약 3-4일",
     "print_method": "쿨토시 1도 실크인쇄(별도)\n복주머니 파우치 1도 실크인쇄(별도)",
     "packaging": "기본 복주머니 파우치 포장",
-    "set_type": "set_product"
+    "set_type": "set_unavailable"
   }
 ]
