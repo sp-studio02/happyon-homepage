@@ -441,5 +441,29 @@
     "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도) - 약 일주일 소요",
     "packaging": "기본 지퍼백 포장",
     "set_type": "set_product"
+  },
+  {
+    "id": "6222df0b-4db1-4c7b-9dbd-56d5385d881a",
+    "title": "레포마 폭염예방 에어핏 쿨키트 3종세트(에어핏 메쉬 쿨마스크+스노우 쿨토시+스노우 쿨스카프)",
+    "display_order": 25,
+    "category": "summer",
+    "subcategory": "sets",
+    "set_package_category": "zipper_bag",
+    "summary": "에어핏 메쉬 쿨마스크 + 스노우 쿨토시 + 스노우 쿨스카프 세트를 지퍼백에 담에 드립니다.",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/3-12.jpg",
+    "gallery": [
+      "assets/uploads/1-17.jpg",
+      "assets/uploads/2-24.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도) - 약 일주일 소요",
+    "packaging": "기본 지퍼백 포장"
   }
 ]
