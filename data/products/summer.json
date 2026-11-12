@@ -821,5 +821,29 @@
     "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도) - 약 일주일 소요",
     "packaging": "기본 지퍼백 포장",
     "set_type": "set_product"
+  },
+  {
+    "id": "1956ab5d-76c2-43ea-96cd-8a8dae486933",
+    "title": "레포마 야외작업 · 활동 쿨키트 2종(쿨 헤드밴드+쿨마스크)",
+    "display_order": 50,
+    "category": "summer",
+    "subcategory": "sets",
+    "set_package_category": "zipper_bag",
+    "summary": "쿨 헤드밴드와 쿨마스크 세트를 지퍼백에 담아드려요.",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/2-39.jpg",
+    "gallery": [
+      "assets/uploads/2-40.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도) - 약 일주일 소요",
+    "packaging": "기본 지퍼백 포장",
+    "set_type": "set_product"
   }
 ]
