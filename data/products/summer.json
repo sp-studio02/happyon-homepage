@@ -110,7 +110,11 @@
     "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도) - 약 일주일 소요",
     "packaging": "기본 지퍼백 포장",
     "set_type": "set_product",
-    "set_package_category": "zipper_bag"
+    "set_package_category": "zipper_bag",
+    "gallery": [
+      "assets/uploads/1-22.jpg",
+      "assets/uploads/2-28.jpg"
+    ]
   },
   {
     "id": "fb70673a-36b2-4d4a-a7d7-7596e47b3f24",
@@ -161,6 +165,31 @@
     "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도) - 약 일주일 소요",
     "packaging": "기본 지퍼백 포장",
     "set_type": "set_product"
+  },
+  {
+    "id": "a8177624-0ddc-4699-ab92-8830dafc2bee",
+    "title": "레포마 폭염예방 실용 3종 쿨키트 C (스노우 쿨토시+스노우 쿨스카프+쿨 헤드밴드)",
+    "display_order": 4,
+    "category": "summer",
+    "subcategory": "sets",
+    "set_package_category": "zipper_bag",
+    "summary": "쿨토시, 쿨스카프, 쿨 헤드밴드를 지퍼백에 구성 하였습니다. ",
+    "published": true,
+    "featured": false,
+    "home_slide_order": "none",
+    "hero_image": "assets/uploads/3c.jpg",
+    "gallery": [
+      "assets/uploads/1-23.jpg",
+      "assets/uploads/2-29.jpg"
+    ],
+    "dimensions": "상세페이지 참고",
+    "material": "상세페이지 참고",
+    "colors": "상세페이지 참고",
+    "default_order_quantity": "100개",
+    "production_time": "약 3-4일",
+    "print_method": "쿨토시 1도 실크인쇄(별도)\n지퍼백 1도 실크인쇄(별도)\n지퍼백 스티커(별도) - 약 일주일 소요",
+    "packaging": "기본 지퍼백 포장",
+    "set_type": "set_unavailable"
   },
   {
     "id": "4193b6d6-d649-4c5b-8aa0-24565fa711fa",
