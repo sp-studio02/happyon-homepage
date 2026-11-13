@@ -69,11 +69,22 @@
   const c = d.categories.find(x=>x.id===cid) || d.categories[0];
   const s = (c.subs||[]).find(x=>x.id===sid);
 
-  const setPackGroups = [
+  const winterSetPackGroups = [
     {id:'zipper_bag', label:'지퍼백 세트'},
     {id:'pouch', label:'복주머니 세트'},
     {id:'paper_handle_case', label:'손잡이 종이케이스 세트'}
   ];
+
+  const summerSetPackGroups = [
+    {id:'zipper_bag', label:'지퍼백 세트'},
+    {id:'pouch', label:'복주머니 세트'},
+    {id:'paper_case', label:'종이케이스 세트'},
+    {id:'handle_zipper_bag', label:'손잡이 지퍼백 세트'}
+  ];
+
+  const setPackGroups = c.id==='summer'
+    ? summerSetPackGroups
+    : winterSetPackGroups;
 
   const normValue=(v)=>String(v||'')
     .trim()
@@ -109,6 +120,36 @@
 
   const getPackageId=(p)=>{
     const raw=normValue(p && p.set_package_category);
+
+    if(c.id==='summer'){
+      const summerMap={
+        'zipper_bag':'zipper_bag',
+        'zipperbag':'zipper_bag',
+        '지퍼백':'zipper_bag',
+        '지퍼백세트':'zipper_bag',
+
+        'pouch':'pouch',
+        '복주머니':'pouch',
+        '복주머니세트':'pouch',
+
+        'paper_case':'paper_case',
+        'papercase':'paper_case',
+        '종이케이스':'paper_case',
+        '종이케이스세트':'paper_case',
+
+        'paper_handle_case':'paper_case',
+        'paperhandlecase':'paper_case',
+        '손잡이종이케이스':'paper_case',
+        '손잡이종이케이스세트':'paper_case',
+
+        'handle_zipper_bag':'handle_zipper_bag',
+        'handlezipperbag':'handle_zipper_bag',
+        '손잡이지퍼백':'handle_zipper_bag',
+        '손잡이지퍼백세트':'handle_zipper_bag'
+      };
+      return summerMap[raw] || raw;
+    }
+
     return packageValueMap[raw] || raw;
   };
 
