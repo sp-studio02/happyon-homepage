@@ -1,0 +1,25 @@
+{
+  "id": "0c6e0e27-67a4-41f3-a92b-498c6c4532bc",
+  "title": "레포마 폭염예방 3종 쿨키트 1 (스노우 쿨토시+스노우 쿨마스크+스토퍼 쿨스카프)",
+  "display_order": 14,
+  "category": "summer",
+  "subcategory": "sets",
+  "set_package_category": "paper_case",
+  "summary": "스노우 쿨토시, 스노우 쿨마스크, 스토퍼 쿨스카프를 종이케이스에 담아 드립니다.\n기본수량 이상 쿨토시 1도 실크인쇄 무료",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/file-88.jpg",
+  "gallery": [
+    "assets/uploads/1-36.jpg",
+    "assets/uploads/2-44.jpg"
+  ],
+  "dimensions": "상세페이지 참고",
+  "material": "상세페이지 참고",
+  "colors": "상세페이지 참고",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "쿨토시 1도 실크인쇄 무료(100개이상)",
+  "packaging": "종이케이스",
+  "set_type": "set_product"
+}
