@@ -1,0 +1,25 @@
+{
+  "id": "0dbf8363-f1fd-4e33-b380-98b5413f0047",
+  "title": "레포마 폭염예방 아쿠아 3종 복주머니 세트(아쿠아 쿨토시+스토퍼 쿨스카프+나이스 쿨타올)",
+  "display_order": 5,
+  "category": "summer",
+  "subcategory": "sets",
+  "set_package_category": "pouch",
+  "summary": "아쿠아 쿨토시,스토퍼 쿨스카프, 나이스 쿨타올을 복주머니 파우치에 넣어드립니다. 기본수량 이상 1도 실크인쇄 무료!",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/3-17.jpg",
+  "gallery": [
+    "assets/uploads/1-33.jpg",
+    "assets/uploads/2-41.jpg"
+  ],
+  "dimensions": "상세페이지 참고",
+  "material": "상세페이지 참고",
+  "colors": "상세페이지 참고",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "쿨토시 1도 실크인쇄(별도)\n복주머니 1도 실크인쇄(기본수량 이상 무료)",
+  "packaging": "기본 복주머니 파우치",
+  "set_type": "set_product"
+}
