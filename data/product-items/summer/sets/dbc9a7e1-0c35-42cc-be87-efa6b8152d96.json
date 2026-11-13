@@ -1,0 +1,24 @@
+{
+  "id": "dbc9a7e1-0c35-42cc-be87-efa6b8152d96",
+  "title": "국산 아쿠아 쿨토시 + 나이스 쿨타올 세트",
+  "display_order": 16,
+  "category": "summer",
+  "subcategory": "sets",
+  "set_package_category": "zipper_bag",
+  "summary": "아쿠아 쿨토시와 나이스 쿨타올을 지퍼백에 담아 드립니다. \n기본수량 이상 쿨토시 1도 실크인쇄 무료",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/file-92.jpg",
+  "gallery": [
+    "assets/uploads/file-93.jpg"
+  ],
+  "dimensions": "상세페이지 참고",
+  "material": "상세페이지 참고",
+  "colors": "상세페이지 참고",
+  "default_order_quantity": "100개",
+  "production_time": "약 3-4일",
+  "print_method": "쿨토시 1도 실크인쇄 무료(100개이상)",
+  "packaging": "기본 지퍼백 포장\n복주머니 파우치 옵션(별도)",
+  "set_type": "set_product"
+}
