@@ -54,6 +54,10 @@
         "label": "담요"
       },
       {
+        "id": "hot-water-bottle",
+        "label": "보온 물주머니"
+      },
+      {
         "id": "foot-warmer",
         "label": "발토시"
       },
