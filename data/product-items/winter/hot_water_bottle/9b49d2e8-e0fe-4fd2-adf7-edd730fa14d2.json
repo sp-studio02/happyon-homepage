@@ -1,0 +1,31 @@
+{
+  "id": "9b49d2e8-e0fe-4fd2-adf7-edd730fa14d2",
+  "title": "레포마 한파대비 보온 물주머니",
+  "category": "winter",
+  "subcategory": "hot-water-bottle",
+  "summary": "따뜻한 보온 물주머니로 추위를 녹여보아요.",
+  "published": true,
+  "featured": false,
+  "home_slide_order": "none",
+  "hero_image": "assets/uploads/file-94.jpg",
+  "gallery": [
+    "assets/uploads/file-95.jpg"
+  ],
+  "dimensions": "약 1,000ml / 15x25cm",
+  "material": "상세페이지 참고",
+  "colors": "핑크, 그레이",
+  "default_order_quantity": "100개",
+  "production_time": "약 일주일",
+  "print_method": "스티커 제작 별도 / 부착 별도",
+  "packaging": "기본 opp 개별포장 ",
+  "set_type": "set_available",
+  "related_set_products": [
+    "afd03e83-2e89-4cec-9824-2f6eab9ff569",
+    "211ae1a3-a1db-406f-981c-ceb165d33154",
+    "f3c65384-8457-4b97-a640-687de003f37a",
+    "21452405-d79d-48e2-a6df-f426dc65e23f",
+    "686e4359-9002-49b5-890f-5904f68fd29c",
+    "915a29e7-9e26-401f-b496-8ca5dc1e4d98",
+    "4de7a372-3b85-49c8-baa5-c7aa07bbfbab"
+  ]
+}
