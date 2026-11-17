@@ -60,6 +60,11 @@ jobs:
                   "귀마개": "earmuffs",
                   "blanket": "blanket",
                   "담요": "blanket",
+                  "hot_water_bottle": "hot_water_bottle",
+                  "hotwaterbottle": "hot_water_bottle",
+                  "hot-water-bottle": "hot_water_bottle",
+                  "보온물주머니": "hot_water_bottle",
+                  "물주머니": "hot_water_bottle",
                   "footwarmer": "footwarmer",
                   "foot_warmer": "footwarmer",
                   "foot-warmer": "footwarmer",
@@ -128,6 +133,8 @@ jobs:
                   public_sub = target
                   if category == "winter" and target == "footwarmer":
                       public_sub = "foot-warmer"
+                  elif category == "winter" and target == "hot_water_bottle":
+                      public_sub = "hot-water-bottle"
                   elif category == "summer" and target == "arm_sleeves":
                       public_sub = "cool-arm-sleeves"
                   elif category == "summer" and target == "cool_scarf":
